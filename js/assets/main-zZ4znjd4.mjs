@@ -59956,7 +59956,7 @@ class ArrayStream {
 }
 let sparkPromise = null;
 function loadSpark() {
-  return sparkPromise ?? (sparkPromise = import("./spark.module-B4lKaRme.mjs"));
+  return sparkPromise ?? (sparkPromise = import("./spark.module-Ce0xldDf.mjs"));
 }
 const MESH_MODEL_EXTENSIONS = [".glb", ".gltf", ".fbx", ".obj", ".stl", ".dae"];
 const SPLAT_MODEL_EXTENSIONS = [".spz", ".splat", ".ksplat"];
@@ -86547,7 +86547,7 @@ const _sfc_main$4o = /* @__PURE__ */ defineComponent({
       }
     });
     const AgentPanelRoot = /* @__PURE__ */ defineAsyncComponent({
-      loader: () => import("./AgentPanelRoot-d2Zko4u3.mjs"),
+      loader: () => import("./AgentPanelRoot-CpcMDPny.mjs"),
       errorComponent: AgentPanelLoadError,
       onError: (error2, _retry, fail) => {
         reportError(error2, { errorType: "agent_panel_load_failure" });
@@ -148868,7 +148868,7 @@ async function parseToObject(file) {
     return new OBJLoader2().parse(await file.text());
   }
   if (lower.endsWith(".stl")) {
-    const { STLLoader } = await import("./STLLoader-C4xNZKkO.mjs");
+    const { STLLoader } = await import("./STLLoader-Ip3_4R6z.mjs");
     const geometry = new STLLoader().parse(await file.arrayBuffer());
     const material = new MeshStandardMaterial({ color: 13421772 });
     const group = new Group();
@@ -148876,7 +148876,7 @@ async function parseToObject(file) {
     return group;
   }
   if (lower.endsWith(".dae")) {
-    const { ColladaLoader } = await import("./ColladaLoader-yJ8gb7dK.mjs");
+    const { ColladaLoader } = await import("./ColladaLoader-CZZFLIpI.mjs");
     const collada = new ColladaLoader().parse(await file.text(), "");
     if (!(collada == null ? void 0 : collada.scene)) throw new Error(`failed to parse ${file.name}`);
     return collada.scene;
@@ -238574,13 +238574,40 @@ function makePoolPicker(previewKind) {
     };
     navPrev.addEventListener("pointerdown", (e) => e.stopPropagation());
     navNext.addEventListener("pointerdown", (e) => e.stopPropagation());
+    const stepPrev = () => applyPick(pickedIdx <= 1 ? batchList.length : pickedIdx - 1);
+    const stepNext = () => applyPick(pickedIdx >= batchList.length ? 1 : pickedIdx + 1);
     navPrev.addEventListener("click", (e) => {
       e.stopPropagation();
-      applyPick(pickedIdx <= 1 ? batchList.length : pickedIdx - 1);
+      stepPrev();
     });
     navNext.addEventListener("click", (e) => {
       e.stopPropagation();
-      applyPick(pickedIdx >= batchList.length ? 1 : pickedIdx + 1);
+      stepNext();
+    });
+    preview.tabIndex = -1;
+    preview.style.outline = "none";
+    let prevFocus = null;
+    preview.addEventListener("pointerenter", () => {
+      const active2 = document.activeElement;
+      if (batchList.length < 2 || preview.contains(active2) || isTextEntry(active2)) return;
+      prevFocus = active2;
+      preview.focus({ preventScroll: true });
+    });
+    preview.addEventListener("pointerleave", () => {
+      if (document.activeElement === preview) {
+        preview.blur();
+        if (prevFocus && prevFocus !== document.body) prevFocus.focus({ preventScroll: true });
+      }
+      prevFocus = null;
+    });
+    preview.addEventListener("keydown", (e) => {
+      if (e.key !== "ArrowLeft" && e.key !== "ArrowRight") return;
+      if (e.ctrlKey || e.metaKey || e.altKey || e.shiftKey || batchList.length < 2) return;
+      if (e.target instanceof HTMLMediaElement || isTextEntry(e.target)) return;
+      e.preventDefault();
+      e.stopPropagation();
+      if (e.key === "ArrowLeft") stepPrev();
+      else stepNext();
     });
     chip.addEventListener("pointerdown", (e) => e.stopPropagation());
     chip.addEventListener("click", (e) => {
@@ -244775,4 +244802,4 @@ export {
   DropdownMenuRoot_default as y,
   DropdownMenuTrigger_default as z
 };
-//# sourceMappingURL=main-RTagaw8Z.mjs.map
+//# sourceMappingURL=main-zZ4znjd4.mjs.map
