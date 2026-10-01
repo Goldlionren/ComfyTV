@@ -300,6 +300,7 @@
     "preparingWorkflow": "Preparing workflow…",
     "noWorkflowShort": "No workflow installed — use Upload / Link",
     "noWorkflowInstalled": "No {kind} workflow is installed — import one with the card's Upload / Link buttons, or under ComfyTV → Stages in the sidebar.",
+    "promptNotBound": "\"{label}\" has no input bound to Stage prompt, so the card's prompt is ignored. In ComfyTV → Workflow, bind your prompt node's text to \"Stage prompt\".",
     "outputDurationHint": "Generation time",
     "section": {
       "context": "Context",
@@ -362,6 +363,8 @@
     "cancelled": "Cancelled",
     "upstreamNotReady": "Upstream not ready",
     "upstreamNotReadyDetail": "Upstream not ready: {list}. Run those stage(s) first so they produce a snapshot, then Run this stage again.",
+    "refMissing": "Reference no longer available",
+    "refMissingDetail": "{list}: the asset was removed from the library or its file is gone. Remove it from the reference strip and add it again, then Run.",
     "droppedFromQueue": "Removed from the queue before it ran — the queue was cleared or the prompt was deleted.",
     "workerDied": "Backend stopped without sending a result. The prompt worker likely died (CUDA OOM during cleanup is the usual cause). Restart ComfyUI to recover."
   },
@@ -844,7 +847,8 @@
     "refreshFailed": "Refresh failed — source stage not found or has no batch output.",
     "remove": "Remove",
     "warnOverflow": "The workflow binds only {total} reference image(s) — the last {count} on this stage won't be consumed.",
-    "warnNoSlots": "This workflow has no image input that can receive reference images — they'll be ignored at run."
+    "warnNoSlots": "This workflow has no image input that can receive reference images — they'll be ignored at run.",
+    "missing": "unavailable: asset removed or file missing"
   },
   "mediaStrip": {
     "wired": "Wired input",
@@ -864,6 +868,53 @@
     "slotWired": "wired",
     "slotClaimed": "taken",
     "slotEmpty": "This workflow has no reference-image slots bound yet — bind a LoadImage to \"Upstream image #N\" in the sidebar workflow config first."
+  },
+  "validator": {
+    "kind": { "image": "image", "video": "video", "audio": "audio", "text": "text", "model": "3D model" },
+    "unused": "\"{label}\" doesn't consume {kind} input — this connection will be ignored at run time.",
+    "extra": "\"{label}\" only consumes {max} {kind} input(s) — this extra connection will be ignored at run time.",
+    "needImage": "\"{label}\" requires an image — add a reference with ＋ on the card, or wire one in.",
+    "needImageN": "\"{label}\" needs image {n} — add a reference with ＋ or wire one in ({ready}/{total} ready).",
+    "needInput": "\"{label}\" requires a {kind} input — wire one into this slot.",
+    "needInputN": "\"{label}\" requires {needed} {kind} inputs — wire one into this slot ({wired}/{needed} wired so far)."
+  },
+  "bindTo": {
+    "useValue": "(use this value)",
+    "prompt": "Stage prompt",
+    "width": "Stage width",
+    "height": "Stage height",
+    "length": "Stage video length",
+    "upstream": {
+      "image": "Upstream image",
+      "video": "Upstream video",
+      "audio": "Upstream audio",
+      "text": "Upstream text",
+      "model": "Upstream 3D model"
+    },
+    "maskedImage": "Upstream image + painted mask (alpha)",
+    "option": {
+      "negative": "Stage negative prompt",
+      "seed": "Stage seed",
+      "batch_size": "Stage batch size",
+      "duration_s": "Stage duration (s)",
+      "generate_audio": "Stage generate audio",
+      "lyrics": "Stage lyrics",
+      "bpm": "Stage BPM",
+      "timesignature": "Stage time signature",
+      "keyscale": "Stage key / scale",
+      "voice": "Stage voice / speaker",
+      "language": "Stage language",
+      "speed": "Stage speaking speed",
+      "reference_text": "Stage reference transcript",
+      "max_length": "Stage LLM max output length",
+      "scale": "Stage scale",
+      "pad_left": "Stage pad left",
+      "pad_top": "Stage pad top",
+      "pad_right": "Stage pad right",
+      "pad_bottom": "Stage pad bottom",
+      "feathering": "Stage feathering",
+      "mask_data": "Stage mask (painter output)"
+    }
   },
   "configSidebar": {
     "title": "Workflow Config",
@@ -1992,6 +2043,7 @@
     "video": "video"
   },
   "mention": {
+    "promptPlaceholder": "Prompt — type {'@'} to insert a saved fragment",
     "newTag": "new",
     "create": "+ Create",
     "newFragment": "new fragment",

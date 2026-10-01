@@ -12,7 +12,7 @@
       "image": {
         "from": "upstream_image:annotated[0]",
         "required": true,
-        "error": "Multi-ref edit needs an edit target — wire it into the stage's first image slot."
+        "error": "Multi-ref edit needs an edit target — add a reference image with ＋ on the card, or wire one in; image 1 is the one that gets edited."
       }
     },
     "12": { "image": { "from": "upstream_image:annotated[1]" } },

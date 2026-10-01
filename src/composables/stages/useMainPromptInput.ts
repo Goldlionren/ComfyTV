@@ -161,7 +161,7 @@ export function usePromptEditorCore(opts: PromptEditorCoreOpts) {
       Text,
       HardBreak,
       Placeholder.configure({
-        placeholder: opts.placeholder() || 'Prompt — type @ to insert a saved fragment',
+        placeholder: opts.placeholder() || t('mention.promptPlaceholder'),
       }),
       Mention.configure({
         renderText: ({ node }) => `@${node.attrs.label}`,

@@ -183,6 +183,7 @@ export function groupExposedWidgets(widgets: ExposedWidget[]): WidgetGroup[] {
 import { reactive } from 'vue'
 
 import { fetchCaps } from '@/api'
+import { i18n, t } from '@/i18n'
 
 export type UpstreamKind = 'image' | 'video' | 'audio' | 'text' | 'model'
 
@@ -192,16 +193,15 @@ export interface Caps {
   computed_keys:  string[]
 }
 
-export const STAGE_COMPUTED_LABELS: Record<string, string> = {
-  'computed:width':  'Stage width',
-  'computed:height': 'Stage height',
-  'computed:length': 'Stage video length',
+const STAGE_COMPUTED_LABEL_KEYS: Record<string, string> = {
+  'computed:width':  'bindTo.width',
+  'computed:height': 'bindTo.height',
+  'computed:length': 'bindTo.length',
 }
 
-export const UPSTREAM_KIND_LABELS: Record<string, string> = {
-  image: 'Upstream image', video: 'Upstream video',
-  audio: 'Upstream audio', text:  'Upstream text',
-  model: 'Upstream 3D model',
+export function stageParamLabel(key: string, fallback: string): string {
+  const k = `bindTo.option.${key}`
+  return i18n.global.te(k) ? t(k) : fallback
 }
 
 interface CapsState {
@@ -259,21 +259,21 @@ export function buildBindingOptions(
   void loadCaps().catch(() => {})
   const caps = (workflowKind ? capsState.byKind[workflowKind] : null) ?? capsState.fallback
   const out: Array<{ value: string; label: string }> = [
-    { value: '__VALUE__', label: '(use this value)' },
-    { value: 'main_prompt', label: 'Stage prompt' },
+    { value: '__VALUE__', label: t('bindTo.useValue') },
+    { value: 'main_prompt', label: t('bindTo.prompt') },
   ]
   if (!caps) return out
   for (const k of caps.option_keys) {
-    out.push({ value: k, label: capsState.optionLabels[k] ?? k })
+    out.push({ value: k, label: stageParamLabel(k.replace(/^option:/, ''), capsState.optionLabels[k] ?? k) })
   }
   for (const k of caps.computed_keys) {
-    out.push({ value: k, label: STAGE_COMPUTED_LABELS[k] ?? k })
+    out.push({ value: k, label: STAGE_COMPUTED_LABEL_KEYS[k] ? t(STAGE_COMPUTED_LABEL_KEYS[k]) : k })
   }
   for (const ukind of caps.upstream_kinds) {
     const maxUsed = maxUsedUpstreamIndex(widgets, ukind)
     const showUpTo = Math.min(8, maxUsed + 1)
     const suffix = ukind === 'text' ? 'value' : 'annotated'
-    const label  = UPSTREAM_KIND_LABELS[ukind]
+    const label  = t(`bindTo.upstream.${ukind}`)
     for (let i = 0; i <= showUpTo; i++) {
       out.push({
         value: `upstream_${ukind}:${suffix}[${i}]`,
@@ -283,7 +283,7 @@ export function buildBindingOptions(
     if (ukind === 'image' && caps.option_keys.includes('option:mask_data')) {
       out.push({
         value: 'upstream_image:masked[0]',
-        label: 'Upstream image + painted mask (alpha)',
+        label: t('bindTo.maskedImage'),
       })
     }
   }

@@ -6,6 +6,7 @@ from typing import Any, Optional
 from sqlalchemy import select
 
 from ... import db
+from .bindings import drop_stale_api
 
 
 _log = logging.getLogger(__name__)
@@ -86,6 +87,7 @@ def get_workflow_for_invoke(kind: str, label: str) -> Optional[dict]:
         ).scalar_one_or_none()
         if row is None:
             return None
+        drop_stale_api(s, row)
         api_obj: Optional[dict] = None
         if row.api_json:
             try:

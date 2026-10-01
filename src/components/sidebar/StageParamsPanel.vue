@@ -95,7 +95,7 @@
       >
         <div class="ctv:flex-1 ctv:min-w-0">
           <div class="ctv:flex ctv:items-center ctv:gap-1.5">
-            <span class="ctv:truncate ctv:font-semibold">{{ p.label }}</span>
+            <span class="ctv:truncate ctv:font-semibold">{{ p.origin === 0 ? stageParamLabel(p.key, p.label) : p.label }}</span>
             <span v-if="p.origin === 0" class="ctv:py-0 ctv:px-1 ctv:rounded ctv:text-3xs ctv:bg-base-foreground/10 ctv:text-muted-foreground">
               {{ $t('stageParams.sidebar.system') }}
             </span>
@@ -125,6 +125,7 @@ import ComfyTVText from '@/components/widgets/ComfyTVText.vue'
 import ComfyTVToggle from '@/components/widgets/ComfyTVToggle.vue'
 import ComfyTVSelect from '@/components/widgets/ComfyTVSelect.vue'
 import StageWorkflowList from '@/components/sidebar/StageWorkflowList.vue'
+import { stageParamLabel } from '@/composables/sidebar/workflowConfigCatalog'
 import {
   useStageKindSelection,
   useStageParamForm,

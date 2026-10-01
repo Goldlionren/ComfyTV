@@ -672,7 +672,8 @@ class TestSeedAndCRUD:
 
         # Stamp api_json so invoke is allowed.
         api = {"3": {"class_type": "KSampler", "inputs": {"seed": 0}}}
-        assert wdb.set_api_json("image", "SD 1.5", api, 100.0)
+        mtime = (wdir / "image" / "sd15.json").stat().st_mtime
+        assert wdb.set_api_json("image", "SD 1.5", api, mtime)
 
         cfg = wdb.get_workflow_for_invoke("image", "SD 1.5")
         assert cfg is not None
@@ -680,6 +681,24 @@ class TestSeedAndCRUD:
         assert cfg["result"] == {"type": "ui_save_batch", "node": "9"}
         assert cfg["sizing"] == {"base": 512, "snap": 8}
         assert cfg["inputs"]["3"]["seed"]["from"] == "option:seed"
+
+    def test_get_workflow_for_invoke_reconverts_edited_file(
+            self, reset_db, tmp_path, monkeypatch):
+        import os
+        from pathlib import Path
+        wdir = tmp_path / "workflows"
+        self._make_workflow(wdir, "sd15", "image")
+        monkeypatch.setattr(wdb.seed, "_WORKFLOWS_DIR", Path(wdir))
+        wdb.seed_workflows_from_disk(("image",))
+        path = wdir / "image" / "sd15.json"
+        api = {"3": {"class_type": "KSampler", "inputs": {"seed": 0}}}
+        assert wdb.set_api_json("image", "sd15", api, path.stat().st_mtime)
+        assert wdb.get_workflow_for_invoke("image", "sd15")["api_json"] == api
+
+        st = path.stat()
+        os.utime(path, (st.st_atime, st.st_mtime + 10))
+        with pytest.raises(RuntimeError, match="could not be converted"):
+            wdb.get_workflow_for_invoke("image", "sd15")
 
     def test_set_api_json_invalid_workflow(self, reset_db):
         assert wdb.set_api_json("image", "Nope", {}, 0.0) is False
@@ -808,7 +827,8 @@ class TestSeedAndCRUD:
         cfg2 = wdb.get_workflow_config("video", "h3ref")
         assert cfg2["meta"] == {"mention_style": "minimax_tags"}
 
-        wdb.set_api_json("video", "h3ref", {"1": {"class_type": "SaveVideo", "inputs": {}}}, 1.0)
+        wdb.set_api_json("video", "h3ref", {"1": {"class_type": "SaveVideo", "inputs": {}}},
+                         (wdir / "video" / "h3ref.json").stat().st_mtime)
         invoke = wdb.get_workflow_for_invoke("video", "h3ref")
         assert invoke["meta"] == {"mention_style": "minimax_tags"}
 
