@@ -59963,7 +59963,7 @@ class ArrayStream {
 }
 let sparkPromise = null;
 function loadSpark() {
-  return sparkPromise ?? (sparkPromise = import("./spark.module-C235EOKd.mjs"));
+  return sparkPromise ?? (sparkPromise = import("./spark.module-Dvy_6qdi.mjs"));
 }
 const MESH_MODEL_EXTENSIONS = [".glb", ".gltf", ".fbx", ".obj", ".stl", ".dae"];
 const SPLAT_MODEL_EXTENSIONS = [".spz", ".splat", ".ksplat"];
@@ -65507,32 +65507,29 @@ function positionRemap(prev, next) {
   });
   return map2;
 }
+function matchLiveLink(e, live, claimed) {
+  return live.find((l) => l.link === e.link && !claimed.has(l.link)) ?? (e.from ? live.find((l) => !claimed.has(l.link) && l.from != null && l.from[0] === e.from[0] && l.from[1] === e.from[1]) : void 0);
+}
 function reconcileType(prev, live) {
   const claimed = /* @__PURE__ */ new Set();
   const next = [];
-  const seen = /* @__PURE__ */ new Set();
-  for (const e of prev) {
-    if (e.src !== "link") {
-      if (!seen.has(e.key)) {
-        seen.add(e.key);
-        next.push(e);
-      }
-      continue;
+  const remap = /* @__PURE__ */ new Map();
+  prev.forEach((e, i) => {
+    const match = e.src === "link" ? matchLiveLink(e, live, claimed) : void 0;
+    if (e.src === "link" && !match) {
+      remap.set(i + 1, null);
+      return;
     }
-    let match = live.find((l) => l.link === e.link && !claimed.has(l.link));
-    if (!match && e.from) {
-      match = live.find((l) => !claimed.has(l.link) && l.from != null && l.from[0] === e.from[0] && l.from[1] === e.from[1]);
-    }
-    if (!match) continue;
-    claimed.add(match.link);
-    next.push(linkEntry(match));
-  }
+    if (match) claimed.add(match.link);
+    if (next.length !== i) remap.set(i + 1, next.length + 1);
+    next.push(match ? linkEntry(match) : e);
+  });
   for (const l of live) {
     if (claimed.has(l.link)) continue;
     claimed.add(l.link);
     next.push(linkEntry(l));
   }
-  return next;
+  return { entries: next, remap };
 }
 function readLegacyRefs(node) {
   var _a2;
@@ -65589,15 +65586,15 @@ function reconcileTable(node, graph) {
     return { table, changed: true, remap: migrated ? remap : {}, migrated, hadLegacy: legacy != null };
   }
   for (const type of MEDIA_TYPES) {
-    let next = reconcileType(prev[type], liveLinks(node, type, graph));
+    const r2 = reconcileType(prev[type], liveLinks(node, type, graph));
+    let next = r2.entries;
     if (legacy) {
-      for (const r2 of legacy) {
-        if (r2.type === type && !next.some((e) => e.key === r2.entry.key)) next = [...next, r2.entry];
+      for (const ref2 of legacy) {
+        if (ref2.type === type && !next.some((e) => e.key === ref2.entry.key)) next = [...next, ref2.entry];
       }
     }
     table[type] = next;
-    const m = positionRemap(prev[type], next);
-    if (m.size) remap[type] = m;
+    if (r2.remap.size) remap[type] = r2.remap;
   }
   return { table, changed: !tablesEqual(prev, table), remap, migrated: false, hadLegacy: legacy != null };
 }
@@ -86573,7 +86570,7 @@ const _sfc_main$4o = /* @__PURE__ */ defineComponent({
       }
     });
     const AgentPanelRoot = /* @__PURE__ */ defineAsyncComponent({
-      loader: () => import("./AgentPanelRoot-DAT_MXVw.mjs"),
+      loader: () => import("./AgentPanelRoot-BDmkSRal.mjs"),
       errorComponent: AgentPanelLoadError,
       onError: (error2, _retry, fail) => {
         reportError(error2, { errorType: "agent_panel_load_failure" });
@@ -91411,6 +91408,7 @@ function rewritePromptTokens(node, remap) {
   return removed;
 }
 function syncMediaTable(node, graph = app$1 == null ? void 0 : app$1.graph) {
+  relinkPastedMedia(node);
   const result = reconcileTable(node, graph);
   if (result.hadLegacy) dropLegacyRefs(node);
   if (!result.changed) return { changed: false, removed: [] };
@@ -91420,6 +91418,31 @@ function syncMediaTable(node, graph = app$1 == null ? void 0 : app$1.graph) {
     console.warn(`[ComfyTV/media] @${r2.type}_${r2.position} removed from prompt — its media left the stage`);
   }
   return { changed: true, removed };
+}
+function relinkPastedMedia(node) {
+  var _a2;
+  const graph = node == null ? void 0 : node.graph;
+  if (!graph) return;
+  const table = readMediaTable(node);
+  for (const type of MEDIA_TYPES) {
+    const live = liveLinks(node, type, graph);
+    const claimed = /* @__PURE__ */ new Set();
+    for (const e of table[type]) {
+      if (e.src !== "link") continue;
+      const match = matchLiveLink(e, live, claimed);
+      if (match) {
+        claimed.add(match.link);
+        continue;
+      }
+      const src = lookupLink(graph, e.link);
+      if (!src || String(src.target_id) === String(node.id)) continue;
+      const origin = (_a2 = graph.getNodeById) == null ? void 0 : _a2.call(graph, src.origin_id);
+      const slot = (node.inputs ?? []).findIndex((i) => (i == null ? void 0 : i.link) == null && typeof (i == null ? void 0 : i.name) === "string" && (AUTOGROW_KEY_RE[type].test(i.name) || type === "audio" && i.name === "audio"));
+      if (!origin || slot < 0) continue;
+      const link2 = origin.connect(src.origin_slot, node, slot);
+      if (link2) claimed.add(Number(link2.id));
+    }
+  }
 }
 function commit(node, prev, next) {
   if (tablesEqual(prev, next)) return [];
@@ -148978,7 +149001,7 @@ async function parseToObject(file) {
     return new OBJLoader2().parse(await file.text());
   }
   if (lower.endsWith(".stl")) {
-    const { STLLoader } = await import("./STLLoader-Gbq3qG-t.mjs");
+    const { STLLoader } = await import("./STLLoader-BXVeJVYH.mjs");
     const geometry = new STLLoader().parse(await file.arrayBuffer());
     const material = new MeshStandardMaterial({ color: 13421772 });
     const group = new Group();
@@ -148986,7 +149009,7 @@ async function parseToObject(file) {
     return group;
   }
   if (lower.endsWith(".dae")) {
-    const { ColladaLoader } = await import("./ColladaLoader-DlZxHhPH.mjs");
+    const { ColladaLoader } = await import("./ColladaLoader-C7R4xzpy.mjs");
     const collada = new ColladaLoader().parse(await file.text(), "");
     if (!(collada == null ? void 0 : collada.scene)) throw new Error(`failed to parse ${file.name}`);
     return collada.scene;
@@ -244912,4 +244935,4 @@ export {
   DropdownMenuRoot_default as y,
   DropdownMenuTrigger_default as z
 };
-//# sourceMappingURL=main-DSSdudM4.mjs.map
+//# sourceMappingURL=main-Bw52jVsD.mjs.map

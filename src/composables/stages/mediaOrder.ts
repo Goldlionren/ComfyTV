@@ -169,7 +169,7 @@ export function nodeAcceptsMedia(node: unknown, type: MediaType): boolean {
     && (AUTOGROW_KEY_RE[type].test(i.name) || (type === 'audio' && i.name === 'audio')))
 }
 
-function lookupLink(graph: AnyGraph, id: number): any {
+export function lookupLink(graph: AnyGraph, id: number): any {
   const links = graph?.links
   if (!links) return graph?.getLink?.(id) ?? null
   if (typeof links.get === 'function') return links.get(id) ?? null
@@ -211,30 +211,36 @@ export function positionRemap(prev: MediaEntry[], next: MediaEntry[]): Map<numbe
   return map
 }
 
-function reconcileType(prev: MediaEntry[], live: LiveLink[]): MediaEntry[] {
+export function matchLiveLink(e: MediaEntry, live: LiveLink[], claimed: Set<number>): LiveLink | undefined {
+  return live.find(l => l.link === e.link && !claimed.has(l.link))
+    ?? (e.from
+      ? live.find(l => !claimed.has(l.link) && l.from != null
+        && l.from[0] === e.from![0] && l.from[1] === e.from![1])
+      : undefined)
+}
+
+function reconcileType(
+  prev: MediaEntry[], live: LiveLink[],
+): { entries: MediaEntry[]; remap: Map<number, number | null> } {
   const claimed = new Set<number>()
   const next: MediaEntry[] = []
-  const seen = new Set<string>()
-  for (const e of prev) {
-    if (e.src !== 'link') {
-      if (!seen.has(e.key)) { seen.add(e.key); next.push(e) }
-      continue
+  const remap = new Map<number, number | null>()
+  prev.forEach((e, i) => {
+    const match = e.src === 'link' ? matchLiveLink(e, live, claimed) : undefined
+    if (e.src === 'link' && !match) {
+      remap.set(i + 1, null)
+      return
     }
-    let match = live.find(l => l.link === e.link && !claimed.has(l.link))
-    if (!match && e.from) {
-      match = live.find(l => !claimed.has(l.link) && l.from != null
-        && l.from[0] === e.from![0] && l.from[1] === e.from![1])
-    }
-    if (!match) continue
-    claimed.add(match.link)
-    next.push(linkEntry(match))
-  }
+    if (match) claimed.add(match.link)
+    if (next.length !== i) remap.set(i + 1, next.length + 1)
+    next.push(match ? linkEntry(match) : e)
+  })
   for (const l of live) {
     if (claimed.has(l.link)) continue
     claimed.add(l.link)
     next.push(linkEntry(l))
   }
-  return next
+  return { entries: next, remap }
 }
 
 interface LegacyRef { slot: number; type: MediaType; entry: MediaEntry }
@@ -307,15 +313,15 @@ export function reconcileTable(node: unknown, graph?: AnyGraph): ReconcileResult
   }
 
   for (const type of MEDIA_TYPES) {
-    let next = reconcileType(prev[type], liveLinks(node, type, graph))
+    const r = reconcileType(prev[type], liveLinks(node, type, graph))
+    let next = r.entries
     if (legacy) {
-      for (const r of legacy) {
-        if (r.type === type && !next.some(e => e.key === r.entry.key)) next = [...next, r.entry]
+      for (const ref of legacy) {
+        if (ref.type === type && !next.some(e => e.key === ref.entry.key)) next = [...next, ref.entry]
       }
     }
     table[type] = next
-    const m = positionRemap(prev[type], next)
-    if (m.size) remap[type] = m
+    if (r.remap.size) remap[type] = r.remap
   }
   return { table, changed: !tablesEqual(prev, table), remap, migrated: false, hadLegacy: legacy != null }
 }
