@@ -371,6 +371,9 @@ const extension: ComfyExtension = {
         store.applyExecutedPayload(state, msg)
       },
     )
+    proto.onConfigure = useChainCallback(proto.onConfigure, function (this: ComfyNode) {
+      ;(this as any).__comfytvConfigured = true
+    })
   },
 
   loadedGraphNode(node: ComfyNode) {

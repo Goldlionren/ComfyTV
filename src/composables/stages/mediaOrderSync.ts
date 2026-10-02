@@ -75,7 +75,9 @@ function relinkPastedMedia(node: any): void {
       const slot = (node.inputs ?? []).findIndex((i: any) => i?.link == null && typeof i?.name === 'string'
         && (AUTOGROW_KEY_RE[type].test(i.name) || (type === 'audio' && i.name === 'audio')))
       if (!origin || slot < 0) continue
+      node.__comfytvRelinking = true
       const link = origin.connect(src.origin_slot, node, slot)
+      node.__comfytvRelinking = false
       if (link) claimed.add(Number(link.id))
     }
   }

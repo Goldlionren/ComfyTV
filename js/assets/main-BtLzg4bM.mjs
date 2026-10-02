@@ -59963,7 +59963,7 @@ class ArrayStream {
 }
 let sparkPromise = null;
 function loadSpark() {
-  return sparkPromise ?? (sparkPromise = import("./spark.module-Dvy_6qdi.mjs"));
+  return sparkPromise ?? (sparkPromise = import("./spark.module-eYBtskMw.mjs"));
 }
 const MESH_MODEL_EXTENSIONS = [".glb", ".gltf", ".fbx", ".obj", ".stl", ".dae"];
 const SPLAT_MODEL_EXTENSIONS = [".spz", ".splat", ".ksplat"];
@@ -86570,7 +86570,7 @@ const _sfc_main$4o = /* @__PURE__ */ defineComponent({
       }
     });
     const AgentPanelRoot = /* @__PURE__ */ defineAsyncComponent({
-      loader: () => import("./AgentPanelRoot-BDmkSRal.mjs"),
+      loader: () => import("./AgentPanelRoot-CA2CMPMZ.mjs"),
       errorComponent: AgentPanelLoadError,
       onError: (error2, _retry, fail) => {
         reportError(error2, { errorType: "agent_panel_load_failure" });
@@ -91439,7 +91439,9 @@ function relinkPastedMedia(node) {
       const origin = (_a2 = graph.getNodeById) == null ? void 0 : _a2.call(graph, src.origin_id);
       const slot = (node.inputs ?? []).findIndex((i) => (i == null ? void 0 : i.link) == null && typeof (i == null ? void 0 : i.name) === "string" && (AUTOGROW_KEY_RE[type].test(i.name) || type === "audio" && i.name === "audio"));
       if (!origin || slot < 0) continue;
+      node.__comfytvRelinking = true;
       const link2 = origin.connect(src.origin_slot, node, slot);
+      node.__comfytvRelinking = false;
       if (link2) claimed.add(Number(link2.id));
     }
   }
@@ -149001,7 +149003,7 @@ async function parseToObject(file) {
     return new OBJLoader2().parse(await file.text());
   }
   if (lower.endsWith(".stl")) {
-    const { STLLoader } = await import("./STLLoader-BXVeJVYH.mjs");
+    const { STLLoader } = await import("./STLLoader-BlmlRyVM.mjs");
     const geometry = new STLLoader().parse(await file.arrayBuffer());
     const material = new MeshStandardMaterial({ color: 13421772 });
     const group = new Group();
@@ -149009,7 +149011,7 @@ async function parseToObject(file) {
     return group;
   }
   if (lower.endsWith(".dae")) {
-    const { ColladaLoader } = await import("./ColladaLoader-C7R4xzpy.mjs");
+    const { ColladaLoader } = await import("./ColladaLoader-BdbIF-fp.mjs");
     const collada = new ColladaLoader().parse(await file.text(), "");
     if (!(collada == null ? void 0 : collada.scene)) throw new Error(`failed to parse ${file.name}`);
     return collada.scene;
@@ -232196,7 +232198,7 @@ function addWorkflowUploadButton(node, wfWidget, kind) {
   var _a2, _b2, _c;
   if (!(node == null ? void 0 : node.addWidget) || !wfWidget) return;
   if ((_a2 = node.widgets) == null ? void 0 : _a2.some((w) => w.__comfytvUpload)) return;
-  const saved = node.__comfytvFromSave && ((_b2 = node.size) == null ? void 0 : _b2.length) >= 2 ? [node.size[0], node.size[1]] : null;
+  const saved = node.__comfytvConfigured && ((_b2 = node.size) == null ? void 0 : _b2.length) >= 2 ? [node.size[0], node.size[1]] : null;
   const btn2 = node.addWidget(
     "button",
     i18n.global.t("workflow.uploadButton"),
@@ -234944,7 +234946,7 @@ function bindCardHeight(node, opts) {
   card.addEventListener("pointerdown", goLive, { capture: true });
   const prevConn = anyNode.onConnectionsChange;
   anyNode.onConnectionsChange = function(...args) {
-    goLive();
+    if (!anyNode.__comfytvRelinking) goLive();
     return prevConn == null ? void 0 : prevConn.apply(this, args);
   };
   opts.scope.run(() => {
@@ -234985,7 +234987,7 @@ function hideNativeWidgets(node) {
   }
 }
 function ensureMinSize(node, minW, minH) {
-  if (node.__comfytvFromSave) return;
+  if (node.__comfytvConfigured) return;
   const [w0, h0] = node.size;
   node.setSize([Math.max(w0, minW), Math.max(h0, minH)]);
 }
@@ -244648,6 +244650,9 @@ const extension = {
         store2.applyExecutedPayload(state2, msg);
       }
     );
+    proto.onConfigure = useChainCallback(proto.onConfigure, function() {
+      this.__comfytvConfigured = true;
+    });
   },
   loadedGraphNode(node) {
     node.__comfytvFromSave = true;
@@ -244935,4 +244940,4 @@ export {
   DropdownMenuRoot_default as y,
   DropdownMenuTrigger_default as z
 };
-//# sourceMappingURL=main-Bw52jVsD.mjs.map
+//# sourceMappingURL=main-BtLzg4bM.mjs.map

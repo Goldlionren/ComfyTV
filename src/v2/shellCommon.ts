@@ -86,7 +86,7 @@ export function bindCardHeight(node: ComfyNode, opts: {
   card.addEventListener('pointerdown', goLive, { capture: true })
   const prevConn = anyNode.onConnectionsChange
   anyNode.onConnectionsChange = function (...args: unknown[]) {
-    goLive()
+    if (!anyNode.__comfytvRelinking) goLive()
     return prevConn?.apply(this, args)
   }
 
@@ -128,7 +128,7 @@ export function hideNativeWidgets(node: ComfyNode) {
 }
 
 export function ensureMinSize(node: ComfyNode, minW: number, minH: number) {
-  if ((node as any).__comfytvFromSave) return
+  if ((node as any).__comfytvConfigured) return
   const [w0, h0] = node.size
   node.setSize([Math.max(w0, minW), Math.max(h0, minH)])
 }
