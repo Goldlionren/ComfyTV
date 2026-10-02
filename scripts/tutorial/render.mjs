@@ -3,6 +3,7 @@ import path from 'node:path'
 import { fileURLToPath, pathToFileURL } from 'node:url'
 import { marked } from 'marked'
 import { chromium } from 'playwright'
+import { renderWechat } from './wechat.mjs'
 
 const here = path.dirname(fileURLToPath(import.meta.url))
 const args = process.argv.slice(2)
@@ -166,6 +167,10 @@ fs.mkdirSync(outDir, { recursive: true })
 const htmlPath = path.join(outDir, `${name}.html`)
 fs.writeFileSync(htmlPath, html)
 console.log(`html  ${path.relative(process.cwd(), htmlPath)}`)
+
+const wxPath = path.join(outDir, `${name}.wechat.html`)
+fs.writeFileSync(wxPath, renderWechat(tokens, { relocate, title: [lesson.kicker, lesson.title].filter(Boolean).join(' · ') }))
+console.log(`wx    ${path.relative(process.cwd(), wxPath)}`)
 
 if (withImages) {
   const imgDir = path.join(outDir, name)
