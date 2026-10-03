@@ -3329,7 +3329,7 @@ var Registry2 = class extends Registry$1 {
     return this._resolvedGrammars.get(name);
   }
   loadLanguage(lang) {
-    var _a2, _b2, _c2, _d;
+    var _a2, _b2, _c2, _d, _e, _f, _g;
     if (this.getGrammar(lang.name)) return;
     const embeddedLazilyBy = new Set([...this._langMap.values()].filter((i2) => {
       var _a3;
@@ -3349,10 +3349,11 @@ var Registry2 = class extends Registry$1 {
     });
     this._loadedLanguagesCache = null;
     if (embeddedLazilyBy.size) for (const e of embeddedLazilyBy) {
+      (_c2 = (_b2 = (_a2 = this._syncRegistry) == null ? void 0 : _a2._grammars) == null ? void 0 : _b2.get(e.scopeName)) == null ? void 0 : _c2.dispose();
       this._resolvedGrammars.delete(e.name);
       this._loadedLanguagesCache = null;
-      (_b2 = (_a2 = this._syncRegistry) == null ? void 0 : _a2._injectionGrammars) == null ? void 0 : _b2.delete(e.scopeName);
-      (_d = (_c2 = this._syncRegistry) == null ? void 0 : _c2._grammars) == null ? void 0 : _d.delete(e.scopeName);
+      (_e = (_d = this._syncRegistry) == null ? void 0 : _d._injectionGrammars) == null ? void 0 : _e.delete(e.scopeName);
+      (_g = (_f = this._syncRegistry) == null ? void 0 : _f._grammars) == null ? void 0 : _g.delete(e.scopeName);
       this.loadLanguage(this._langMap.get(e.name));
     }
   }
@@ -3419,7 +3420,7 @@ var Resolver = class {
     this._scopeToLang.set(l2.scopeName, l2);
     if (l2.injectTo) l2.injectTo.forEach((i2) => {
       if (!this._injections.get(i2)) this._injections.set(i2, []);
-      this._injections.get(i2).push(l2.scopeName);
+      if (!this._injections.get(i2).includes(l2.scopeName)) this._injections.get(i2).push(l2.scopeName);
     });
   }
   getInjections(scopeName) {
@@ -6073,16 +6074,17 @@ function flatTokenVariants(merged, variantsOrder, cssVariablePrefix, defaultColo
   styles.forEach((cur, idx) => {
     for (const key2 of styleKeys) {
       const value = cur[key2] || "inherit";
-      if (idx === 0 && defaultColor && COLOR_KEYS.includes(key2)) if (defaultColor === "light-dark()" && styles.length > 1) {
-        const lightIndex = variantsOrder.findIndex((t) => t === "light");
-        const darkIndex = variantsOrder.findIndex((t) => t === "dark");
-        if (lightIndex === -1 || darkIndex === -1) throw new ShikiError('When using `defaultColor: "light-dark()"`, you must provide both `light` and `dark` themes');
-        const lightValue = styles[lightIndex][key2] || "inherit";
-        const darkValue = styles[darkIndex][key2] || "inherit";
-        mergedStyles[key2] = `light-dark(${lightValue}, ${darkValue})`;
-        if (colorsRendering === "css-vars") mergedStyles[varKey(idx, key2)] = value;
-      } else mergedStyles[key2] = value;
-      else if (colorsRendering === "css-vars") mergedStyles[varKey(idx, key2)] = value;
+      if (idx === 0 && defaultColor && COLOR_KEYS.includes(key2)) {
+        if (defaultColor === "light-dark()" && styles.length > 1) {
+          const lightIndex = variantsOrder.findIndex((t) => t === "light");
+          const darkIndex = variantsOrder.findIndex((t) => t === "dark");
+          if (lightIndex === -1 || darkIndex === -1) throw new ShikiError('When using `defaultColor: "light-dark()"`, you must provide both `light` and `dark` themes');
+          const lightValue = styles[lightIndex][key2] || "inherit";
+          const darkValue = styles[darkIndex][key2] || "inherit";
+          mergedStyles[key2] = `light-dark(${lightValue}, ${darkValue})`;
+          if (colorsRendering === "css-vars") mergedStyles[varKey(idx, key2)] = value;
+        } else mergedStyles[key2] = value;
+      } else if (colorsRendering === "css-vars") mergedStyles[varKey(idx, key2)] = value;
     }
   });
   token2.htmlStyle = mergedStyles;
@@ -6702,8 +6704,10 @@ function tokensToHast(tokens, options, transformerContext, grammarState = getLas
   };
   const { structure = "classic", tabindex = "0" } = options;
   const properties = { class: `shiki ${options.themeName || ""}` };
-  if (options.rootStyle !== false) if (options.rootStyle != null) properties.style = options.rootStyle;
-  else properties.style = `background-color:${options.bg};color:${options.fg}`;
+  if (options.rootStyle !== false) {
+    if (options.rootStyle != null) properties.style = options.rootStyle;
+    else properties.style = `background-color:${options.bg};color:${options.fg}`;
+  }
   if (tabindex !== false && tabindex != null) properties.tabindex = tabindex.toString();
   for (const [key2, value] of Object.entries(options.meta || {})) if (!key2.startsWith("_")) properties[key2] = value;
   let preNode = {
@@ -6937,11 +6941,37 @@ async function createHighlighterCore(options) {
   };
 }
 const MAX = 4294967295;
+function isSearchCacheable(regexp) {
+  var _a2;
+  return !regexp.sticky && !((_a2 = regexp.rawOptions) == null ? void 0 : _a2.strategy);
+}
+function toResult(index, indices) {
+  return {
+    index,
+    captureIndices: indices.map((indice) => {
+      if (indice == null) return {
+        start: MAX,
+        end: MAX,
+        length: 0
+      };
+      return {
+        start: indice[0],
+        end: indice[1],
+        length: indice[1] - indice[0]
+      };
+    })
+  };
+}
 var JavaScriptScanner = class {
   constructor(patterns, options = {}) {
     __publicField(this, "patterns");
     __publicField(this, "options");
     __publicField(this, "regexps");
+    /**
+    * Last search of each regexp on the current string, reused the way `vscode-oniguruma` does.
+    * `null` for regexps whose searches can't be reused.
+    */
+    __publicField(this, "lastSearches");
     this.patterns = patterns;
     this.options = options;
     const { forgiving = false, cache, regexConstructor } = options;
@@ -6964,52 +6994,63 @@ var JavaScriptScanner = class {
         throw e;
       }
     });
+    this.lastSearches = this.regexps.map((regexp) => regexp && isSearchCacheable(regexp) ? {
+      strId: 0,
+      searchedFrom: 0,
+      matchIndex: -1,
+      indices: null
+    } : null);
   }
   findNextMatchSync(string, startPosition, _options) {
     const str = typeof string === "string" ? string : string.content;
-    const pending = [];
-    function toResult(index, match, offset = 0) {
-      return {
-        index,
-        captureIndices: match.indices.map((indice) => {
-          if (indice == null) return {
-            start: MAX,
-            end: MAX,
-            length: 0
-          };
-          return {
-            start: indice[0] + offset,
-            end: indice[1] + offset,
-            length: indice[1] - indice[0]
-          };
-        })
-      };
-    }
+    const strId = typeof string === "string" ? 0 : string.id || 0;
+    let bestIndex = -1;
+    let bestMatchIndex = 0;
+    let bestIndices = null;
     for (let i2 = 0; i2 < this.regexps.length; i2++) {
       const regexp = this.regexps[i2];
       if (!regexp) continue;
       try {
-        regexp.lastIndex = startPosition;
-        const match = regexp.exec(str);
-        if (!match) continue;
-        if (match.index === startPosition) return toResult(i2, match, 0);
-        pending.push([
-          i2,
-          match,
-          0
-        ]);
+        const last = strId ? this.lastSearches[i2] : null;
+        let matchIndex;
+        let indices;
+        if (last && last.strId === strId && last.searchedFrom <= startPosition && (last.matchIndex === -1 || last.matchIndex >= startPosition)) {
+          matchIndex = last.matchIndex;
+          indices = last.indices;
+        } else {
+          regexp.lastIndex = startPosition;
+          const match = regexp.exec(str);
+          matchIndex = match ? match.index : -1;
+          indices = match ? match.indices : null;
+          if (last) {
+            last.strId = strId;
+            last.searchedFrom = startPosition;
+            last.matchIndex = matchIndex;
+            last.indices = indices;
+          }
+        }
+        if (matchIndex === -1) continue;
+        if (matchIndex === startPosition) return toResult(i2, indices);
+        if (bestIndex === -1 || matchIndex < bestMatchIndex) {
+          bestIndex = i2;
+          bestMatchIndex = matchIndex;
+          bestIndices = indices;
+        }
       } catch (e) {
         if (this.options.forgiving) continue;
         throw e;
       }
     }
-    if (pending.length) {
-      const minIndex = Math.min(...pending.map((m2) => m2[1].index));
-      for (const [i2, match, offset] of pending) if (match.index === minIndex) return toResult(i2, match, offset);
-    }
-    return null;
+    return bestIndex === -1 ? null : toResult(bestIndex, bestIndices);
   }
 };
+let lastStringId = 0;
+function createJavaScriptEngineString(content) {
+  return {
+    content,
+    id: ++lastStringId
+  };
+}
 function r$2(e) {
   if ([...e].length !== 1) throw new Error(`Expected "${e}" to be a single code point`);
   return e.codePointAt(0);
@@ -10123,9 +10164,7 @@ function createJavaScriptRegexEngine(options = {}) {
     createScanner(patterns) {
       return new JavaScriptScanner(patterns, _options);
     },
-    createString(s2) {
-      return { content: s2 };
-    }
+    createString: createJavaScriptEngineString
   };
 }
 const LANGS = {
@@ -10177,4 +10216,4 @@ async function codeToHtml(code, options) {
 export {
   codeToHtml
 };
-//# sourceMappingURL=shiki-Do5VLs4k.mjs.map
+//# sourceMappingURL=shiki-yOI22FK8.mjs.map

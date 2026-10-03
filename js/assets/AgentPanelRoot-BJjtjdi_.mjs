@@ -1,8 +1,8 @@
 var __defProp = Object.defineProperty;
-var __defNormalProp = (obj, key, value) => key in obj ? __defProp(obj, key, { enumerable: true, configurable: true, writable: true, value }) : obj[key] = value;
-var __publicField = (obj, key, value) => __defNormalProp(obj, typeof key !== "symbol" ? key + "" : key, value);
+var __defNormalProp = (obj, key2, value) => key2 in obj ? __defProp(obj, key2, { enumerable: true, configurable: true, writable: true, value }) : obj[key2] = value;
+var __publicField = (obj, key2, value) => __defNormalProp(obj, typeof key2 !== "symbol" ? key2 + "" : key2, value);
 var _a;
-import { bn as defineComponent, cC as useVModel, cc as toRefs, cq as useForwardExpose, bT as openBlock, be as createBlock, cJ as withCtx, c2 as renderSlot, cg as unref, aj as Primitive, bg as createContext, ct as useId, c0 as ref, cG as watch, bK as nextTick, bQ as onMounted, co as useEventListener, bl as createVNode, bI as mergeProps, bf as createCommentVNode, ai as Presence_default, bb as computed, bh as createElementBlock, bA as injectPopperContentContext, bN as normalizeStyle, cn as useEmitAsProps, bM as normalizeProps, bt as guardReactiveProps, a6 as MenuItem_default, bw as hostStore, b2 as app, bX as parseNodeLocatorId, bx as hostVersion, bv as hostManager, bo as defineStore, cz as useStorage, ce as toValue, b9 as clsx, bL as normalizeClass, ba as cn, cy as useModel, cA as useTemplateRef, cK as withDirectives, cF as vModelText, bH as mergeModels, a$ as _export_sfc, aN as TooltipProvider_default, aO as TooltipRoot_default, aP as TooltipTrigger_default, bd as createBaseVNode, cM as withModifiers, aM as TooltipPortal_default, aL as TooltipContent_default, bk as createTextVNode, c9 as toDisplayString, cs as useI18n, M as Fragment, c1 as renderList, y as DropdownMenuRoot_default, z as DropdownMenuTrigger_default, v as DropdownMenuPortal_default, u as DropdownMenuContent_default, bs as getCurrentScope, bR as onScopeDispose, av as Schema, bF as isNodeLocatorId, bu as history, bG as keymap, b$ as redo, cf as undo, b5 as baseKeymap, G as EditorView, D as DOMParser$1, aB as Slice, N as Fragment$1, b8 as closeHistory, q as Decoration, r as DecorationSet, aI as TextSelection, bP as onBeforeUnmount, F as EditorState, c5 as shallowRef, c7 as storeToRefs, cj as useAgentRunModeStore, cu as useId$1, c4 as resolveDirective, b6 as buildTooltipConfig, w as DropdownMenuRadioGroup_default, x as DropdownMenuRadioItem_default, c3 as reportError, bz as inject, bE as isMemoSame, ck as useClipboard, cH as watchDebounced, b1 as api, bZ as reactiveOmit, cr as useForwardPropsEmits, aD as SliderRoot_default, aF as SliderTrack_default, aC as SliderRange_default, aE as SliderThumb_default, cx as useMediaControls, cI as whenever, cb as toRef, bm as defineAsyncComponent, cw as useLocalStorage, cE as useWorkflowStore, ca as toRaw, ci as useAgentPanelStore, l as DOMSerializer, cl as useClipboardItems, cL as withKeys, cv as useIntersectionObserver, bj as createSlots, aH as Teleport, bi as createNodeLocatorId, cm as useElementBounding, cp as useFloating, b4 as autoUpdate, L as FocusScope_default, bO as offset, c6 as shift, cD as useWindowSize, by as i18n, a as AgentApiError, cd as toTurnId, bB as isAgentEvent, bV as parseAgentWsEvent, cO as zDisownedWorkflowError, cN as zAgentAdmissionError, A as AGENT_WS_EVENT_TYPES, cB as useTimestamp, bW as parseNodeId, bJ as newChatRequests, b0 as agentBusy, bY as provide, br as eagleAvailable, bU as openEaglePicker, b7 as closeEaglePicker, bS as openAssetPicker, bC as isComfyTVAssetDrag, bD as isEagleDrag, bq as droppedEagleAssets, bp as droppedComfyTVAssets, ch as uploadToLibrary, c8 as toAttachment, bc as createAgentRestClient, b3 as assetIdOf, b_ as readonly } from "./main-BtLzg4bM.mjs";
+import { $ as defineComponent, aH as useVModel, aI as toRefs, aJ as useForwardExpose, a0 as openBlock, a6 as createBlock, aK as withCtx, aL as renderSlot, aM as unref, aN as Primitive, aO as createContext, aP as useId, aQ as ref, aR as watch, aS as nextTick, a4 as onMounted, aT as useEventListener, aU as createVNode, aV as mergeProps, a7 as createCommentVNode, aW as Presence_default, ab as computed, a1 as createElementBlock, aX as injectPopperContentContext, aY as normalizeStyle, aZ as useEmitAsProps, a_ as normalizeProps, a$ as guardReactiveProps, b0 as MenuItem_default, b1 as validInteractionDecision, b2 as zTVInteraction, b3 as hostStore, b4 as app, b5 as parseNodeLocatorId, b6 as hostVersion, b7 as hostManager, b8 as defineStore, b9 as useStorage, ba as toValue, bb as clsx, bc as normalizeClass, bd as cn, be as useModel, bf as useTemplateRef, bg as withDirectives, bh as vModelText, bi as mergeModels, bj as _export_sfc, bk as TooltipProvider_default, bl as TooltipRoot_default, bm as TooltipTrigger_default, a2 as createBaseVNode, a9 as withModifiers, bn as TooltipPortal_default, bo as TooltipContent_default, bp as createTextVNode, a3 as toDisplayString, bq as useI18n, a8 as Fragment, br as renderList, bs as DropdownMenuRoot_default, bt as DropdownMenuTrigger_default, bu as DropdownMenuPortal_default, bv as DropdownMenuContent_default, bw as getCurrentScope, bx as onScopeDispose, by as Schema, bz as isNodeLocatorId, bA as history, bB as keymap, bC as redo, bD as undo, bE as baseKeymap, bF as EditorView, bG as DOMParser$1, bH as Slice, bI as Fragment$1, bJ as closeHistory, bK as Decoration, bL as DecorationSet, bM as TextSelection, a5 as onBeforeUnmount, bN as EditorState, bO as shallowRef, bP as storeToRefs, bQ as useAgentRunModeStore, bR as useId$1, bS as resolveDirective, bT as buildTooltipConfig, bU as DropdownMenuRadioGroup_default, bV as DropdownMenuRadioItem_default, bW as reportError, bX as inject, bY as reactive, bZ as isMemoSame, b_ as useClipboard, b$ as watchDebounced, c0 as api, c1 as reactiveOmit, c2 as useForwardPropsEmits, c3 as SliderRoot_default, c4 as SliderTrack_default, c5 as SliderRange_default, c6 as SliderThumb_default, c7 as useMediaControls, c8 as whenever, c9 as toRef, ca as defineAsyncComponent, cb as useLocalStorage, cc as useWorkflowStore, cd as toRaw, ce as useAgentPanelStore, cf as DOMSerializer, cg as useClipboardItems, ch as withKeys, ci as useIntersectionObserver, cj as createSlots, aa as Teleport, ck as createNodeLocatorId, cl as useElementBounding, cm as useFloating, cn as autoUpdate, co as FocusScope_default, cp as offset, cq as shift, cr as useWindowSize, cs as i18n, ct as AgentApiError, cu as toTurnId, cv as isAgentEvent, cw as parseAgentWsEvent, cx as zDisownedWorkflowError, cy as zAgentAdmissionError, cz as AGENT_WS_EVENT_TYPES, cA as useTimestamp, cB as createAgentRestClient, cC as parseNodeId, cD as provide, cE as newChatRequests, cF as agentBusy, cG as closeEaglePicker, cH as closeAssetPicker, cI as eagleAvailable, cJ as openEaglePicker, cK as openAssetPicker, cL as isComfyTVAssetDrag, cM as isEagleDrag, cN as droppedEagleAssets, cO as droppedComfyTVAssets, cP as useAssetStore, cQ as assetIdOf, cR as uploadToLibrary, cS as toAttachment, cT as readonly } from "./main-B9mK-0IO.mjs";
 const [injectCollapsibleRootContext, provideCollapsibleRootContext] = /* @__PURE__ */ createContext("CollapsibleRoot");
 var CollapsibleRoot_vue_vue_type_script_setup_true_lang_default = /* @__PURE__ */ defineComponent({
   __name: "CollapsibleRoot",
@@ -225,11 +225,11 @@ var CollapsibleTrigger_vue_vue_type_script_setup_true_lang_default = /* @__PURE_
   }
 });
 var CollapsibleTrigger_default = CollapsibleTrigger_vue_vue_type_script_setup_true_lang_default;
-const _hoisted_1$t = {
+const _hoisted_1$v = {
   key: 0,
   d: "M0 0L6 6L12 0"
 };
-const _hoisted_2$o = {
+const _hoisted_2$q = {
   key: 1,
   d: "M0 0L4.58579 4.58579C5.36683 5.36683 6.63316 5.36684 7.41421 4.58579L12 0"
 };
@@ -270,7 +270,7 @@ var Arrow_vue_vue_type_script_setup_true_lang_default = /* @__PURE__ */ defineCo
         viewBox: _ctx.asChild ? void 0 : "0 0 12 6",
         preserveAspectRatio: _ctx.asChild ? void 0 : "none"
       }), {
-        default: withCtx(() => [renderSlot(_ctx.$slots, "default", {}, () => [!_ctx.rounded ? (openBlock(), createElementBlock("path", _hoisted_1$t)) : (openBlock(), createElementBlock("path", _hoisted_2$o))])]),
+        default: withCtx(() => [renderSlot(_ctx.$slots, "default", {}, () => [!_ctx.rounded ? (openBlock(), createElementBlock("path", _hoisted_1$v)) : (openBlock(), createElementBlock("path", _hoisted_2$q))])]),
         _: 3
       }, 16, [
         "width",
@@ -489,6 +489,99 @@ var TooltipArrow_vue_vue_type_script_setup_true_lang_default = /* @__PURE__ */ d
   }
 });
 var TooltipArrow_default = TooltipArrow_vue_vue_type_script_setup_true_lang_default;
+const interactionViewKey = Symbol("native-interactions");
+function content(i) {
+  const { state: _state, can_respond: _can, ...immutable } = zTVInteraction.parse(i);
+  return JSON.stringify(immutable);
+}
+const terminal = (i) => !["pending", "dispatching", "delivery_unknown"].includes(i.state);
+const key = (i) => `${i.thread_id}\0${i.id}`;
+function createAgentInteractions(rest, apply2) {
+  const canonical = ref(/* @__PURE__ */ new Map());
+  const blocked = ref(/* @__PURE__ */ new Set());
+  const protocolErrors = ref(/* @__PURE__ */ new Map());
+  const protocolFailure = (k) => protocolErrors.value.set(k, "Interaction protocol error: acknowledgement or snapshot mismatch. Canonical state retained; no retry.");
+  const channel = rest.interactionChannel;
+  const view = {
+    now: channel.now,
+    protocolError: (i) => protocolErrors.value.get(key(i)),
+    canRespond(i) {
+      void channel.now.value;
+      const c = canonical.value.get(key(i));
+      return channel.available.value && channel.isAvailable() && channel.connected.value && !blocked.value.has(key(i)) && i.state === "pending" && (c == null ? void 0 : c.state) === "pending" && c.can_respond && content(c) === content(i) && (c.expires_at === null || Date.parse(c.expires_at) > Date.now());
+    }
+  };
+  function accept(i) {
+    const prior = canonical.value.get(key(i));
+    if (prior && terminal(prior)) {
+      if (content(prior) !== content(i) || terminal(i) && prior.state !== i.state) protocolFailure(key(i));
+      const settled = { ...prior, can_respond: false };
+      canonical.value.set(key(i), settled);
+      apply2(settled);
+      return;
+    }
+    if (prior && content(prior) !== content(i)) {
+      const stale = { ...prior, state: "stale", can_respond: false };
+      canonical.value.set(key(i), stale);
+      blocked.value.add(key(i));
+      apply2(stale);
+      return;
+    }
+    canonical.value.set(key(i), i);
+    if (i.state === "pending" && blocked.value.has(key(i)) && prior && ["dispatching", "delivery_unknown"].includes(prior.state)) {
+      canonical.value.set(key(i), { ...i, state: prior.state, can_respond: false });
+      apply2({ ...i, state: prior.state, can_respond: false });
+      return;
+    }
+    if (i.state !== "pending" && !["dispatching", "delivery_unknown"].includes(i.state)) blocked.value.delete(key(i));
+    apply2(i);
+  }
+  function hint(i) {
+    const prior = canonical.value.get(key(i));
+    if (prior && content(prior) !== content(i)) {
+      accept({ ...prior, state: "stale", can_respond: false });
+      blocked.value.add(key(i));
+      return;
+    }
+    const display = { ...prior ?? i, state: (prior == null ? void 0 : prior.state) ?? (i.state === "pending" ? "pending" : "delivery_unknown"), can_respond: false };
+    canonical.value.set(key(i), display);
+    apply2(display);
+  }
+  async function refresh(threadId) {
+    try {
+      const snapshot = await rest.getInteractions(threadId);
+      const present = new Set(snapshot.interactions.map(key));
+      for (const [k, old] of canonical.value) if (old.thread_id === threadId && !present.has(k)) accept({ ...old, state: "stale", can_respond: false });
+      for (const interaction of snapshot.interactions) accept(interaction);
+    } catch {
+      for (const [k, i] of canonical.value) if (i.thread_id === threadId) {
+        canonical.value.set(k, { ...i, can_respond: false });
+        apply2({ ...i, can_respond: false });
+      }
+    }
+  }
+  async function respond({ interaction, decision }) {
+    if (!view.canRespond(interaction) || !validInteractionDecision(interaction, decision)) return;
+    const frozen = zTVInteraction.parse(interaction);
+    const k = key(frozen);
+    if (frozen.kind === "hermes_approval" ? !("choice" in decision) || !["once", "deny"].includes(decision.choice) || decision.choice === "once" && (!frozen.action.approvable || frozen.action.truncated) : "choice" in decision) return;
+    blocked.value.add(k);
+    apply2({ ...frozen, state: "dispatching", can_respond: false });
+    let result;
+    try {
+      result = zTVInteraction.parse((await rest.respondInteraction(frozen, decision)).interaction);
+    } catch (error) {
+      if (!(error instanceof TypeError) && !(typeof error === "object" && error !== null && "status" in error)) protocolFailure(k);
+    }
+    await refresh(frozen.thread_id);
+    const readback = canonical.value.get(k);
+    if (result && (content(result) !== content(frozen) || readback && terminal(readback) && result.state !== readback.state)) protocolFailure(k);
+    if (readback && content(readback) === content(frozen) && terminal(readback)) return;
+    blocked.value.add(k);
+    accept({ ...readback && content(readback) === content(frozen) ? readback : frozen, state: "delivery_unknown", can_respond: false });
+  }
+  return { view, refresh, respond, hint };
+}
 const resolvedUserInfo = ref(null);
 const userDisplayName = ref(void 0);
 const userEmail = ref(void 0);
@@ -506,9 +599,9 @@ function useWorkflowService() {
       const store = hostStore("workflow");
       if (((_a2 = store == null ? void 0 : store.activeWorkflow) == null ? void 0 : _a2.path) === workflow.path) return true;
       const loaded = typeof workflow.load === "function" ? await workflow.load() : workflow;
-      const content = loaded.activeState ?? loaded.originalContent;
-      if (!content) return false;
-      await app.loadGraphData(content, true, true, loaded);
+      const content2 = loaded.activeState ?? loaded.originalContent;
+      if (!content2) return false;
+      await app.loadGraphData(content2, true, true, loaded);
       return true;
     },
     async saveWorkflowAs(workflow, options = {}) {
@@ -603,6 +696,22 @@ function formatTime(seconds) {
   const mins = Math.floor(seconds / 60);
   const secs = Math.floor(seconds % 60);
   return `${mins}:${secs.toString().padStart(2, "0")}`;
+}
+function attachmentPolicy(cap) {
+  const references = cap.attachment_transport === "asset_refs";
+  const enabled = cap.attachments !== false;
+  const mixedContext = references && cap.attachments === true && cap.attachment_mixed_context === true;
+  const mediaTypes = ["image", "video", "audio"].filter((kind) => (cap.attachment_media_types ?? ["image"]).includes(kind));
+  return {
+    references,
+    enabled,
+    mixedContext,
+    // Unknown deferred/Eagle media must first be imported via the library.
+    allowsDeferred: enabled && !references,
+    accept: references ? mediaTypes.map((kind) => `${kind}/*`).join(",") : AGENT_ATTACH_ACCEPT,
+    label: references ? enabled ? mediaTypes.some((kind) => kind !== "image") ? `Media references · not inspected. Inspect metadata, video frames/timeline and audio waveform on demand; waveform is not hearing or transcription. Documents unsupported. ${mixedContext ? "Workflow drafts, root-level node selections, saved references and preferences are captured, not applied. Nested selections are currently unsupported and rejected. ComfyTV skills and request preference overrides remain unsupported." : "Combining media with selection, skills, workflow context or saved preferences is unsupported and will be rejected. Send without media to keep that context, or use a separate chat without it."} Nothing is automatically cleared. Deferred Eagle imports remain unsupported.` : mixedContext ? "Image references · not inspected. Workflow drafts, root-level node selections, saved references and preferences are captured, not applied. Nested selections are currently unsupported and rejected. Unsupported or ambiguous context is rejected; nothing is automatically unlinked. ComfyTV skills, request preference overrides, video/audio/documents and deferred Eagle imports remain unsupported." : "Image references only · not inspected. Video/audio/documents unsupported. Combining images with selection, skills, workflow context or saved preferences is unsupported and will be rejected. Send without images to keep that context, or use a separate chat without it. Nothing is automatically cleared." : "Image references disabled pending cache and vision acceptance." : enabled ? "" : "Attachments unsupported by this provider.",
+    allows: (kind) => enabled && (!references || mediaTypes.includes(kind))
+  };
 }
 const MEDIA_ATTACHABLE_KINDS = /* @__PURE__ */ new Set(["image", "video", "audio"]);
 const EXTRA_ATTACHABLE_EXTENSIONS = /* @__PURE__ */ new Set(["glb", "md", "txt"]);
@@ -876,70 +985,235 @@ function useOnboarding(steps, storageKey = SHARED_ONBOARDING_KEY) {
   return { active, index, step, isLast, next, finish };
 }
 const falsyToString = (value) => typeof value === "boolean" ? `${value}` : value === 0 ? "0" : value;
-const defineConfig = (options) => {
-  const cx = function() {
-    for (var _len = arguments.length, inputs = new Array(_len), _key = 0; _key < _len; _key++) {
-      inputs[_key] = arguments[_key];
-    }
-    return clsx(inputs);
+const empty = {};
+const noValues = [];
+const hasOwn = Object.prototype.hasOwnProperty;
+const ownEnumerable = Object.prototype.propertyIsEnumerable;
+const definedProps = (props, seed) => {
+  let merged = { ...seed };
+  for (const key2 in props) if (hasOwn.call(props, key2)) {
+    const value = props[key2];
+    if (key2 !== "class" && key2 !== "className" && value !== void 0) if (key2 === "__proto__") merged = {
+      ...merged,
+      [key2]: value
+    };
+    else merged[key2] = value;
+  }
+  return merged;
+};
+const pushDefined = (out, value) => {
+  if (value !== void 0) out.push(value);
+};
+const pushClassProps = (out, source) => {
+  pushDefined(out, source.class);
+  pushDefined(out, source.className);
+  return out;
+};
+const mergeInto = (merged, source) => {
+  const variants = source && source.variants;
+  for (const key2 in variants) if (hasOwn.call(variants, key2)) {
+    const values = {
+      ...merged.variants[key2],
+      ...variants[key2]
+    };
+    if (key2 === "__proto__") merged.variants = {
+      ...merged.variants,
+      [key2]: values
+    };
+    else merged.variants[key2] = values;
+  }
+  merged.defaults = {
+    ...merged.defaults,
+    ...source && source.defaultVariants
   };
-  const cva2 = (config) => (props) => {
-    var _config_compoundVariants;
-    if ((config === null || config === void 0 ? void 0 : config.variants) == null) return cx(config === null || config === void 0 ? void 0 : config.base, props === null || props === void 0 ? void 0 : props.class, props === null || props === void 0 ? void 0 : props.className);
-    const { variants, defaultVariants } = config;
-    const getVariantClassNames = Object.keys(variants).map((variant) => {
-      const variantProp = props === null || props === void 0 ? void 0 : props[variant];
-      const defaultVariantProp = defaultVariants === null || defaultVariants === void 0 ? void 0 : defaultVariants[variant];
-      const variantKey = falsyToString(variantProp) || falsyToString(defaultVariantProp);
-      return variants[variant][variantKey];
+};
+const mergeConfig = (children, definition) => {
+  const merged = {
+    variants: {},
+    defaults: {}
+  };
+  for (let i = 0; i < children.length; i++) mergeInto(merged, children[i].config);
+  mergeInto(merged, definition);
+  return merged;
+};
+const prepareVariants = (localVariants, defaults) => {
+  const names = [];
+  const maps = [];
+  for (const key2 in localVariants) if (hasOwn.call(localVariants, key2)) {
+    names.push(key2);
+    maps.push(localVariants[key2]);
+  }
+  if (!names.length) return [
+    noValues,
+    noValues,
+    noValues
+  ];
+  return [
+    names.slice(),
+    maps.slice(),
+    names.map((key2, i) => maps[i][falsyToString(defaults[key2])])
+  ];
+};
+const compoundMatches = (compound, indexes, selectors, values) => {
+  for (let i = compound.start; i < compound.end; i++) {
+    const selector = selectors[i];
+    const value = values[indexes[i]];
+    if (Array.isArray(selector) ? !selector.includes(value) : value !== selector) return false;
+  }
+  return true;
+};
+const prepareCompounds = (compoundVariants, variantKeys, defaults) => {
+  const keys = variantKeys.slice();
+  const compounds = [];
+  const indexes = [];
+  const selectors = [];
+  for (let i = 0; i < compoundVariants.length; i++) {
+    const compound = compoundVariants[i];
+    const start = indexes.length;
+    let mask = 0;
+    for (const key2 in compound) if (hasOwn.call(compound, key2)) {
+      const selector = compound[key2];
+      if (key2 !== "class" && key2 !== "className") {
+        let index = keys.indexOf(key2);
+        if (index === -1) index = keys.push(key2) - 1;
+        indexes.push(index);
+        selectors.push(selector);
+        mask |= 1 << index;
+      }
+    }
+    compounds.push({
+      start,
+      end: indexes.length,
+      mask,
+      matchesDefaults: false,
+      class: compound.class,
+      className: compound.className
     });
-    const defaultsAndProps = {
-      ...defaultVariants,
-      // remove `undefined` props
-      ...props && Object.entries(props).reduce((acc, param) => {
-        let [key, value] = param;
-        return typeof value === "undefined" ? acc : {
-          ...acc,
-          [key]: value
-        };
-      }, {})
-    };
-    const getCompoundVariantClassNames = config === null || config === void 0 ? void 0 : (_config_compoundVariants = config.compoundVariants) === null || _config_compoundVariants === void 0 ? void 0 : _config_compoundVariants.reduce((acc, param) => {
-      let { class: cvClass, className: cvClassName, ...cvConfig } = param;
-      return Object.entries(cvConfig).every((param2) => {
-        let [cvKey, cvSelector] = param2;
-        const selector = defaultsAndProps[cvKey];
-        return Array.isArray(cvSelector) ? cvSelector.includes(selector) : selector === cvSelector;
-      }) ? [
-        ...acc,
-        cvClass,
-        cvClassName
-      ] : acc;
-    }, []);
-    return cx(config === null || config === void 0 ? void 0 : config.base, getVariantClassNames, getCompoundVariantClassNames, props === null || props === void 0 ? void 0 : props.class, props === null || props === void 0 ? void 0 : props.className);
-  };
-  const compose = function() {
-    for (var _len = arguments.length, components = new Array(_len), _key = 0; _key < _len; _key++) {
-      components[_key] = arguments[_key];
+  }
+  const defaultValues = keys.map((key2) => defaults[key2]);
+  for (let i = 0; i < compounds.length; i++) compounds[i].matchesDefaults = compoundMatches(compounds[i], indexes, selectors, defaultValues);
+  return [
+    keys.slice(),
+    defaultValues,
+    compounds.slice(),
+    indexes.slice(),
+    selectors.slice()
+  ];
+};
+const createPlainComponent = (cxArray, defaultOut, singleDefaultClass) => (input) => {
+  const props = input || empty;
+  const classValue = props.class;
+  const classNameValue = props.className;
+  if (classValue === void 0 && singleDefaultClass !== void 0) return cxArray(classNameValue === void 0 ? [singleDefaultClass] : [singleDefaultClass, classNameValue]);
+  const out = defaultOut.slice();
+  pushDefined(out, classValue);
+  pushDefined(out, classNameValue);
+  return cxArray(out);
+};
+const defineConfig = ((options) => {
+  const cxArray = (inputs) => Reflect.apply(options.cx, options, inputs);
+  const cx = (...inputs) => cxArray(inputs.filter((input) => input !== void 0));
+  const cva2 = ((config) => {
+    const definition = config || empty;
+    const composes = definition.composes;
+    const base = definition.base;
+    const children = composes == null ? noValues : Array.isArray(composes) ? composes.slice() : [composes];
+    const childCount = children.length;
+    const { variants: mergedVariants, defaults } = mergeConfig(children, definition);
+    const preparedVariants = prepareVariants(definition.variants, defaults);
+    const variantKeys = preparedVariants[0];
+    const variantMaps = preparedVariants[1];
+    const defaultClasses = preparedVariants[2];
+    const variantCount = variantKeys.length;
+    const prepared = definition.compoundVariants ? prepareCompounds(definition.compoundVariants, variantKeys, defaults) : void 0;
+    const keys = prepared ? prepared[0] : variantKeys;
+    const defaultValues = prepared ? prepared[1] : noValues;
+    const compounds = prepared ? prepared[2] : noValues;
+    const indexes = prepared ? prepared[3] : noValues;
+    const selectors = prepared ? prepared[4] : noValues;
+    const keyCount = keys.length;
+    const compoundCount = compounds.length;
+    const onlyBase = !variantCount && !compoundCount;
+    const assembled = onlyBase && base !== void 0 ? [base] : [];
+    if (!onlyBase) pushDefined(assembled, base);
+    for (let i = 0; i < variantCount; i++) pushDefined(assembled, defaultClasses[i]);
+    for (let i = 0; i < compoundCount; i++) {
+      const compound = compounds[i];
+      if (compound.matchesDefaults) pushClassProps(assembled, compound);
     }
-    return (props) => {
-      const propsWithoutClass = Object.fromEntries(Object.entries(props || {}).filter((param) => {
-        let [key] = param;
-        return ![
-          "class",
-          "className"
-        ].includes(key);
-      }));
-      return cx(components.map((component) => component(propsWithoutClass)), props === null || props === void 0 ? void 0 : props.class, props === null || props === void 0 ? void 0 : props.className);
+    const defaultOut = onlyBase ? assembled : assembled.slice();
+    const singleDefaultClass = defaultOut.length === 1 ? defaultOut[0] : void 0;
+    const component = !keyCount && !childCount ? createPlainComponent(cxArray, defaultOut, singleDefaultClass) : (input) => {
+      const props = input || empty;
+      const classValue = props.class;
+      const classNameValue = props.className;
+      let supplied = 0;
+      const variantClasses = variantCount ? new Array(variantCount) : void 0;
+      const resolved = compoundCount ? new Array(keyCount) : void 0;
+      for (let i = 0; i < keyCount; i++) {
+        const key2 = keys[i];
+        const own = compoundCount !== 0 && ownEnumerable.call(props, key2);
+        const value = i < variantCount || own ? props[key2] : void 0;
+        if (value !== void 0) supplied |= i < 31 ? 1 << i : -1;
+        if (variantClasses && i < variantCount) {
+          const variantKey = falsyToString(value);
+          variantClasses[i] = variantKey ? variantMaps[i][variantKey] : defaultClasses[i];
+        }
+        if (resolved) resolved[i] = own && value !== void 0 ? value : defaultValues[i];
+      }
+      if (!childCount && !supplied) {
+        if (classValue === void 0) {
+          if (singleDefaultClass !== void 0) return cxArray(classNameValue === void 0 ? [singleDefaultClass] : [singleDefaultClass, classNameValue]);
+          if (classNameValue === void 0) return cxArray(defaultOut);
+        }
+        const out2 = defaultOut.slice();
+        pushDefined(out2, classValue);
+        pushDefined(out2, classNameValue);
+        return cxArray(out2);
+      }
+      const out = [];
+      if (childCount) {
+        const forwarded = definedProps(props, defaults);
+        for (let i = 0; i < childCount; i++) {
+          const child = children[i];
+          pushDefined(out, child({ ...forwarded }));
+        }
+      }
+      pushDefined(out, base);
+      if (variantClasses) for (let i = 0; i < variantCount; i++) pushDefined(out, variantClasses[i]);
+      if (resolved) for (let i = 0; i < compoundCount; i++) {
+        const compound = compounds[i];
+        let matched = compound.matchesDefaults;
+        if (supplied & compound.mask) {
+          matched = true;
+          for (let j2 = compound.start; j2 < compound.end; j2++) {
+            const selector = selectors[j2];
+            const value = resolved[indexes[j2]];
+            if (Array.isArray(selector) ? !selector.includes(value) : value !== selector) {
+              matched = false;
+              break;
+            }
+          }
+        }
+        if (matched) pushClassProps(out, compound);
+      }
+      pushDefined(out, classValue);
+      pushDefined(out, classNameValue);
+      return cxArray(out);
     };
-  };
+    component.config = {
+      ...config,
+      variants: mergedVariants,
+      defaultVariants: defaults
+    };
+    return component;
+  });
   return {
-    compose,
     cva: cva2,
     cx
   };
-};
-const { cva } = defineConfig();
+});
+const { cva } = defineConfig({ cx: clsx });
 const buttonVariants = cva({
   base: "ctv:relative ctv:inline-flex ctv:items-center ctv:justify-center ctv:gap-2 ctv:cursor-pointer ctv:touch-manipulation ctv:whitespace-nowrap ctv:appearance-none ctv:border-none ctv:rounded-md ctv:text-sm ctv:font-medium ctv:font-inter ctv:transition-colors ctv:focus-visible:outline-none ctv:focus-visible:ring-1 ctv:focus-visible:ring-ring ctv:disabled:pointer-events-none ctv:disabled:opacity-50 ctv:[&_svg]:pointer-events-none ctv:[&_svg:not([width]):not([height])]:size-4 ctv:[&_svg]:shrink-0",
   variants: {
@@ -978,16 +1252,16 @@ const buttonVariants = cva({
     size: "md"
   }
 });
-const _hoisted_1$s = {
+const _hoisted_1$u = {
   key: 0,
   class: "ctv:icon-[lucide--loader-circle] ctv:animate-spin",
   "aria-hidden": "true"
 };
-const _hoisted_2$n = {
+const _hoisted_2$p = {
   key: 1,
   class: "ctv:sr-only"
 };
-const _sfc_main$v = /* @__PURE__ */ defineComponent({
+const _sfc_main$x = /* @__PURE__ */ defineComponent({
   __name: "Button",
   props: {
     variant: {},
@@ -1008,8 +1282,8 @@ const _sfc_main$v = /* @__PURE__ */ defineComponent({
         class: normalizeClass(unref(cn)(unref(buttonVariants)({ variant: __props.variant, size: __props.size }), __props.class))
       }, {
         default: withCtx(() => [
-          __props.loading ? (openBlock(), createElementBlock("i", _hoisted_1$s)) : createCommentVNode("", true),
-          __props.loading ? (openBlock(), createElementBlock("span", _hoisted_2$n, [
+          __props.loading ? (openBlock(), createElementBlock("i", _hoisted_1$u)) : createCommentVNode("", true),
+          __props.loading ? (openBlock(), createElementBlock("span", _hoisted_2$p, [
             renderSlot(_ctx.$slots, "default")
           ])) : renderSlot(_ctx.$slots, "default", { key: 2 })
         ]),
@@ -1018,7 +1292,7 @@ const _sfc_main$v = /* @__PURE__ */ defineComponent({
     };
   }
 });
-const _sfc_main$u = /* @__PURE__ */ defineComponent({
+const _sfc_main$w = /* @__PURE__ */ defineComponent({
   __name: "Input",
   props: /* @__PURE__ */ mergeModels({
     class: { type: [Boolean, null, String, Object, Array] }
@@ -1080,17 +1354,17 @@ function resolveAgentPaywallPresentation({
 }) {
   return { kind: "local" };
 }
-const _sfc_main$t = {};
-const _hoisted_1$r = { class: "ctv:hidden" };
+const _sfc_main$v = {};
+const _hoisted_1$t = { class: "ctv:hidden" };
 function _sfc_render(_ctx, _cache) {
-  return openBlock(), createElementBlock("span", _hoisted_1$r);
+  return openBlock(), createElementBlock("span", _hoisted_1$t);
 }
-const AgentFeedbackCaption = /* @__PURE__ */ _export_sfc(_sfc_main$t, [["render", _sfc_render]]);
+const AgentFeedbackCaption = /* @__PURE__ */ _export_sfc(_sfc_main$v, [["render", _sfc_render]]);
 function useModalLiftedZIndex(_open) {
   return computed(() => void 0);
 }
-const _hoisted_1$q = ["aria-label", "data-testid"];
-const _sfc_main$s = /* @__PURE__ */ defineComponent({
+const _hoisted_1$s = ["aria-label", "data-testid"];
+const _sfc_main$u = /* @__PURE__ */ defineComponent({
   __name: "AccessibleTooltip",
   props: {
     label: {},
@@ -1155,7 +1429,7 @@ const _sfc_main$s = /* @__PURE__ */ defineComponent({
                       onClick: _cache[0] || (_cache[0] = withModifiers(($event) => open.value = true, ["stop"]))
                     }, [
                       renderSlot(_ctx.$slots, "default")
-                    ], 10, _hoisted_1$q)
+                    ], 10, _hoisted_1$s)
                   ])
                 ]),
                 _: 3
@@ -1197,24 +1471,24 @@ const _sfc_main$s = /* @__PURE__ */ defineComponent({
     };
   }
 });
-const _hoisted_1$p = { class: "ctv:flex ctv:h-full ctv:flex-col ctv:overflow-hidden" };
-const _hoisted_2$m = { class: "ctv:flex ctv:h-10 ctv:shrink-0 ctv:items-center ctv:gap-1 ctv:px-2" };
-const _hoisted_3$j = { class: "ctv:m-0 ctv:text-xs ctv:font-normal ctv:text-muted-foreground" };
-const _hoisted_4$f = { class: "ctv:min-h-0 ctv:flex-1 ctv:overflow-y-auto ctv:p-2" };
-const _hoisted_5$c = {
+const _hoisted_1$r = { class: "ctv:flex ctv:h-full ctv:flex-col ctv:overflow-hidden" };
+const _hoisted_2$o = { class: "ctv:flex ctv:h-10 ctv:shrink-0 ctv:items-center ctv:gap-1 ctv:px-2" };
+const _hoisted_3$l = { class: "ctv:m-0 ctv:text-xs ctv:font-normal ctv:text-muted-foreground" };
+const _hoisted_4$h = { class: "ctv:min-h-0 ctv:flex-1 ctv:overflow-y-auto ctv:p-2" };
+const _hoisted_5$e = {
   key: 0,
   class: "ctv:px-2 ctv:py-8 ctv:text-center ctv:text-sm ctv:text-muted-foreground"
 };
-const _hoisted_6$b = { class: "ctv:my-0 ctv:px-2 ctv:py-1 ctv:text-xs ctv:font-medium ctv:text-muted-foreground" };
-const _hoisted_7$8 = {
+const _hoisted_6$d = { class: "ctv:my-0 ctv:px-2 ctv:py-1 ctv:text-xs ctv:font-medium ctv:text-muted-foreground" };
+const _hoisted_7$9 = {
   key: 0,
   class: "ctv:flex ctv:min-w-0 ctv:flex-1 ctv:items-center"
 };
-const _hoisted_8$5 = { class: "ctv:truncate" };
+const _hoisted_8$6 = { class: "ctv:truncate" };
 const _hoisted_9$2 = { class: "ctv:truncate" };
-const _hoisted_10$1 = { class: "ctv:truncate" };
+const _hoisted_10$2 = { class: "ctv:truncate" };
 const MAX_TITLE_LENGTH = 200;
-const _sfc_main$r = /* @__PURE__ */ defineComponent({
+const _sfc_main$t = /* @__PURE__ */ defineComponent({
   __name: "ChatHistoryScreen",
   props: {
     groups: {}
@@ -1278,9 +1552,9 @@ const _sfc_main$r = /* @__PURE__ */ defineComponent({
       }
     }
     return (_ctx, _cache) => {
-      return openBlock(), createElementBlock("div", _hoisted_1$p, [
-        createBaseVNode("div", _hoisted_2$m, [
-          createVNode(_sfc_main$s, {
+      return openBlock(), createElementBlock("div", _hoisted_1$r, [
+        createBaseVNode("div", _hoisted_2$o, [
+          createVNode(_sfc_main$u, {
             label: unref(t)("agent.backToPreviousChat"),
             side: "bottom",
             "skip-delay-duration": 0,
@@ -1288,7 +1562,7 @@ const _sfc_main$r = /* @__PURE__ */ defineComponent({
             "collision-padding": 8
           }, {
             trigger: withCtx(() => [
-              createVNode(_sfc_main$v, {
+              createVNode(_sfc_main$x, {
                 type: "button",
                 variant: "muted-textonly",
                 size: "icon-sm",
@@ -1304,24 +1578,24 @@ const _sfc_main$r = /* @__PURE__ */ defineComponent({
             ]),
             _: 1
           }, 8, ["label"]),
-          createBaseVNode("h2", _hoisted_3$j, toDisplayString(unref(t)("agent.history")), 1)
+          createBaseVNode("h2", _hoisted_3$l, toDisplayString(unref(t)("agent.history")), 1)
         ]),
-        createBaseVNode("div", _hoisted_4$f, [
-          isEmpty.value ? (openBlock(), createElementBlock("p", _hoisted_5$c, toDisplayString(unref(t)("agent.historyEmpty")), 1)) : createCommentVNode("", true),
-          (openBlock(true), createElementBlock(Fragment, null, renderList(sections.value, ([key, label, items]) => {
+        createBaseVNode("div", _hoisted_4$h, [
+          isEmpty.value ? (openBlock(), createElementBlock("p", _hoisted_5$e, toDisplayString(unref(t)("agent.historyEmpty")), 1)) : createCommentVNode("", true),
+          (openBlock(true), createElementBlock(Fragment, null, renderList(sections.value, ([key2, label, items]) => {
             return openBlock(), createElementBlock("section", {
-              key,
+              key: key2,
               class: "ctv:mb-3"
             }, [
-              createBaseVNode("p", _hoisted_6$b, toDisplayString(label), 1),
+              createBaseVNode("p", _hoisted_6$d, toDisplayString(label), 1),
               (openBlock(true), createElementBlock(Fragment, null, renderList(items, (session) => {
                 return openBlock(), createElementBlock("div", {
                   key: session.id,
                   class: "ctv:group ctv:flex ctv:items-center ctv:gap-2 ctv:rounded-sm ctv:px-2 ctv:py-1 ctv:hover:bg-secondary-background-hover"
                 }, [
-                  renamingId.value === session.id ? (openBlock(), createElementBlock("div", _hoisted_7$8, [
+                  renamingId.value === session.id ? (openBlock(), createElementBlock("div", _hoisted_7$9, [
                     _cache[3] || (_cache[3] = createBaseVNode("span", { class: "ctv:icon-[lucide--circle-check] ctv:size-4 ctv:shrink-0 ctv:text-muted-foreground" }, null, -1)),
-                    createVNode(_sfc_main$u, {
+                    createVNode(_sfc_main$w, {
                       ref_for: true,
                       ref: focusInput,
                       modelValue: renameDraft.value,
@@ -1334,7 +1608,7 @@ const _sfc_main$r = /* @__PURE__ */ defineComponent({
                       onBlur: ($event) => commitRename(session)
                     }, null, 8, ["modelValue", "aria-label", "onKeydown", "onBlur"])
                   ])) : (openBlock(), createElementBlock(Fragment, { key: 1 }, [
-                    createVNode(_sfc_main$v, {
+                    createVNode(_sfc_main$x, {
                       type: "button",
                       variant: "muted-textonly",
                       size: "unset",
@@ -1343,18 +1617,18 @@ const _sfc_main$r = /* @__PURE__ */ defineComponent({
                     }, {
                       default: withCtx(() => [
                         _cache[4] || (_cache[4] = createBaseVNode("span", { class: "ctv:icon-[lucide--circle-check] ctv:size-4 ctv:shrink-0" }, null, -1)),
-                        createBaseVNode("span", _hoisted_8$5, toDisplayString(session.title.trim() || unref(t)("agent.untitledChat")), 1)
+                        createBaseVNode("span", _hoisted_8$6, toDisplayString(session.title.trim() || unref(t)("agent.untitledChat")), 1)
                       ]),
                       _: 2
                     }, 1032, ["onClick"]),
-                    createVNode(_sfc_main$s, {
+                    createVNode(_sfc_main$u, {
                       label: unref(t)("agent.copyMarkdown"),
                       "skip-delay-duration": 0,
                       "disable-hoverable-content": "",
                       "collision-padding": 8
                     }, {
                       trigger: withCtx(() => [
-                        createVNode(_sfc_main$v, {
+                        createVNode(_sfc_main$x, {
                           type: "button",
                           variant: "muted-textonly",
                           size: "icon-sm",
@@ -1374,7 +1648,7 @@ const _sfc_main$r = /* @__PURE__ */ defineComponent({
                       default: withCtx(() => [
                         createVNode(unref(DropdownMenuTrigger_default), { "as-child": "" }, {
                           default: withCtx(() => [
-                            createVNode(_sfc_main$v, {
+                            createVNode(_sfc_main$x, {
                               variant: "muted-textonly",
                               size: "icon-sm",
                               class: "ctv:size-6 ctv:shrink-0",
@@ -1415,7 +1689,7 @@ const _sfc_main$r = /* @__PURE__ */ defineComponent({
                                 }, {
                                   default: withCtx(() => [
                                     _cache[8] || (_cache[8] = createBaseVNode("span", { class: "ctv:icon-[lucide--trash-2] ctv:size-4 ctv:shrink-0" }, null, -1)),
-                                    createBaseVNode("span", _hoisted_10$1, toDisplayString(unref(t)("g.delete")), 1)
+                                    createBaseVNode("span", _hoisted_10$2, toDisplayString(unref(t)("g.delete")), 1)
                                   ]),
                                   _: 1
                                 }, 8, ["onSelect"])
@@ -1751,8 +2025,8 @@ const _createHooksMap = function _createHooksMap2() {
     uponSanitizeShadowNode: []
   };
 };
-const _resolveSetOption = function _resolveSetOption2(cfg, key, fallback, options) {
-  return objectHasOwnProperty(cfg, key) && arrayIsArray(cfg[key]) ? addToSet(options.base ? clone(options.base) : {}, cfg[key], options.transform) : fallback;
+const _resolveSetOption = function _resolveSetOption2(cfg, key2, fallback, options) {
+  return objectHasOwnProperty(cfg, key2) && arrayIsArray(cfg[key2]) ? addToSet(options.base ? clone(options.base) : {}, cfg[key2], options.transform) : fallback;
 };
 function createDOMPurify() {
   let window2 = arguments.length > 0 && arguments[0] !== void 0 ? arguments[0] : getGlobal();
@@ -2533,12 +2807,12 @@ function createDOMPurify() {
       return true;
     }
     if (SAFE_FOR_TEMPLATES && currentNode.nodeType === NODE_TYPE.text) {
-      const content = _stripTemplateExpressions(currentNode.textContent);
-      if (currentNode.textContent !== content) {
+      const content2 = _stripTemplateExpressions(currentNode.textContent);
+      if (currentNode.textContent !== content2) {
         arrayPush(DOMPurify.removed, {
           element: currentNode.cloneNode()
         });
-        currentNode.textContent = content;
+        currentNode.textContent = content2;
       }
     }
     _executeHooks(hooks.afterSanitizeElements, currentNode, null);
@@ -2726,10 +3000,10 @@ function createDOMPurify() {
       if (isElement) {
         const rootName = getNodeName ? getNodeName(node) : null;
         if (typeof rootName === "string" && transformCaseFunc(rootName) === "template") {
-          const content = node.content;
-          if (_isDocumentFragment(content)) {
+          const content2 = node.content;
+          if (_isDocumentFragment(content2)) {
             stack.push({
-              node: content,
+              node: content2,
               shadow: null
             });
           }
@@ -3226,7 +3500,7 @@ function promptReferenceNode(reference) {
   }
 }
 function promptDocument(prompt) {
-  const content = [];
+  const content2 = [];
   let offset2 = 0;
   for (const reference of prompt.references) {
     const next = Math.max(
@@ -3234,13 +3508,13 @@ function promptDocument(prompt) {
       Math.min(prompt.text.length, reference.textOffset)
     );
     if (next > offset2)
-      content.push(inlinePromptSchema.text(prompt.text.slice(offset2, next)));
-    content.push(promptReferenceNode(reference));
+      content2.push(inlinePromptSchema.text(prompt.text.slice(offset2, next)));
+    content2.push(promptReferenceNode(reference));
     offset2 = next;
   }
   if (offset2 < prompt.text.length)
-    content.push(inlinePromptSchema.text(prompt.text.slice(offset2)));
-  return inlinePromptSchema.nodes.doc.create(null, content);
+    content2.push(inlinePromptSchema.text(prompt.text.slice(offset2)));
+  return inlinePromptSchema.nodes.doc.create(null, content2);
 }
 function promptNodeReference(node, textOffset) {
   const { id, name } = node.attrs;
@@ -3317,7 +3591,7 @@ function promptDocumentPosition(doc, textOffset) {
   });
   return position;
 }
-const _sfc_main$q = /* @__PURE__ */ defineComponent({
+const _sfc_main$s = /* @__PURE__ */ defineComponent({
   ...{ inheritAttrs: false },
   __name: "InlinePromptEditor",
   props: /* @__PURE__ */ mergeModels({
@@ -3508,7 +3782,7 @@ const _sfc_main$q = /* @__PURE__ */ defineComponent({
             }),
             { preserveWhitespace: "full" }
           );
-          const content = pasted.content.content.map((node) => {
+          const content2 = pasted.content.content.map((node) => {
             if (node.type !== inlinePromptSchema.nodes.workflow) return node;
             if (usedIds.has(node.attrs.id))
               return inlinePromptSchema.text(referenceClipboardText(node));
@@ -3516,7 +3790,7 @@ const _sfc_main$q = /* @__PURE__ */ defineComponent({
             return node;
           });
           editor.dispatch(
-            state.tr.replaceSelection(new Slice(Fragment$1.from(content), 0, 0)).setMeta("paste", true).setMeta("uiEvent", "paste").scrollIntoView()
+            state.tr.replaceSelection(new Slice(Fragment$1.from(content2), 0, 0)).setMeta("paste", true).setMeta("uiEvent", "paste").scrollIntoView()
           );
           return true;
         },
@@ -4056,9 +4330,9 @@ const useAgentComposerStore = defineStore("agentComposer", () => {
   function applyEditorPrompt(next) {
     const seen = /* @__PURE__ */ new Set();
     const references = next.references.flatMap((item) => {
-      const key = composerReferenceKey(item);
-      if (seen.has(key)) return [];
-      seen.add(key);
+      const key2 = composerReferenceKey(item);
+      if (seen.has(key2)) return [];
+      seen.add(key2);
       if (item.kind === "node" && item.scope !== nodeScope.value) return [];
       if (item.kind !== "asset") return [item];
       if (retiredAssets.has(item.attachment.id)) return [];
@@ -4119,9 +4393,9 @@ const useAgentComposerStore = defineStore("agentComposer", () => {
       ].sort((a, b2) => a.textOffset - b2.textOffset)
     });
   }
-  function removeReference(key) {
+  function removeReference(key2) {
     const references = prompt.value.references.filter(
-      (item) => composerReferenceKey(item) !== key
+      (item) => composerReferenceKey(item) !== key2
     );
     if (references.length !== prompt.value.references.length)
       updateDraft({
@@ -4368,11 +4642,11 @@ function iconForMediaType(mediaType) {
       return "ctv:icon-[lucide--image]";
   }
 }
-const _hoisted_1$o = ["data-attachment-name"];
-const _hoisted_2$l = ["aria-label"];
-const _hoisted_3$i = ["src", "alt"];
-const _hoisted_4$e = { class: "ctv:max-w-32 ctv:truncate" };
-const _sfc_main$p = /* @__PURE__ */ defineComponent({
+const _hoisted_1$q = ["data-attachment-name"];
+const _hoisted_2$n = ["aria-label"];
+const _hoisted_3$k = ["src", "alt"];
+const _hoisted_4$g = { class: "ctv:max-w-32 ctv:truncate" };
+const _sfc_main$r = /* @__PURE__ */ defineComponent({
   __name: "AttachmentChip",
   props: {
     name: {},
@@ -4396,17 +4670,17 @@ const _sfc_main$p = /* @__PURE__ */ defineComponent({
           key: 0,
           "aria-label": _ctx.$t("agent.uploading"),
           class: "ctv:icon-[lucide--loader-circle] ctv:size-3.5 ctv:animate-spin ctv:text-muted-foreground"
-        }, null, 8, _hoisted_2$l)) : __props.previewUrl && kind.value === "image" ? (openBlock(), createElementBlock("img", {
+        }, null, 8, _hoisted_2$n)) : __props.previewUrl && kind.value === "image" ? (openBlock(), createElementBlock("img", {
           key: 1,
           src: __props.previewUrl,
           alt: __props.name,
           class: "ctv:size-3.5 ctv:shrink-0 ctv:rounded-sm ctv:object-cover"
-        }, null, 8, _hoisted_3$i)) : (openBlock(), createElementBlock("span", {
+        }, null, 8, _hoisted_3$k)) : (openBlock(), createElementBlock("span", {
           key: 2,
           class: normalizeClass(unref(cn)(kindIconClass.value, "ctv:size-3.5 ctv:shrink-0"))
         }, null, 2)),
-        createBaseVNode("span", _hoisted_4$e, toDisplayString(__props.name), 1),
-        createVNode(_sfc_main$v, {
+        createBaseVNode("span", _hoisted_4$g, toDisplayString(__props.name), 1),
+        createVNode(_sfc_main$x, {
           type: "button",
           variant: "muted-textonly",
           size: "unset",
@@ -4419,25 +4693,25 @@ const _sfc_main$p = /* @__PURE__ */ defineComponent({
           ])]),
           _: 1
         }, 8, ["aria-label"])
-      ], 8, _hoisted_1$o);
+      ], 8, _hoisted_1$q);
     };
   }
 });
-const _hoisted_1$n = { class: "ctv:flex ctv:flex-col ctv:gap-0.5" };
-const _hoisted_2$k = {
+const _hoisted_1$p = { class: "ctv:flex ctv:flex-col ctv:gap-0.5" };
+const _hoisted_2$m = {
   "aria-hidden": "true",
   class: "ctv:text-sm/5 ctv:font-medium ctv:text-base-foreground"
 };
-const _hoisted_3$h = ["id"];
-const _hoisted_4$d = { class: "ctv:min-w-0 ctv:flex-1" };
-const _hoisted_5$b = { class: "ctv:block ctv:text-sm/5 ctv:text-base-foreground" };
-const _hoisted_6$a = { class: "ctv:mt-0.5 ctv:block ctv:text-xs/4 ctv:text-muted-foreground" };
-const _hoisted_7$7 = {
+const _hoisted_3$j = ["id"];
+const _hoisted_4$f = { class: "ctv:min-w-0 ctv:flex-1" };
+const _hoisted_5$d = { class: "ctv:block ctv:text-sm/5 ctv:text-base-foreground" };
+const _hoisted_6$c = { class: "ctv:mt-0.5 ctv:block ctv:text-xs/4 ctv:text-muted-foreground" };
+const _hoisted_7$8 = {
   key: 0,
   role: "status",
   class: "ctv:sr-only"
 };
-const _sfc_main$o = /* @__PURE__ */ defineComponent({
+const _sfc_main$q = /* @__PURE__ */ defineComponent({
   __name: "RunModePopover",
   setup(__props) {
     const { t } = useI18n();
@@ -4502,7 +4776,7 @@ const _sfc_main$o = /* @__PURE__ */ defineComponent({
         default: withCtx(() => [
           createVNode(unref(DropdownMenuTrigger_default), { "as-child": "" }, {
             default: withCtx(() => [
-              withDirectives((openBlock(), createBlock(_sfc_main$v, {
+              withDirectives((openBlock(), createBlock(_sfc_main$x, {
                 variant: "muted-textonly",
                 size: "md",
                 class: normalizeClass(unref(cn)("ctv:gap-1", open.value && "ctv:bg-secondary-background-hover"))
@@ -4536,13 +4810,13 @@ const _sfc_main$o = /* @__PURE__ */ defineComponent({
                 class: "agent-scope ctv:z-1100 ctv:flex ctv:w-80 ctv:flex-col ctv:gap-2.5 ctv:rounded-lg ctv:border ctv:border-border-default ctv:bg-secondary-background ctv:p-2.5 ctv:text-base-foreground ctv:shadow-lg ctv:outline-none ctv:data-[side=bottom]:slide-in-from-top-2 ctv:data-[side=top]:slide-in-from-bottom-2 ctv:data-[state=closed]:animate-out ctv:data-[state=closed]:fade-out-0 ctv:data-[state=closed]:zoom-out-95 ctv:data-[state=open]:animate-in ctv:data-[state=open]:fade-in-0 ctv:data-[state=open]:zoom-in-95"
               }, {
                 default: withCtx(() => [
-                  createBaseVNode("div", _hoisted_1$n, [
-                    createBaseVNode("div", _hoisted_2$k, toDisplayString(unref(t)("agent.runPermissions")), 1),
+                  createBaseVNode("div", _hoisted_1$p, [
+                    createBaseVNode("div", _hoisted_2$m, toDisplayString(unref(t)("agent.runPermissions")), 1),
                     createBaseVNode("div", {
                       id: unref(descriptionId),
                       "aria-hidden": "true",
                       class: "ctv:text-xs/4 ctv:text-muted-foreground"
-                    }, toDisplayString(unref(t)("agent.runPermissionsDescription")), 9, _hoisted_3$h)
+                    }, toDisplayString(unref(t)("agent.runPermissionsDescription")), 9, _hoisted_3$j)
                   ]),
                   createVNode(unref(DropdownMenuRadioGroup_default), {
                     "model-value": unref(store).mode,
@@ -4562,7 +4836,7 @@ const _sfc_main$o = /* @__PURE__ */ defineComponent({
                           }, ["prevent"]))
                         }, {
                           default: withCtx(() => [
-                            createVNode(_sfc_main$v, {
+                            createVNode(_sfc_main$x, {
                               variant: unref(store).mode === option.mode ? "tertiary" : "muted-textonly",
                               size: "unset",
                               class: normalizeClass(
@@ -4581,9 +4855,9 @@ const _sfc_main$o = /* @__PURE__ */ defineComponent({
                                     )
                                   )
                                 }, null, 2),
-                                createBaseVNode("span", _hoisted_4$d, [
-                                  createBaseVNode("span", _hoisted_5$b, toDisplayString(unref(t)(option.title)), 1),
-                                  createBaseVNode("span", _hoisted_6$a, toDisplayString(unref(t)(option.description)), 1)
+                                createBaseVNode("span", _hoisted_4$f, [
+                                  createBaseVNode("span", _hoisted_5$d, toDisplayString(unref(t)(option.title)), 1),
+                                  createBaseVNode("span", _hoisted_6$c, toDisplayString(unref(t)(option.description)), 1)
                                 ]),
                                 createBaseVNode("span", {
                                   "aria-hidden": "true",
@@ -4607,7 +4881,7 @@ const _sfc_main$o = /* @__PURE__ */ defineComponent({
                 ]),
                 _: 1
               }, 8, ["aria-describedby"]),
-              open.value ? (openBlock(), createElementBlock("span", _hoisted_7$7, toDisplayString(savingMode.value === null ? "" : unref(t)("g.saving")), 1)) : createCommentVNode("", true)
+              open.value ? (openBlock(), createElementBlock("span", _hoisted_7$8, toDisplayString(savingMode.value === null ? "" : unref(t)("g.saving")), 1)) : createCommentVNode("", true)
             ]),
             _: 1
           })
@@ -4617,38 +4891,38 @@ const _sfc_main$o = /* @__PURE__ */ defineComponent({
     };
   }
 });
-const _hoisted_1$m = {
+const _hoisted_1$o = {
   id: "agent-composer",
   class: "ctv:relative ctv:flex ctv:flex-col ctv:rounded-lg ctv:border ctv:border-border-default ctv:bg-base-background"
 };
-const _hoisted_2$j = ["aria-label"];
-const _hoisted_3$g = {
+const _hoisted_2$l = ["aria-label"];
+const _hoisted_3$i = {
   key: 0,
   class: "ctv:flex ctv:h-6 ctv:items-center ctv:px-1.5 ctv:py-1 ctv:text-xs/4 ctv:text-muted-foreground"
 };
-const _hoisted_4$c = ["id", "aria-disabled", "aria-description", "data-active", "onMouseenter", "onClick"];
-const _hoisted_5$a = {
+const _hoisted_4$e = ["id", "aria-disabled", "aria-description", "data-active", "onMouseenter", "onClick"];
+const _hoisted_5$c = {
   key: 0,
   class: "ctv:icon-[comfy--node] ctv:size-3.5 ctv:shrink-0"
 };
-const _hoisted_6$9 = {
+const _hoisted_6$b = {
   key: 1,
   class: "ctv:icon-[comfy--workflow] ctv:size-3.5 ctv:shrink-0"
 };
-const _hoisted_7$6 = {
+const _hoisted_7$7 = {
   key: 2,
   class: "ctv:icon-[lucide--chevron-left] ctv:size-4 ctv:shrink-0"
 };
-const _hoisted_8$4 = { class: "ctv:min-w-0 ctv:flex-1 ctv:truncate" };
+const _hoisted_8$5 = { class: "ctv:min-w-0 ctv:flex-1 ctv:truncate" };
 const _hoisted_9$1 = {
   key: 3,
   class: "ctv:text-xs ctv:text-muted-foreground"
 };
-const _hoisted_10 = {
+const _hoisted_10$1 = {
   key: 5,
   class: "ctv:icon-[lucide--chevron-right] ctv:size-4 ctv:shrink-0"
 };
-const _hoisted_11 = {
+const _hoisted_11$1 = {
   key: 1,
   role: "status",
   class: "ctv:px-2 ctv:py-1 ctv:text-xs ctv:text-muted-foreground"
@@ -4708,7 +4982,7 @@ const _hoisted_31 = {
   class: "ctv:ml-1 ctv:opacity-50"
 };
 const duplicateIdClass = "ctv:shrink-0 ctv:rounded-full ctv:bg-interface-menu-keybind-surface-default ctv:px-1 ctv:py-0.5 ctv:font-mono ctv:text-xs/4 ctv:font-medium ctv:text-base-foreground";
-const _sfc_main$n = /* @__PURE__ */ defineComponent({
+const _sfc_main$p = /* @__PURE__ */ defineComponent({
   __name: "Composer",
   props: {
     streaming: { type: Boolean, default: false },
@@ -4721,11 +4995,10 @@ const _sfc_main$n = /* @__PURE__ */ defineComponent({
     availableWorkflows: { default: () => [] },
     selectWorkflowReference: { type: Function, default: async () => void 0 },
     editableWorkflowId: {},
-    hasWorkflowTarget: { type: Boolean, default: false },
     workflowSelecting: { type: Boolean, default: false },
     getMentionNodes: { type: Function, default: () => [] }
   },
-  emits: ["send", "stop", "attach", "openAssets", "openEagle", "selectNodes", "removeTag", "mentionPick", "requestWorkflowReferences", "removeWorkflowReference", "openReferenceWorkflow", "workflowTargetRequired"],
+  emits: ["send", "stop", "attach", "openAssets", "openEagle", "selectNodes", "removeTag", "mentionPick", "requestWorkflowReferences", "removeWorkflowReference", "openReferenceWorkflow"],
   setup(__props, { expose: __expose, emit: __emit }) {
     const emit = __emit;
     const { t } = useI18n();
@@ -4737,10 +5010,6 @@ const _sfc_main$n = /* @__PURE__ */ defineComponent({
     const composer = useComposer({
       onSend: (text2, attachments) => {
         if (__props.workflowSelecting || __props.submitting) return;
-        if (!__props.hasWorkflowTarget) {
-          emit("workflowTargetRequired");
-          return;
-        }
         if (workflowReferences.value.length > 0) {
           const { text: draft, workflowReferences: references } = composerPromptForSend(composer.prompt.value);
           const offsets = references.map((reference) => reference.textOffset);
@@ -4872,7 +5141,7 @@ const _sfc_main$n = /* @__PURE__ */ defineComponent({
     });
     return (_ctx, _cache) => {
       const _directive_tooltip = resolveDirective("tooltip");
-      return openBlock(), createElementBlock("div", _hoisted_1$m, [
+      return openBlock(), createElementBlock("div", _hoisted_1$o, [
         unref(mentionVisible) ? (openBlock(), createElementBlock("div", {
           key: 0,
           id: "agent-reference-menu",
@@ -4885,9 +5154,9 @@ const _sfc_main$n = /* @__PURE__ */ defineComponent({
           onMousedown: _cache[0] || (_cache[0] = withModifiers(() => {
           }, ["prevent"]))
         }, [
-          unref(mentionSection) === "root" ? (openBlock(), createElementBlock("div", _hoisted_3$g, toDisplayString(unref(t)("agent.reference")), 1)) : createCommentVNode("", true),
+          unref(mentionSection) === "root" ? (openBlock(), createElementBlock("div", _hoisted_3$i, toDisplayString(unref(t)("agent.reference")), 1)) : createCommentVNode("", true),
           (openBlock(true), createElementBlock(Fragment, null, renderList(unref(mentionMatches), (match, index) => {
-            return openBlock(), createBlock(_sfc_main$s, {
+            return openBlock(), createBlock(_sfc_main$u, {
               key: `${match.kind}:${match.id}`,
               label: __props.nodeReferenceDisabledReason ?? "",
               disabled: !unref(isNodeReferenceDisabled)(match),
@@ -4911,21 +5180,21 @@ const _sfc_main$n = /* @__PURE__ */ defineComponent({
                   onMouseenter: ($event) => unref(highlightMention)(index),
                   onClick: ($event) => unref(pickMention)(match)
                 }, [
-                  match.kind === "section" && match.id === "nodes" ? (openBlock(), createElementBlock("span", _hoisted_5$a)) : match.kind === "section" && match.id === "workflows" ? (openBlock(), createElementBlock("span", _hoisted_6$9)) : match.kind === "back" ? (openBlock(), createElementBlock("span", _hoisted_7$6)) : createCommentVNode("", true),
-                  createBaseVNode("span", _hoisted_8$4, toDisplayString(match.label), 1),
+                  match.kind === "section" && match.id === "nodes" ? (openBlock(), createElementBlock("span", _hoisted_5$c)) : match.kind === "section" && match.id === "workflows" ? (openBlock(), createElementBlock("span", _hoisted_6$b)) : match.kind === "back" ? (openBlock(), createElementBlock("span", _hoisted_7$7)) : createCommentVNode("", true),
+                  createBaseVNode("span", _hoisted_8$5, toDisplayString(match.label), 1),
                   match.kind === "workflow" && match.workflow.id === void 0 ? (openBlock(), createElementBlock("span", _hoisted_9$1, toDisplayString(unref(t)("agent.unsavedWorkflow")), 1)) : createCommentVNode("", true),
                   match.kind === "node" && unref(graphDupes).has(match.node.title) ? (openBlock(), createElementBlock("span", {
                     key: 4,
                     class: normalizeClass(unref(cn)(duplicateIdClass, "ctv:ml-auto"))
                   }, " #" + toDisplayString(match.node.id), 3)) : createCommentVNode("", true),
-                  match.kind === "section" ? (openBlock(), createElementBlock("span", _hoisted_10)) : createCommentVNode("", true)
-                ], 42, _hoisted_4$c)
+                  match.kind === "section" ? (openBlock(), createElementBlock("span", _hoisted_10$1)) : createCommentVNode("", true)
+                ], 42, _hoisted_4$e)
               ]),
               _: 2
             }, 1032, ["label", "disabled"]);
           }), 128)),
-          !unref(mentionHasResults) ? (openBlock(), createElementBlock("div", _hoisted_11, toDisplayString(unref(mentionSection) === "workflows" ? unref(t)("agent.noWorkflowsToReference") : unref(t)("agent.noNodesToReference")), 1)) : createCommentVNode("", true)
-        ], 40, _hoisted_2$j)) : createCommentVNode("", true),
+          !unref(mentionHasResults) ? (openBlock(), createElementBlock("div", _hoisted_11$1, toDisplayString(unref(mentionSection) === "workflows" ? unref(t)("agent.noWorkflowsToReference") : unref(t)("agent.noNodesToReference")), 1)) : createCommentVNode("", true)
+        ], 40, _hoisted_2$l)) : createCommentVNode("", true),
         _ctx.$slots.header ? (openBlock(), createElementBlock("div", _hoisted_12, [
           renderSlot(_ctx.$slots, "header")
         ])) : createCommentVNode("", true),
@@ -4958,7 +5227,7 @@ const _sfc_main$n = /* @__PURE__ */ defineComponent({
                     class: normalizeClass(duplicateIdClass)
                   }, "#" + toDisplayString(tag.id), 1)) : createCommentVNode("", true)
                 ]),
-                withDirectives((openBlock(), createBlock(_sfc_main$v, {
+                withDirectives((openBlock(), createBlock(_sfc_main$x, {
                   type: "button",
                   variant: "muted-textonly",
                   size: "unset",
@@ -4983,7 +5252,7 @@ const _sfc_main$n = /* @__PURE__ */ defineComponent({
           ])) : createCommentVNode("", true),
           unref(composer).attachments.value.length ? (openBlock(), createElementBlock("div", _hoisted_17, [
             (openBlock(true), createElementBlock(Fragment, null, renderList(unref(composer).attachments.value, (item) => {
-              return openBlock(), createBlock(_sfc_main$p, {
+              return openBlock(), createBlock(_sfc_main$r, {
                 key: item.id,
                 name: item.name,
                 "preview-url": item.previewUrl,
@@ -4998,7 +5267,7 @@ const _sfc_main$n = /* @__PURE__ */ defineComponent({
               createTextVNode(" " + toDisplayString(unref(t)("agent.savingWorkflow")), 1)
             ])) : createCommentVNode("", true),
             createBaseVNode("div", _hoisted_20, [
-              createVNode(_sfc_main$q, {
+              createVNode(_sfc_main$s, {
                 ref_key: "editorRef",
                 ref: editorRef,
                 "model-value": unref(composer).prompt.value,
@@ -5020,7 +5289,7 @@ const _sfc_main$n = /* @__PURE__ */ defineComponent({
               }, null, 8, ["model-value", "label", "expanded", "active-descendant", "history-epoch", "editable-workflow-id", "onUpdate:modelValue", "onKeyup", "onInput", "onClick"]),
               !unref(composer).draft.value && !unref(composer).prompt.value.references.length ? (openBlock(), createElementBlock("div", _hoisted_21, [
                 createBaseVNode("span", null, toDisplayString(placeholderHint.value.text), 1),
-                createVNode(_sfc_main$s, {
+                createVNode(_sfc_main$u, {
                   label: __props.nodeReferenceDisabledReason ?? "",
                   disabled: !__props.nodeReferenceDisabledReason,
                   "skip-delay-duration": 0,
@@ -5028,7 +5297,7 @@ const _sfc_main$n = /* @__PURE__ */ defineComponent({
                   "collision-padding": 8
                 }, {
                   trigger: withCtx(() => [
-                    createVNode(_sfc_main$v, {
+                    createVNode(_sfc_main$x, {
                       type: "button",
                       variant: "link",
                       size: "unset",
@@ -5057,7 +5326,7 @@ const _sfc_main$n = /* @__PURE__ */ defineComponent({
               default: withCtx(() => [
                 createVNode(unref(DropdownMenuTrigger_default), { "as-child": "" }, {
                   default: withCtx(() => [
-                    withDirectives((openBlock(), createBlock(_sfc_main$v, {
+                    withDirectives((openBlock(), createBlock(_sfc_main$x, {
                       variant: "muted-textonly",
                       size: "icon",
                       "aria-label": unref(t)("agent.addToPrompt")
@@ -5086,7 +5355,7 @@ const _sfc_main$n = /* @__PURE__ */ defineComponent({
                       class: "agent-scope ctv:z-1100 ctv:box-border ctv:w-max ctv:min-w-46.5 ctv:rounded-lg ctv:border ctv:border-border-subtle ctv:bg-secondary-background ctv:p-1 ctv:font-inter ctv:shadow-lg"
                     }, {
                       default: withCtx(() => [
-                        createVNode(_sfc_main$s, {
+                        createVNode(_sfc_main$u, {
                           label: __props.nodeReferenceDisabledReason ?? "",
                           disabled: !__props.nodeReferenceDisabledReason,
                           "skip-delay-duration": 0,
@@ -5156,15 +5425,15 @@ const _sfc_main$n = /* @__PURE__ */ defineComponent({
               _: 1
             }, 8, ["open"]),
             createBaseVNode("div", _hoisted_28, [
-              createVNode(_sfc_main$o),
-              createVNode(_sfc_main$s, {
+              createVNode(_sfc_main$q),
+              createVNode(_sfc_main$u, {
                 label: primaryActionTooltip.value,
                 "skip-delay-duration": 0,
                 "disable-hoverable-content": "",
                 "collision-padding": 8
               }, {
                 trigger: withCtx(() => [
-                  createVNode(_sfc_main$v, {
+                  createVNode(_sfc_main$x, {
                     type: "button",
                     variant: running.value ? "secondary" : "inverted",
                     size: "icon",
@@ -5278,10 +5547,10 @@ function replyAssetResultItem(asset) {
     url: asset.url
   };
 }
-function z() {
+function M() {
   return { async: false, breaks: false, extensions: null, gfm: true, hooks: null, pedantic: false, renderer: null, silent: false, tokenizer: null, walkTokens: null };
 }
-var T = z();
+var T = M();
 function N(l3) {
   T = l3;
 }
@@ -5306,8 +5575,8 @@ var Te = ((l3 = "") => {
   } catch {
     return false;
   }
-})(), m = { codeRemoveIndent: /^(?: {1,4}| {0,3}\t)/gm, outputLinkReplace: /\\([\[\]])/g, indentCodeCompensation: /^(\s+)(?:```)/, beginningSpace: /^\s+/, endingHash: /#$/, startingSpaceChar: /^ /, endingSpaceChar: / $/, nonSpaceChar: /[^ ]/, newLineCharGlobal: /\n/g, tabCharGlobal: /\t/g, multipleSpaceGlobal: /\s+/g, blankLine: /^[ \t]*$/, doubleBlankLine: /\n[ \t]*\n[ \t]*$/, blockquoteStart: /^ {0,3}>/, blockquoteSetextReplace: /\n {0,3}((?:=+|-+) *)(?=\n|$)/g, blockquoteSetextReplace2: /^ {0,3}>[ \t]?/gm, listReplaceNesting: /^ {1,4}(?=( {4})*[^ ])/g, listIsTask: /^\[[ xX]\] +\S/, listReplaceTask: /^\[[ xX]\] +/, listTaskCheckbox: /\[[ xX]\]/, anyLine: /\n.*\n/, hrefBrackets: /^<(.*)>$/, tableDelimiter: /[:|]/, tableAlignChars: /^\||\| *$/g, tableRowBlankLine: /\n[ \t]*$/, tableAlignRight: /^ *-+: *$/, tableAlignCenter: /^ *:-+: *$/, tableAlignLeft: /^ *:-+ *$/, startATag: /^<a /i, endATag: /^<\/a>/i, startPreScriptTag: /^<(pre|code|kbd|script)(\s|>)/i, endPreScriptTag: /^<\/(pre|code|kbd|script)(\s|>)/i, startAngleBracket: /^</, endAngleBracket: />$/, pedanticHrefTitle: /^([^'"]*[^\s])\s+(['"])(.*)\2/, unicodeAlphaNumeric: /[\p{L}\p{N}]/u, escapeTest: /[&<>"']/, escapeReplace: /[&<>"']/g, escapeTestNoEncode: /[<>"']|&(?!(#\d{1,7}|#[Xx][a-fA-F0-9]{1,6}|\w+);)/, escapeReplaceNoEncode: /[<>"']|&(?!(#\d{1,7}|#[Xx][a-fA-F0-9]{1,6}|\w+);)/g, caret: /(^|[^\[])\^/g, percentDecode: /%25/g, findPipe: /\|/g, splitPipe: / \|/, slashPipe: /\\\|/g, carriageReturn: /\r\n|\r/g, spaceLine: /^ +$/gm, notSpaceStart: /^\S*/, endingNewline: /\n$/, listItemRegex: (l3) => new RegExp(`^( {0,3}${l3})((?:[	 ][^\\n]*)?(?:\\n|$))`), nextBulletRegex: E((l3) => new RegExp(`^ {0,${l3}}(?:[*+-]|\\d{1,9}[.)])((?:[ 	][^\\n]*)?(?:\\n|$))`)), hrRegex: E((l3) => new RegExp(`^ {0,${l3}}((?:- *){3,}|(?:_ *){3,}|(?:\\* *){3,})(?:\\n+|$)`)), fencesBeginRegex: E((l3) => new RegExp(`^ {0,${l3}}(?:\`\`\`|~~~)`)), headingBeginRegex: E((l3) => new RegExp(`^ {0,${l3}}#`)), htmlBeginRegex: E((l3) => new RegExp(`^ {0,${l3}}<(?:[a-z].*>|!--)`, "i")), blockquoteBeginRegex: E((l3) => new RegExp(`^ {0,${l3}}>`)) }, Oe = /^(?:[ \t]*(?:\n|$))+/, we = /^((?: {4}| {0,3}\t)[^\n]+(?:\n(?:[ \t]*(?:\n|$))*)?)+/, ye = /^ {0,3}(`{3,}(?=[^`\n]*(?:\n|$))|~{3,})([^\n]*)(?:\n|$)(?:|([\s\S]*?)(?:\n|$))(?: {0,3}\1[~`]* *(?=\n|$)|$)/, B = /^ {0,3}((?:-[\t ]*){3,}|(?:_[ \t]*){3,}|(?:\*[ \t]*){3,})(?:\n+|$)/, Pe = /^ {0,3}(#{1,6})(?=\s|$)(.*)(?:\n+|$)/, j = / {0,3}(?:[*+-]|\d{1,9}[.)])/, oe = /^(?!bull |blockCode|fences|blockquote|heading|html|table)((?:.|\n(?!\s*?\n|bull |blockCode|fences|blockquote|heading|html|table))+?)\n {0,3}(=+|-+) *(?:\n+|$)/, ae = d(oe).replace(/bull/g, j).replace(/blockCode/g, /(?: {4}| {0,3}\t)/).replace(/fences/g, / {0,3}(?:`{3,}|~{3,})/).replace(/blockquote/g, / {0,3}>/).replace(/heading/g, / {0,3}#{1,6}(?:\s|$)/).replace(/html/g, / {0,3}<[^\n>]+>\n/).replace(/\|table/g, "").getRegex(), Se = d(oe).replace(/bull/g, j).replace(/blockCode/g, /(?: {4}| {0,3}\t)/).replace(/fences/g, / {0,3}(?:`{3,}|~{3,})/).replace(/blockquote/g, / {0,3}>/).replace(/heading/g, / {0,3}#{1,6}(?:\s|$)/).replace(/html/g, / {0,3}<[^\n>]+>\n/).replace(/table/g, / {0,3}\|?(?:[:\- ]*\|)+[\:\- ]*\n/).getRegex(), F = /^([^\n]+(?:\n(?!hr|heading|lheading|blockquote|fences|list|html|table|[ \t]+\n)[^\n]+)*)/, $e = /^[^\n]+/, U = /(?!\s*\])(?:\\[\s\S]|[^\[\]\\])+/, Le = d(/^ {0,3}\[(label)\]: *(?:\n[ \t]*)?([^<\s][^\s]*|<.*?>)(?:(?: +(?:\n[ \t]*)?| *\n[ \t]*)(title))? *(?:\n+|$)/).replace("label", U).replace("title", /(?:"(?:\\"?|[^"\\])*"|'[^'\n]*(?:\n[^'\n]+)*\n?'|\([^()]*\))/).getRegex(), _e = d(/^(bull)([ \t][^\n]*?)?(?:\n|$)/).replace(/bull/g, j).getRegex(), H = "address|article|aside|base|basefont|blockquote|body|caption|center|col|colgroup|dd|details|dialog|dir|div|dl|dt|fieldset|figcaption|figure|footer|form|frame|frameset|h[1-6]|head|header|hr|html|iframe|legend|li|link|main|menu|menuitem|meta|nav|noframes|ol|optgroup|option|p|param|search|section|summary|table|tbody|td|tfoot|th|thead|title|tr|track|ul", K = /<!--(?:-?>|[\s\S]*?(?:-->|$))/, Me = d("^ {0,3}(?:<(script|pre|style|textarea)[\\s>][\\s\\S]*?(?:</\\1>[^\\n]*\\n*|$)|comment[^\\n]*(\\n+|$)|<\\?[\\s\\S]*?(?:\\?>[^\\n]*\\n*|$)|<![A-Z][\\s\\S]*?(?:>[^\\n]*\\n*|$)|<!\\[CDATA\\[[\\s\\S]*?(?:\\]\\]>[^\\n]*\\n*|$)|</?(tag)(?: +|\\n|/?>)[\\s\\S]*?(?:(?:\\n[ 	]*)+\\n|$)|<(?!script|pre|style|textarea)([a-z][\\w-]*)(?:attribute)*? */?>(?=[ \\t]*(?:\\n|$))[\\s\\S]*?(?:(?:\\n[ 	]*)+\\n|$)|</(?!script|pre|style|textarea)[a-z][\\w-]*\\s*>(?=[ \\t]*(?:\\n|$))[\\s\\S]*?(?:(?:\\n[ 	]*)+\\n|$))", "i").replace("comment", K).replace("tag", H).replace("attribute", / +[a-zA-Z:_][\w.:-]*(?: *= *"[^"\n]*"| *= *'[^'\n]*'| *= *[^\s"'=<>`]+)?/).getRegex(), le = (l3) => d(F).replace("hr", B).replace("heading", " {0,3}#{1,6}(?:\\s|$)").replace("|lheading", "").replace("|table", "").replace("blockquote", " {0,3}>").replace("fences", " {0,3}(?:`{3,}(?=[^`\\n]*\\n)|~~~)[^\\n]*\\n").replace("list", l3).replace("html", "</?(?:tag)(?: +|\\n|/?>)|<(?:script|pre|style|textarea|!--)").replace("tag", H).getRegex(), ze = le(/ {0,3}(?:[*+-]|1[.)])[ \t]+[^ \t\n]/), Ee = le(/ {0,3}(?:[*+-]|\d{1,9}[.)])(?:[ \t]|\n|$)/), Ce = d(/^( {0,3}> ?(paragraph|[^\n]*)(?:\n|$))+/).replace("paragraph", Ee).getRegex(), W = { blockquote: Ce, code: we, def: Le, fences: ye, heading: Pe, hr: B, html: Me, lheading: ae, list: _e, newline: Oe, paragraph: ze, table: _, text: $e }, se = d("^ *([^\\n ].*)\\n {0,3}((?:\\| *)?:?-+:? *(?:\\| *:?-+:? *)*(?:\\| *)?)(?:\\n((?:(?! *\\n|hr|heading|blockquote|code|fences|list|html).*(?:\\n|$))*)\\n*|$)").replace("hr", B).replace("heading", " {0,3}#{1,6}(?:\\s|$)").replace("blockquote", " {0,3}>").replace("code", "(?: {4}| {0,3}	)[^\\n]").replace("fences", " {0,3}(?:`{3,}(?=[^`\\n]*\\n)|~~~)[^\\n]*\\n").replace("list", " {0,3}(?:[*+-]|1[.)])[ \\t]").replace("html", "</?(?:tag)(?: +|\\n|/?>)|<(?:script|pre|style|textarea|!--)").replace("tag", H).getRegex(), Ae = { ...W, lheading: Se, table: se, paragraph: d(F).replace("hr", B).replace("heading", " {0,3}#{1,6}(?:\\s|$)").replace("|lheading", "").replace("table", se).replace("blockquote", " {0,3}>").replace("fences", " {0,3}(?:`{3,}(?=[^`\\n]*\\n)|~~~)[^\\n]*\\n").replace("list", " {0,3}(?:[*+-]|1[.)])[ \\t]+[^ \\t\\n]").replace("html", "</?(?:tag)(?: +|\\n|/?>)|<(?:script|pre|style|textarea|!--)").replace("tag", H).getRegex() }, Ie = { ...W, html: d(`^ *(?:comment *(?:\\n|\\s*$)|<(tag)[\\s\\S]+?</\\1> *(?:\\n{2,}|\\s*$)|<tag(?:"[^"]*"|'[^']*'|\\s[^'"/>\\s]*)*?/?> *(?:\\n{2,}|\\s*$))`).replace("comment", K).replace(/tag/g, "(?!(?:a|em|strong|small|s|cite|q|dfn|abbr|data|time|code|var|samp|kbd|sub|sup|i|b|u|mark|ruby|rt|rp|bdi|bdo|span|br|wbr|ins|del|img)\\b)\\w+(?!:|[^\\w\\s@]*@)\\b").getRegex(), def: /^ *\[([^\]]+)\]: *<?([^\s>]+)>?(?: +(["(][^\n]+[")]))? *(?:\n+|$)/, heading: /^(#{1,6})(.*)(?:\n+|$)/, fences: _, lheading: /^(.+?)\n {0,3}(=+|-+) *(?:\n+|$)/, paragraph: d(F).replace("hr", B).replace("heading", ` *#{1,6} *[^
-]`).replace("lheading", ae).replace("|table", "").replace("blockquote", " {0,3}>").replace("|fences", "").replace("|list", "").replace("|html", "").replace("|tag", "").getRegex() }, Be = /^\\([!"#$%&'()*+,\-./:;<=>?@\[\]\\^_`{|}~])/, qe = /^(`+)([^`]|[^`][\s\S]*?[^`])\1(?!`)/, ue = /^( {2,}|\\)\n(?!\s*$)/, De = /^(`+|[^`])(?:(?= {2,}\n)|[\s\S]*?(?:(?=[\\<!\[`*_]|\b_|$)|[^ ](?= {2,}\n)))/, C = /[\p{P}\p{S}]/u, Z = /[\s\p{P}\p{S}]/u, X = /[^\s\p{P}\p{S}]/u, ve = d(/^((?![*_])punctSpace)/, "u").replace(/punctSpace/g, Z).getRegex(), pe = /(?!~)[\p{P}\p{S}]/u, He = /(?!~)[\s\p{P}\p{S}]/u, Ze = /(?:[^\s\p{P}\p{S}]|~)/u, Ge = d(/link|precode-code|html/, "g").replace("link", /\[(?:[^\[\]`]|(?<a>`+)[^`]+\k<a>(?!`))*?\]\((?:\\[\s\S]|[^\\\(\)]|\((?:\\[\s\S]|[^\\\(\)])*\))*\)/).replace("precode-", Te ? "(?<!`)()" : "(^^|[^`])").replace("code", /(?<b>`+)[^`]+\k<b>(?!`)/).replace("html", /<(?! )[^<>]*?>/).getRegex(), ce = /^(?:\*+(?:((?!\*)punct)|([^\s*]))?)|^_+(?:((?!_)punct)|([^\s_]))?/, Ne = d(ce, "u").replace(/punct/g, C).getRegex(), Qe = d(ce, "u").replace(/punct/g, pe).getRegex(), he = "^[^_*]*?__[^_*]*?\\*[^_*]*?(?=__)|[^*]+(?=[^*])|(?!\\*)punct(\\*+)(?=[\\s]|$)|notPunctSpace(\\*+)(?!\\*)(?=punctSpace|$)|(?!\\*)punctSpace(\\*+)(?=notPunctSpace)|[\\s](\\*+)(?!\\*)(?=punct)|(?!\\*)punct(\\*+)(?!\\*)(?=punct)|notPunctSpace(\\*+)(?=notPunctSpace)", je = d(he, "gu").replace(/notPunctSpace/g, X).replace(/punctSpace/g, Z).replace(/punct/g, C).getRegex(), Fe = d(he, "gu").replace(/notPunctSpace/g, Ze).replace(/punctSpace/g, He).replace(/punct/g, pe).getRegex(), Ue = d("^[^_*]*?\\*\\*[^_*]*?_[^_*]*?(?=\\*\\*)|[^_]+(?=[^_])|(?!_)punct(_+)(?=[\\s]|$)|notPunctSpace(_+)(?!_)(?=punctSpace|$)|(?!_)punctSpace(_+)(?=notPunctSpace)|[\\s](_+)(?!_)(?=punct)|(?!_)punct(_+)(?!_)(?=punct)", "gu").replace(/notPunctSpace/g, X).replace(/punctSpace/g, Z).replace(/punct/g, C).getRegex(), Ke = d(/^~~?(?:((?!~)punct)|[^\s~])/, "u").replace(/punct/g, C).getRegex(), We = "^[^~]+(?=[^~])|(?!~)punct(~~?)(?=[\\s]|$)|notPunctSpace(~~?)(?!~)(?=punctSpace|$)|(?!~)punctSpace(~~?)(?=notPunctSpace)|[\\s](~~?)(?!~)(?=punct)|(?!~)punct(~~?)(?!~)(?=punct)|notPunctSpace(~~?)(?=notPunctSpace)", Xe = d(We, "gu").replace(/notPunctSpace/g, X).replace(/punctSpace/g, Z).replace(/punct/g, C).getRegex(), Je = d(/\\(punct)/, "gu").replace(/punct/g, C).getRegex(), Ve = d(/^<(scheme:[^\s\x00-\x1f<>]*|email)>/).replace("scheme", /[a-zA-Z][a-zA-Z0-9+.-]{1,31}/).replace("email", /[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+(@)[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?(?:\.[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?)+(?![-_])/).getRegex(), Ye = d(K).replace("(?:-->|$)", "-->").getRegex(), et = d("^comment|^</[a-zA-Z][\\w:-]*\\s*>|^<[a-zA-Z][\\w-]*(?:attribute)*?\\s*/?>|^<\\?[\\s\\S]*?\\?>|^<![a-zA-Z]+\\s[\\s\\S]*?>|^<!\\[CDATA\\[[\\s\\S]*?\\]\\]>").replace("comment", Ye).replace("attribute", /\s+[a-zA-Z:_][\w.:-]*(?:\s*=\s*"[^"]*"|\s*=\s*'[^']*'|\s*=\s*[^\s"'=<>`]+)?/).getRegex(), v = /(?:\[(?:\\[\s\S]|[^\[\]\\])*\]|\\[\s\S]|`+(?!`)[^`]*?`+(?!`)|``+(?=\])|[^\[\]\\`])*?/, tt = d(/^!?\[(label)\]\(\s*(href)(?:(?:[ \t]+(?:\n[ \t]*)?|\n[ \t]*)(title))?\s*\)/).replace("label", v).replace("href", /<(?:\\.|[^\n<>\\])+>|[^ \t\n\x00-\x1f]+|(?=\))/).replace("title", /"(?:\\"?|[^"\\])*"|'(?:\\'?|[^'\\])*'|\((?:\\\)?|[^)\\])*\)/).getRegex(), ke = d(/^!?\[(label)\]\[(ref)\]/).replace("label", v).replace("ref", U).getRegex(), de = d(/^!?\[(ref)\](?:\[\])?/).replace("ref", U).getRegex(), nt = d("reflink|nolink(?!\\()", "g").replace("reflink", ke).replace("nolink", de).getRegex(), ie = /[hH][tT][tT][pP][sS]?|[fF][tT][pP]/, J = { _backpedal: _, anyPunctuation: Je, autolink: Ve, blockSkip: Ge, br: ue, code: qe, del: _, delLDelim: _, delRDelim: _, emStrongLDelim: Ne, emStrongRDelimAst: je, emStrongRDelimUnd: Ue, escape: Be, link: tt, nolink: de, punctuation: ve, reflink: ke, reflinkSearch: nt, tag: et, text: De, url: _ }, rt = { ...J, link: d(/^!?\[(label)\]\((.*?)\)/).replace("label", v).getRegex(), reflink: d(/^!?\[(label)\]\s*\[([^\]]*)\]/).replace("label", v).getRegex() }, Q = { ...J, emStrongRDelimAst: Fe, emStrongLDelim: Qe, delLDelim: Ke, delRDelim: Xe, url: d(/^((?:protocol):\/\/|www\.)(?:[a-zA-Z0-9\-]+\.?)+[^\s<]*|^email/).replace("protocol", ie).replace("email", /[A-Za-z0-9._+-]+(@)[a-zA-Z0-9-_]+(?:\.[a-zA-Z0-9-_]*[a-zA-Z0-9])+(?![-_])/).getRegex(), _backpedal: /(?:[^?!.,:;*_'"~()&]+|\([^)]*\)|&(?![a-zA-Z0-9]+;$)|[?!.,:;*_'"~)]+(?!$))+/, del: /^(~~?)(?=[^\s~])((?:\\[\s\S]|[^\\])*?(?:\\[\s\S]|[^\s~\\]))\1(?=[^~]|$)/, text: d(/^(`+|~+|[^`~])(?:(?=[`~])|(?= {2,}\n)|(?=[a-zA-Z0-9.!#$%&'*+\/=?_`{\|}~-]+@)|[\s\S]*?(?:(?=[\\<!\[`*~_]|\b_|protocol:\/\/|www\.|$)|[^ ](?= {2,}\n)|[^a-zA-Z0-9.!#$%&'*+\/=?_`{\|}~-](?=[a-zA-Z0-9.!#$%&'*+\/=?_`{\|}~-]+@)))/).replace("protocol", ie).getRegex() }, st = { ...Q, br: d(ue).replace("{2,}", "*").getRegex(), text: d(Q.text).replace("\\b_", "\\b_| {2,}\\n").replace(/\{2,\}/g, "*").getRegex() }, q = { normal: W, gfm: Ae, pedantic: Ie }, A = { normal: J, gfm: Q, breaks: st, pedantic: rt };
+})(), m = { codeRemoveIndent: /^(?: {1,4}| {0,3}\t)/gm, outputLinkReplace: /\\([\[\]])/g, indentCodeCompensation: /^(\s+)(?:```)/, beginningSpace: /^\s+/, endingHash: /#$/, startingSpaceChar: /^ /, endingSpaceChar: / $/, nonSpaceChar: /[^ ]/, newLineCharGlobal: /\n/g, tabCharGlobal: /\t/g, multipleSpaceGlobal: /\s+/g, blankLine: /^[ \t]*$/, doubleBlankLine: /\n[ \t]*\n[ \t]*$/, blockquoteStart: /^ {0,3}>/, blockquoteSetextReplace: /\n {0,3}((?:=+|-+) *)(?=\n|$)/g, blockquoteSetextReplace2: /^ {0,3}>[ \t]?/gm, listReplaceNesting: /^ {1,4}(?=( {4})*[^ ])/g, listIsTask: /^\[[ xX]\] +\S/, listReplaceTask: /^\[[ xX]\] +/, listTaskCheckbox: /\[[ xX]\]/, anyLine: /\n.*\n/, hrefBrackets: /^<(.*)>$/, tableDelimiter: /[:|]/, tableAlignChars: /^\||\| *$/g, tableRowBlankLine: /\n[ \t]*$/, tableAlignRight: /^ *-+: *$/, tableAlignCenter: /^ *:-+: *$/, tableAlignLeft: /^ *:-+ *$/, startATag: /^<a /i, endATag: /^<\/a>/i, startPreScriptTag: /^<(pre|code|kbd|script)(\s|>)/i, endPreScriptTag: /^<\/(pre|code|kbd|script)(\s|>)/i, startAngleBracket: /^</, endAngleBracket: />$/, pedanticHrefTitle: /^([^'"]*[^\s])\s+(['"])(.*)\2/, unicodeAlphaNumeric: /[\p{L}\p{N}]/u, escapeTest: /[&<>"']/, escapeReplace: /[&<>"']/g, escapeTestNoEncode: /[<>"']|&(?!(#\d{1,7}|#[Xx][a-fA-F0-9]{1,6}|\w+);)/, escapeReplaceNoEncode: /[<>"']|&(?!(#\d{1,7}|#[Xx][a-fA-F0-9]{1,6}|\w+);)/g, caret: /(^|[^\[])\^/g, percentDecode: /%25/g, findPipe: /\|/g, splitPipe: / \|/, slashPipe: /\\\|/g, carriageReturn: /\r\n|\r/g, spaceLine: /^ +$/gm, notSpaceStart: /^\S*/, endingNewline: /\n$/, listItemRegex: (l3) => new RegExp(`^( {0,3}${l3})((?:[	 ][^\\n]*)?(?:\\n|$))`), nextBulletRegex: E((l3) => new RegExp(`^ {0,${l3}}(?:[*+-]|\\d{1,9}[.)])((?:[ 	][^\\n]*)?(?:\\n|$))`)), hrRegex: E((l3) => new RegExp(`^ {0,${l3}}((?:- *){3,}|(?:_ *){3,}|(?:\\* *){3,})(?:\\n+|$)`)), fencesBeginRegex: E((l3) => new RegExp(`^ {0,${l3}}(?:\`\`\`|~~~)`)), headingBeginRegex: E((l3) => new RegExp(`^ {0,${l3}}#`)), htmlBeginRegex: E((l3) => new RegExp(`^ {0,${l3}}<(?:[a-z].*>|!--)`, "i")), blockquoteBeginRegex: E((l3) => new RegExp(`^ {0,${l3}}>`)) }, Oe = /^(?:[ \t]*(?:\n|$))+/, we = /^((?: {4}| {0,3}\t)[^\n]+(?:\n(?:[ \t]*(?:\n|$))*)?)+/, ye = /^ {0,3}(`{3,}(?=[^`\n]*(?:\n|$))|~{3,})([^\n]*)(?:\n|$)(?:|([\s\S]*?)(?:\n|$))(?: {0,3}\1[~`]* *(?=\n|$)|$)/, B = /^ {0,3}((?:-[\t ]*){3,}|(?:_[ \t]*){3,}|(?:\*[ \t]*){3,})(?:\n+|$)/, Pe = /^ {0,3}(#{1,6})(?=\s|$)(.*)(?:\n+|$)/, j = / {0,3}(?:[*+-]|\d{1,9}[.)])/, oe = /^(?!bull |blockCode|fences|blockquote|heading|html|table)((?:.|\n(?!\s*?\n|bull |blockCode|fences|blockquote|heading|html|table))+?)\n {0,3}(=+|-+) *(?:\n+|$)/, ae = d(oe).replace(/bull/g, j).replace(/blockCode/g, /(?: {4}| {0,3}\t)/).replace(/fences/g, / {0,3}(?:`{3,}|~{3,})/).replace(/blockquote/g, / {0,3}>/).replace(/heading/g, / {0,3}#{1,6}/).replace(/html/g, / {0,3}<[^\n>]+>\n/).replace(/\|table/g, "").getRegex(), Se = d(oe).replace(/bull/g, j).replace(/blockCode/g, /(?: {4}| {0,3}\t)/).replace(/fences/g, / {0,3}(?:`{3,}|~{3,})/).replace(/blockquote/g, / {0,3}>/).replace(/heading/g, / {0,3}#{1,6}/).replace(/html/g, / {0,3}<[^\n>]+>\n/).replace(/table/g, / {0,3}\|?(?:[:\- ]*\|)+[\:\- ]*\n/).getRegex(), F = /^([^\n]+(?:\n(?!hr|heading|lheading|blockquote|fences|list|html|table| +\n)[^\n]+)*)/, $e = /^[^\n]+/, U = /(?!\s*\])(?:\\[\s\S]|[^\[\]\\])+/, Le = d(/^ {0,3}\[(label)\]: *(?:\n[ \t]*)?([^<\s][^\s]*|<.*?>)(?:(?: +(?:\n[ \t]*)?| *\n[ \t]*)(title))? *(?:\n+|$)/).replace("label", U).replace("title", /(?:"(?:\\"?|[^"\\])*"|'[^'\n]*(?:\n[^'\n]+)*\n?'|\([^()]*\))/).getRegex(), _e = d(/^(bull)([ \t][^\n]*?)?(?:\n|$)/).replace(/bull/g, j).getRegex(), H = "address|article|aside|base|basefont|blockquote|body|caption|center|col|colgroup|dd|details|dialog|dir|div|dl|dt|fieldset|figcaption|figure|footer|form|frame|frameset|h[1-6]|head|header|hr|html|iframe|legend|li|link|main|menu|menuitem|meta|nav|noframes|ol|optgroup|option|p|param|search|section|summary|table|tbody|td|tfoot|th|thead|title|tr|track|ul", K = /<!--(?:-?>|[\s\S]*?(?:-->|$))/, ze = d("^ {0,3}(?:<(script|pre|style|textarea)[\\s>][\\s\\S]*?(?:</\\1>[^\\n]*\\n+|$)|comment[^\\n]*(\\n+|$)|<\\?[\\s\\S]*?(?:\\?>[^\\n]*\\n+|$)|<![A-Z][\\s\\S]*?(?:>[^\\n]*\\n+|$)|<!\\[CDATA\\[[\\s\\S]*?(?:\\]\\]>[^\\n]*\\n+|$)|</?(tag)(?: +|\\n|/?>)[\\s\\S]*?(?:(?:\\n[ 	]*)+\\n|$)|<(?!script|pre|style|textarea)([a-z][\\w-]*)(?:attribute)*? */?>(?=[ \\t]*(?:\\n|$))[\\s\\S]*?(?:(?:\\n[ 	]*)+\\n|$)|</(?!script|pre|style|textarea)[a-z][\\w-]*\\s*>(?=[ \\t]*(?:\\n|$))[\\s\\S]*?(?:(?:\\n[ 	]*)+\\n|$))", "i").replace("comment", K).replace("tag", H).replace("attribute", / +[a-zA-Z:_][\w.:-]*(?: *= *"[^"\n]*"| *= *'[^'\n]*'| *= *[^\s"'=<>`]+)?/).getRegex(), le = (l3) => d(F).replace("hr", B).replace("heading", " {0,3}#{1,6}(?:\\s|$)").replace("|lheading", "").replace("|table", "").replace("blockquote", " {0,3}>").replace("fences", " {0,3}(?:`{3,}(?=[^`\\n]*\\n)|~{3,})[^\\n]*\\n").replace("list", l3).replace("html", "</?(?:tag)(?: +|\\n|/?>)|<(?:script|pre|style|textarea|!--)").replace("tag", H).getRegex(), Me = le(/ {0,3}(?:[*+-]|1[.)])[ \t]+[^ \t\n]/), Ee = le(/ {0,3}(?:[*+-]|\d{1,9}[.)])[ \t]+[^ \t\n]/), Ie = d(/^( {0,3}> ?(paragraph|[^\n]*)(?:\n|$))+/).replace("paragraph", Ee).getRegex(), W = { blockquote: Ie, code: we, def: Le, fences: ye, heading: Pe, hr: B, html: ze, lheading: ae, list: _e, newline: Oe, paragraph: Me, table: _, text: $e }, se = d("^ *([^\\n ].*)\\n {0,3}((?:\\| *)?:?-+:? *(?:\\| *:?-+:? *)*(?:\\| *)?)(?:\\n((?:(?! *\\n|hr|heading|blockquote|code|fences|list|html).*(?:\\n|$))*)\\n*|$)").replace("hr", B).replace("heading", " {0,3}#{1,6}(?:\\s|$)").replace("blockquote", " {0,3}>").replace("code", "(?: {4}| {0,3}	)[^\\n]").replace("fences", " {0,3}(?:`{3,}(?=[^`\\n]*\\n)|~{3,})[^\\n]*\\n").replace("list", " {0,3}(?:[*+-]|1[.)])[ \\t]").replace("html", "</?(?:tag)(?: +|\\n|/?>)|<(?:script|pre|style|textarea|!--)").replace("tag", H).getRegex(), Ae = { ...W, lheading: Se, table: se, paragraph: d(F).replace("hr", B).replace("heading", " {0,3}#{1,6}(?:\\s|$)").replace("|lheading", "").replace("table", se).replace("blockquote", " {0,3}>").replace("fences", " {0,3}(?:`{3,}(?=[^`\\n]*\\n)|~{3,})[^\\n]*\\n").replace("list", " {0,3}(?:[*+-]|1[.)])[ \\t]+[^ \\t\\n]").replace("html", "</?(?:tag)(?: +|\\n|/?>)|<(?:script|pre|style|textarea|!--)").replace("tag", H).getRegex() }, Ce = { ...W, html: d(`^ *(?:comment *(?:\\n|\\s*$)|<(tag)[\\s\\S]+?</\\1> *(?:\\n{2,}|\\s*$)|<tag(?:"[^"]*"|'[^']*'|\\s[^'"/>\\s]*)*?/?> *(?:\\n{2,}|\\s*$))`).replace("comment", K).replace(/tag/g, "(?!(?:a|em|strong|small|s|cite|q|dfn|abbr|data|time|code|var|samp|kbd|sub|sup|i|b|u|mark|ruby|rt|rp|bdi|bdo|span|br|wbr|ins|del|img)\\b)\\w+(?!:|[^\\w\\s@]*@)\\b").getRegex(), def: /^ *\[([^\]]+)\]: *<?([^\s>]+)>?(?: +(["(][^\n]+[")]))? *(?:\n+|$)/, heading: /^(#{1,6})(.*)(?:\n+|$)/, fences: _, lheading: /^(.+?)\n {0,3}(=+|-+) *(?:\n+|$)/, paragraph: d(F).replace("hr", B).replace("heading", ` *#{1,6} *[^
+]`).replace("lheading", ae).replace("|table", "").replace("blockquote", " {0,3}>").replace("|fences", "").replace("|list", "").replace("|html", "").replace("|tag", "").getRegex() }, Be = /^\\([!"#$%&'()*+,\-./:;<=>?@\[\]\\^_`{|}~])/, qe = /^(`+)([^`]|[^`][\s\S]*?[^`])\1(?!`)/, ue = /^( {2,}|\\)\n(?!\s*$)/, De = /^(`+|[^`])(?:(?= {2,}\n)|[\s\S]*?(?:(?=[\\<!\[`*_]|\b_|$)|[^ ](?= {2,}\n)))/, I = /[\p{P}\p{S}]/u, Z = /[\s\p{P}\p{S}]/u, X = /[^\s\p{P}\p{S}]/u, ve = d(/^((?![*_])punctSpace)/, "u").replace(/punctSpace/g, Z).getRegex(), pe = /(?!~)[\p{P}\p{S}]/u, He = /(?!~)[\s\p{P}\p{S}]/u, Ze = /(?:[^\s\p{P}\p{S}]|~)/u, Ge = d(/link|precode-code|html/, "g").replace("link", /\[(?:[^\[\]`]|(?<a>`+)[^`]+\k<a>(?!`))*?\]\((?:\\[\s\S]|[^\\\(\)]|\((?:\\[\s\S]|[^\\\(\)])*\))*\)/).replace("precode-", Te ? "(?<!`)()" : "(^^|[^`])").replace("code", /(?<b>`+)[^`]+\k<b>(?!`)/).replace("html", /<(?! )[^<>]*?>/).getRegex(), ce = /^(?:\*+(?:((?!\*)punct)|([^\s*]))?)|^_+(?:((?!_)punct)|([^\s_]))?/, Ne = d(ce, "u").replace(/punct/g, I).getRegex(), Qe = d(ce, "u").replace(/punct/g, pe).getRegex(), he = "^[^_*]*?__[^_*]*?\\*[^_*]*?(?=__)|[^*]+(?=[^*])|(?!\\*)punct(\\*+)(?=[\\s]|$)|notPunctSpace(\\*+)(?!\\*)(?=punctSpace|$)|(?!\\*)punctSpace(\\*+)(?=notPunctSpace)|[\\s](\\*+)(?!\\*)(?=punct)|(?!\\*)punct(\\*+)(?!\\*)(?=punct)|notPunctSpace(\\*+)(?=notPunctSpace)", je = d(he, "gu").replace(/notPunctSpace/g, X).replace(/punctSpace/g, Z).replace(/punct/g, I).getRegex(), Fe = d(he, "gu").replace(/notPunctSpace/g, Ze).replace(/punctSpace/g, He).replace(/punct/g, pe).getRegex(), Ue = d("^[^_*]*?\\*\\*[^_*]*?_[^_*]*?(?=\\*\\*)|[^_]+(?=[^_])|(?!_)punct(_+)(?=[\\s]|$)|notPunctSpace(_+)(?!_)(?=punctSpace|$)|(?!_)punctSpace(_+)(?=notPunctSpace)|[\\s](_+)(?!_)(?=punct)|(?!_)punct(_+)(?!_)(?=punct)", "gu").replace(/notPunctSpace/g, X).replace(/punctSpace/g, Z).replace(/punct/g, I).getRegex(), Ke = d(/^~~?(?:((?!~)punct)|[^\s~])/, "u").replace(/punct/g, I).getRegex(), We = "^[^~]+(?=[^~])|(?!~)punct(~~?)(?=[\\s]|$)|notPunctSpace(~~?)(?!~)(?=punctSpace|$)|(?!~)punctSpace(~~?)(?=notPunctSpace)|[\\s](~~?)(?!~)(?=punct)|(?!~)punct(~~?)(?!~)(?=punct)|notPunctSpace(~~?)(?=notPunctSpace)", Xe = d(We, "gu").replace(/notPunctSpace/g, X).replace(/punctSpace/g, Z).replace(/punct/g, I).getRegex(), Je = d(/\\(punct)/, "gu").replace(/punct/g, I).getRegex(), Ve = d(/^<(scheme:[^\s\x00-\x1f<>]*|email)>/).replace("scheme", /[a-zA-Z][a-zA-Z0-9+.-]{1,31}/).replace("email", /[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+(@)[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?(?:\.[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?)+(?![-_])/).getRegex(), Ye = d(K).replace("(?:-->|$)", "-->").getRegex(), et = d("^comment|^</[a-zA-Z][\\w:-]*\\s*>|^<[a-zA-Z][\\w-]*(?:attribute)*?\\s*/?>|^<\\?[\\s\\S]*?\\?>|^<![a-zA-Z]+\\s[\\s\\S]*?>|^<!\\[CDATA\\[[\\s\\S]*?\\]\\]>").replace("comment", Ye).replace("attribute", /\s+[a-zA-Z:_][\w.:-]*(?:\s*=\s*"[^"]*"|\s*=\s*'[^']*'|\s*=\s*[^\s"'=<>`]+)?/).getRegex(), v = /(?:\[(?:\\[\s\S]|[^\[\]\\])*\]|\\[\s\S]|`+(?!`)[^`]*?`+(?!`)|``+(?=\])|[^\[\]\\`])*?/, tt = d(/^!?\[(label)\]\(\s*(href)(?:(?:[ \t]+(?:\n[ \t]*)?|\n[ \t]*)(title))?\s*\)/).replace("label", v).replace("href", /<(?:\\.|[^\n<>\\])+>|[^ \t\n\x00-\x1f]+|(?=\))/).replace("title", /"(?:\\"?|[^"\\])*"|'(?:\\'?|[^'\\])*'|\((?:\\\)?|[^)\\])*\)/).getRegex(), ke = d(/^!?\[(label)\]\[(ref)\]/).replace("label", v).replace("ref", U).getRegex(), de = d(/^!?\[(ref)\](?:\[\])?/).replace("ref", U).getRegex(), nt = d("reflink|nolink(?!\\()", "g").replace("reflink", ke).replace("nolink", de).getRegex(), ie = /[hH][tT][tT][pP][sS]?|[fF][tT][pP]/, J = { _backpedal: _, anyPunctuation: Je, autolink: Ve, blockSkip: Ge, br: ue, code: qe, del: _, delLDelim: _, delRDelim: _, emStrongLDelim: Ne, emStrongRDelimAst: je, emStrongRDelimUnd: Ue, escape: Be, link: tt, nolink: de, punctuation: ve, reflink: ke, reflinkSearch: nt, tag: et, text: De, url: _ }, rt = { ...J, link: d(/^!?\[(label)\]\((.*?)\)/).replace("label", v).getRegex(), reflink: d(/^!?\[(label)\]\s*\[([^\]]*)\]/).replace("label", v).getRegex() }, Q = { ...J, emStrongRDelimAst: Fe, emStrongLDelim: Qe, delLDelim: Ke, delRDelim: Xe, url: d(/^((?:protocol):\/\/|www\.)(?:[a-zA-Z0-9\-]+\.?)+[^\s<]*|^email/).replace("protocol", ie).replace("email", /[A-Za-z0-9._+-]+(@)[a-zA-Z0-9-_]+(?:\.[a-zA-Z0-9-_]*[a-zA-Z0-9])+(?![-_])/).getRegex(), _backpedal: /(?:[^?!.,:;*_'"~()&]+|\([^)]*\)|&(?![a-zA-Z0-9]+;$)|[?!.,:;*_'"~)]+(?!$))+/, del: /^(~~?)(?=[^\s~])((?:\\[\s\S]|[^\\])*?(?:\\[\s\S]|[^\s~\\]))\1(?=[^~]|$)/, text: d(/^([`~]+|[^`~])(?:(?= {2,}\n)|(?=[a-zA-Z0-9.!#$%&'*+\/=?_`{\|}~-]+@)|[\s\S]*?(?:(?=[\\<!\[`*~_]|\b_|protocol:\/\/|www\.|$)|[^ ](?= {2,}\n)|[^a-zA-Z0-9.!#$%&'*+\/=?_`{\|}~-](?=[a-zA-Z0-9.!#$%&'*+\/=?_`{\|}~-]+@)))/).replace("protocol", ie).getRegex() }, st = { ...Q, br: d(ue).replace("{2,}", "*").getRegex(), text: d(Q.text).replace("\\b_", "\\b_| {2,}\\n").replace(/\{2,\}/g, "*").getRegex() }, q = { normal: W, gfm: Ae, pedantic: Ce }, A = { normal: J, gfm: Q, breaks: st, pedantic: rt };
 var it = { "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }, ge = (l3) => it[l3];
 function O(l3, e) {
   if (e) {
@@ -5442,27 +5711,27 @@ var w = class {
         else if (!o) u.push(n[a]);
         else break;
         n = n.slice(a);
-        let p = u.join(`
-`), c = p.replace(this.rules.other.blockquoteSetextReplace, `
+        let c = u.join(`
+`), p = c.replace(this.rules.other.blockquoteSetextReplace, `
     $1`).replace(this.rules.other.blockquoteSetextReplace2, "");
         s = s ? `${s}
-${p}` : p, r = r ? `${r}
-${c}` : c;
-        let h = this.lexer.state.top;
-        if (this.lexer.state.top = true, this.lexer.blockTokens(c, i, true), this.lexer.state.top = h, n.length === 0) break;
-        let k = i.at(-1);
-        if ((k == null ? void 0 : k.type) === "code") break;
-        if ((k == null ? void 0 : k.type) === "blockquote") {
-          let R = k, f = R.raw + `
+${c}` : c, r = r ? `${r}
+${p}` : p;
+        let k = this.lexer.state.top;
+        if (this.lexer.state.top = true, this.lexer.blockTokens(p, i, true), this.lexer.state.top = k, n.length === 0) break;
+        let h = i.at(-1);
+        if ((h == null ? void 0 : h.type) === "code") break;
+        if ((h == null ? void 0 : h.type) === "blockquote") {
+          let R = h, f = R.raw + `
 ` + n.join(`
 `), S = this.blockquote(f);
           i[i.length - 1] = S, s = s.substring(0, s.length - R.raw.length) + S.raw, r = r.substring(0, r.length - R.text.length) + S.text;
           break;
-        } else if ((k == null ? void 0 : k.type) === "list") {
-          let R = k, f = R.raw + `
+        } else if ((h == null ? void 0 : h.type) === "list") {
+          let R = h, f = R.raw + `
 ` + n.join(`
 `), S = this.list(f);
-          i[i.length - 1] = S, s = s.substring(0, s.length - k.raw.length) + S.raw, r = r.substring(0, r.length - R.raw.length) + S.raw, n = f.substring(i.at(-1).raw.length).split(`
+          i[i.length - 1] = S, s = s.substring(0, s.length - h.raw.length) + S.raw, r = r.substring(0, r.length - R.raw.length) + S.raw, n = f.substring(i.at(-1).raw.length).split(`
 `);
           continue;
         }
@@ -5477,31 +5746,31 @@ ${c}` : c;
       n = s ? `\\d{1,9}\\${n.slice(-1)}` : `\\${n}`, this.options.pedantic && (n = s ? n : "[*+-]");
       let i = this.rules.other.listItemRegex(n), o = false;
       for (; e; ) {
-        let a = false, p = "", c = "";
+        let a = false, c = "", p = "";
         if (!(t = i.exec(e)) || this.rules.block.hr.test(e)) break;
-        p = t[0], e = e.substring(p.length);
-        let h = me(t[2].split(`
-`, 1)[0], t[1].length), k = e.split(`
-`, 1)[0], R = !h.trim(), f = 0;
-        if (this.options.pedantic ? (f = 2, c = h.trimStart()) : R ? f = t[1].length + 1 : (f = h.search(this.rules.other.nonSpaceChar), f = f > 4 ? 1 : f, c = h.slice(f), f += t[1].length), R && this.rules.other.blankLine.test(k) && (p += k + `
-`, e = e.substring(k.length + 1), a = true), !a) {
+        c = t[0], e = e.substring(c.length);
+        let k = me(t[2].split(`
+`, 1)[0], t[1].length), h = e.split(`
+`, 1)[0], R = !k.trim(), f = 0;
+        if (this.options.pedantic ? (f = 2, p = k.trimStart()) : R ? f = t[1].length + 1 : (f = k.search(this.rules.other.nonSpaceChar), f = f > 4 ? 1 : f, p = k.slice(f), f += t[1].length), R && this.rules.other.blankLine.test(h) && (c += h + `
+`, e = e.substring(h.length + 1), a = true), !a) {
           let S = this.rules.other.nextBulletRegex(f), te = this.rules.other.hrRegex(f), ne = this.rules.other.fencesBeginRegex(f), re = this.rules.other.headingBeginRegex(f), be = this.rules.other.htmlBeginRegex(f), Re = this.rules.other.blockquoteBeginRegex(f);
           for (; e; ) {
             let G = e.split(`
-`, 1)[0], I;
-            if (k = G, this.options.pedantic ? (k = k.replace(this.rules.other.listReplaceNesting, "  "), I = k) : I = k.replace(this.rules.other.tabCharGlobal, "    "), ne.test(k) || re.test(k) || be.test(k) || Re.test(k) || S.test(k) || te.test(k)) break;
-            if (I.search(this.rules.other.nonSpaceChar) >= f || !k.trim()) c += `
-` + I.slice(f);
+`, 1)[0], C;
+            if (h = G, this.options.pedantic ? (h = h.replace(this.rules.other.listReplaceNesting, "  "), C = h) : C = h.replace(this.rules.other.tabCharGlobal, "    "), ne.test(h) || re.test(h) || be.test(h) || Re.test(h) || S.test(h) || te.test(h)) break;
+            if (C.search(this.rules.other.nonSpaceChar) >= f || !h.trim()) p += `
+` + C.slice(f);
             else {
-              if (R || h.replace(this.rules.other.tabCharGlobal, "    ").search(this.rules.other.nonSpaceChar) >= 4 || ne.test(h) || re.test(h) || te.test(h)) break;
-              c += `
-` + k;
+              if (R || k.replace(this.rules.other.tabCharGlobal, "    ").search(this.rules.other.nonSpaceChar) >= 4 || ne.test(k) || re.test(k) || te.test(k)) break;
+              p += `
+` + h;
             }
-            R = !k.trim(), p += G + `
-`, e = e.substring(G.length + 1), h = I.slice(f);
+            R = !h.trim(), c += G + `
+`, e = e.substring(G.length + 1), k = C.slice(f);
           }
         }
-        r.loose || (o ? r.loose = true : this.rules.other.doubleBlankLine.test(p) && (o = true)), r.items.push({ type: "list_item", raw: p, task: !!this.options.gfm && this.rules.other.listIsTask.test(c), loose: false, text: c, tokens: [] }), r.raw += p;
+        r.loose || (o ? r.loose = true : this.rules.other.doubleBlankLine.test(c) && (o = true)), r.items.push({ type: "list_item", raw: c, task: !!this.options.gfm && this.rules.other.listIsTask.test(p), loose: false, text: p, tokens: [] }), r.raw += c;
       }
       let u = r.items.at(-1);
       if (u) u.raw = u.raw.trimEnd(), u.text = u.text.trimEnd();
@@ -5509,27 +5778,27 @@ ${c}` : c;
       r.raw = r.raw.trimEnd();
       for (let a of r.items) {
         this.lexer.state.top = false, a.tokens = this.lexer.blockTokens(a.text, []);
-        let p = a.tokens[0];
-        if (a.task && ((p == null ? void 0 : p.type) === "text" || (p == null ? void 0 : p.type) === "paragraph")) {
-          a.text = a.text.replace(this.rules.other.listReplaceTask, ""), p.raw = p.raw.replace(this.rules.other.listReplaceTask, ""), p.text = p.text.replace(this.rules.other.listReplaceTask, "");
-          for (let h = this.lexer.inlineQueue.length - 1; h >= 0; h--) if (this.rules.other.listIsTask.test(this.lexer.inlineQueue[h].src)) {
-            this.lexer.inlineQueue[h].src = this.lexer.inlineQueue[h].src.replace(this.rules.other.listReplaceTask, "");
+        let c = a.tokens[0];
+        if (a.task && ((c == null ? void 0 : c.type) === "text" || (c == null ? void 0 : c.type) === "paragraph")) {
+          a.text = a.text.replace(this.rules.other.listReplaceTask, ""), c.raw = c.raw.replace(this.rules.other.listReplaceTask, ""), c.text = c.text.replace(this.rules.other.listReplaceTask, "");
+          for (let k = this.lexer.inlineQueue.length - 1; k >= 0; k--) if (this.rules.other.listIsTask.test(this.lexer.inlineQueue[k].src)) {
+            this.lexer.inlineQueue[k].src = this.lexer.inlineQueue[k].src.replace(this.rules.other.listReplaceTask, "");
             break;
           }
-          let c = this.rules.other.listTaskCheckbox.exec(a.raw);
-          if (c) {
-            let h = { type: "checkbox", raw: c[0] + " ", checked: c[0] !== "[ ]" };
-            a.checked = h.checked, r.loose ? a.tokens[0] && ["paragraph", "text"].includes(a.tokens[0].type) && "tokens" in a.tokens[0] && a.tokens[0].tokens ? (a.tokens[0].raw = h.raw + a.tokens[0].raw, a.tokens[0].text = h.raw + a.tokens[0].text, a.tokens[0].tokens.unshift(h)) : a.tokens.unshift({ type: "paragraph", raw: h.raw, text: h.raw, tokens: [h] }) : a.tokens.unshift(h);
+          let p = this.rules.other.listTaskCheckbox.exec(a.raw);
+          if (p) {
+            let k = { type: "checkbox", raw: p[0] + " ", checked: p[0] !== "[ ]" };
+            a.checked = k.checked, r.loose ? a.tokens[0] && ["paragraph", "text"].includes(a.tokens[0].type) && "tokens" in a.tokens[0] && a.tokens[0].tokens ? (a.tokens[0].raw = k.raw + a.tokens[0].raw, a.tokens[0].text = k.raw + a.tokens[0].text, a.tokens[0].tokens.unshift(k)) : a.tokens.unshift({ type: "paragraph", raw: k.raw, text: k.raw, tokens: [k] }) : a.tokens.unshift(k);
           }
         } else a.task && (a.task = false);
         if (!r.loose) {
-          let c = a.tokens.filter((k) => k.type === "space"), h = c.length > 0 && c.some((k) => this.rules.other.anyLine.test(k.raw));
-          r.loose = h;
+          let p = a.tokens.filter((h) => h.type === "space"), k = p.length > 0 && p.some((h) => this.rules.other.anyLine.test(h.raw));
+          r.loose = k;
         }
       }
       if (r.loose) for (let a of r.items) {
         a.loose = true;
-        for (let p of a.tokens) p.type === "text" && (p.type = "paragraph");
+        for (let c of a.tokens) c.type === "text" && (c.type = "paragraph");
       }
       return r;
     }
@@ -5630,25 +5899,25 @@ ${c}` : c;
     let s = this.rules.inline.emStrongLDelim.exec(e);
     if (!s || !s[1] && !s[2] && !s[3] && !s[4] || s[4] && n.match(this.rules.other.unicodeAlphaNumeric)) return;
     if (!(s[1] || s[3] || "") || !n || this.rules.inline.punctuation.exec(n)) {
-      let i = [...s[0]].length - 1, o, u, a = i, p = 0, c = s[0][0] === "*" ? this.rules.inline.emStrongRDelimAst : this.rules.inline.emStrongRDelimUnd;
-      for (c.lastIndex = 0, t = t.slice(-1 * e.length + i); (s = c.exec(t)) !== null; ) {
+      let i = [...s[0]].length - 1, o, u, a = i, c = 0, p = s[0][0] === "*" ? this.rules.inline.emStrongRDelimAst : this.rules.inline.emStrongRDelimUnd;
+      for (p.lastIndex = 0, t = t.slice(-1 * e.length + i); (s = p.exec(t)) !== null; ) {
         if (o = s[1] || s[2] || s[3] || s[4] || s[5] || s[6], !o) continue;
         if (u = [...o].length, s[3] || s[4]) {
           a += u;
           continue;
         } else if ((s[5] || s[6]) && i % 3 && !((i + u) % 3)) {
-          p += u;
+          c += u;
           continue;
         }
         if (a -= u, a > 0) continue;
-        u = Math.min(u, u + a + p);
-        let h = [...s[0]][0].length, k = e.slice(0, i + s.index + h + u);
+        u = Math.min(u, u + a + c);
+        let k = [...s[0]][0].length, h = e.slice(0, i + s.index + k + u);
         if (Math.min(i, u) % 2) {
-          let f = k.slice(1, -1);
-          return { type: "em", raw: k, text: f, tokens: this.lexer.inlineTokens(f) };
+          let f = h.slice(1, -1);
+          return { type: "em", raw: h, text: f, tokens: this.lexer.inlineTokens(f) };
         }
-        let R = k.slice(2, -2);
-        return { type: "strong", raw: k, text: R, tokens: this.lexer.inlineTokens(R) };
+        let R = h.slice(2, -2);
+        return { type: "strong", raw: h, text: R, tokens: this.lexer.inlineTokens(R) };
       }
     }
   }
@@ -5667,8 +5936,8 @@ ${c}` : c;
     let s = this.rules.inline.delLDelim.exec(e);
     if (!s) return;
     if (!(s[1] || "") || !n || this.rules.inline.punctuation.exec(n)) {
-      let i = [...s[0]].length - 1, o, u, a = i, p = this.rules.inline.delRDelim;
-      for (p.lastIndex = 0, t = t.slice(-1 * e.length + i); (s = p.exec(t)) !== null; ) {
+      let i = [...s[0]].length - 1, o, u, a = i, c = this.rules.inline.delRDelim;
+      for (c.lastIndex = 0, t = t.slice(-1 * e.length + i); (s = c.exec(t)) !== null; ) {
         if (o = s[1] || s[2] || s[3] || s[4] || s[5] || s[6], !o || (u = [...o].length, u !== i)) continue;
         if (s[3] || s[4]) {
           a += u;
@@ -5676,8 +5945,8 @@ ${c}` : c;
         }
         if (a -= u, a > 0) continue;
         u = Math.min(u, u + a);
-        let c = [...s[0]][0].length, h = e.slice(0, i + s.index + c + u), k = h.slice(i, -i);
-        return { type: "del", raw: h, text: k, tokens: this.lexer.inlineTokens(k) };
+        let p = [...s[0]][0].length, k = e.slice(0, i + s.index + p + u), h = k.slice(i, -i);
+        return { type: "del", raw: k, text: h, tokens: this.lexer.inlineTokens(h) };
       }
     }
   }
@@ -5813,8 +6082,8 @@ var x = class l {
       let i = e;
       if ((_c = this.options.extensions) == null ? void 0 : _c.startBlock) {
         let o = 1 / 0, u = e.slice(1), a;
-        this.options.extensions.startBlock.forEach((p) => {
-          a = p.call({ lexer: this }, u), typeof a == "number" && a >= 0 && (o = Math.min(o, a));
+        this.options.extensions.startBlock.forEach((c) => {
+          a = c.call({ lexer: this }, u), typeof a == "number" && a >= 0 && (o = Math.min(o, a));
         }), o < 1 / 0 && o >= 0 && (i = e.substring(0, o + 1));
       }
       if (this.state.top && (r = this.tokenizer.paragraph(i))) {
@@ -5847,78 +6116,78 @@ var x = class l {
   inlineTokens(e, t = []) {
     var _a2, _b, _c, _d, _e2;
     this.tokenizer.lexer = this;
-    let n = e;
+    let n = e, s = null;
     if (this.tokens.links) {
-      let o = Object.keys(this.tokens.links);
-      o.length > 0 && (n = n.replace(this.tokenizer.rules.inline.reflinkSearch, (u) => o.includes(u.slice(u.lastIndexOf("[") + 1, -1)) ? "[" + "a".repeat(u.length - 2) + "]" : u));
+      let a = Object.keys(this.tokens.links);
+      if (a.length > 0) for (; (s = this.tokenizer.rules.inline.reflinkSearch.exec(n)) !== null; ) a.includes(s[0].slice(s[0].lastIndexOf("[") + 1, -1)) && (n = n.slice(0, s.index) + "[" + "a".repeat(s[0].length - 2) + "]" + n.slice(this.tokenizer.rules.inline.reflinkSearch.lastIndex));
     }
-    n = n.replace(this.tokenizer.rules.inline.anyPunctuation, "++"), n = n.replace(this.tokenizer.rules.inline.blockSkip, (o, u, a) => {
-      let p = a ? a.length : 0;
-      return o.slice(0, p) + "[" + "a".repeat(o.length - p - 2) + "]";
-    }), n = ((_b = (_a2 = this.options.hooks) == null ? void 0 : _a2.emStrongMask) == null ? void 0 : _b.call({ lexer: this }, n)) ?? n;
-    let s = false, r = "", i = 1 / 0;
+    for (; (s = this.tokenizer.rules.inline.anyPunctuation.exec(n)) !== null; ) n = n.slice(0, s.index) + "++" + n.slice(this.tokenizer.rules.inline.anyPunctuation.lastIndex);
+    let r;
+    for (; (s = this.tokenizer.rules.inline.blockSkip.exec(n)) !== null; ) r = s[2] ? s[2].length : 0, n = n.slice(0, s.index + r) + "[" + "a".repeat(s[0].length - r - 2) + "]" + n.slice(this.tokenizer.rules.inline.blockSkip.lastIndex);
+    n = ((_b = (_a2 = this.options.hooks) == null ? void 0 : _a2.emStrongMask) == null ? void 0 : _b.call({ lexer: this }, n)) ?? n;
+    let i = false, o = "", u = 1 / 0;
     for (; e; ) {
-      if (e.length < i) i = e.length;
+      if (e.length < u) u = e.length;
       else {
         this.infiniteLoopError(e.charCodeAt(0));
         break;
       }
-      s || (r = ""), s = false;
-      let o;
-      if ((_d = (_c = this.options.extensions) == null ? void 0 : _c.inline) == null ? void 0 : _d.some((a) => (o = a.call({ lexer: this }, e, t)) ? (e = e.substring(o.raw.length), t.push(o), true) : false)) continue;
-      if (o = this.tokenizer.escape(e)) {
-        e = e.substring(o.raw.length), t.push(o);
+      i || (o = ""), i = false;
+      let a;
+      if ((_d = (_c = this.options.extensions) == null ? void 0 : _c.inline) == null ? void 0 : _d.some((p) => (a = p.call({ lexer: this }, e, t)) ? (e = e.substring(a.raw.length), t.push(a), true) : false)) continue;
+      if (a = this.tokenizer.escape(e)) {
+        e = e.substring(a.raw.length), t.push(a);
         continue;
       }
-      if (o = this.tokenizer.tag(e)) {
-        e = e.substring(o.raw.length), t.push(o);
+      if (a = this.tokenizer.tag(e)) {
+        e = e.substring(a.raw.length), t.push(a);
         continue;
       }
-      if (o = this.tokenizer.link(e)) {
-        e = e.substring(o.raw.length), t.push(o);
+      if (a = this.tokenizer.link(e)) {
+        e = e.substring(a.raw.length), t.push(a);
         continue;
       }
-      if (o = this.tokenizer.reflink(e, this.tokens.links)) {
-        e = e.substring(o.raw.length);
-        let a = t.at(-1);
-        o.type === "text" && (a == null ? void 0 : a.type) === "text" ? (a.raw += o.raw, a.text += o.text) : t.push(o);
+      if (a = this.tokenizer.reflink(e, this.tokens.links)) {
+        e = e.substring(a.raw.length);
+        let p = t.at(-1);
+        a.type === "text" && (p == null ? void 0 : p.type) === "text" ? (p.raw += a.raw, p.text += a.text) : t.push(a);
         continue;
       }
-      if (o = this.tokenizer.emStrong(e, n, r)) {
-        e = e.substring(o.raw.length), t.push(o);
+      if (a = this.tokenizer.emStrong(e, n, o)) {
+        e = e.substring(a.raw.length), t.push(a);
         continue;
       }
-      if (o = this.tokenizer.codespan(e)) {
-        e = e.substring(o.raw.length), t.push(o);
+      if (a = this.tokenizer.codespan(e)) {
+        e = e.substring(a.raw.length), t.push(a);
         continue;
       }
-      if (o = this.tokenizer.br(e)) {
-        e = e.substring(o.raw.length), t.push(o);
+      if (a = this.tokenizer.br(e)) {
+        e = e.substring(a.raw.length), t.push(a);
         continue;
       }
-      if (o = this.tokenizer.del(e, n, r)) {
-        e = e.substring(o.raw.length), t.push(o);
+      if (a = this.tokenizer.del(e, n, o)) {
+        e = e.substring(a.raw.length), t.push(a);
         continue;
       }
-      if (o = this.tokenizer.autolink(e)) {
-        e = e.substring(o.raw.length), t.push(o);
+      if (a = this.tokenizer.autolink(e)) {
+        e = e.substring(a.raw.length), t.push(a);
         continue;
       }
-      if (!this.state.inLink && (o = this.tokenizer.url(e))) {
-        e = e.substring(o.raw.length), t.push(o);
+      if (!this.state.inLink && (a = this.tokenizer.url(e))) {
+        e = e.substring(a.raw.length), t.push(a);
         continue;
       }
-      let u = e;
+      let c = e;
       if ((_e2 = this.options.extensions) == null ? void 0 : _e2.startInline) {
-        let a = 1 / 0, p = e.slice(1), c;
-        this.options.extensions.startInline.forEach((h) => {
-          c = h.call({ lexer: this }, p), typeof c == "number" && c >= 0 && (a = Math.min(a, c));
-        }), a < 1 / 0 && a >= 0 && (u = e.substring(0, a + 1));
+        let p = 1 / 0, k = e.slice(1), h;
+        this.options.extensions.startInline.forEach((R) => {
+          h = R.call({ lexer: this }, k), typeof h == "number" && h >= 0 && (p = Math.min(p, h));
+        }), p < 1 / 0 && p >= 0 && (c = e.substring(0, p + 1));
       }
-      if (o = this.tokenizer.inlineText(u)) {
-        e = e.substring(o.raw.length), o.raw.slice(-1) !== "_" && (r = o.raw.slice(-1)), s = true;
-        let a = t.at(-1);
-        (a == null ? void 0 : a.type) === "text" ? (a.raw += o.raw, a.text += o.text) : t.push(o);
+      if (a = this.tokenizer.inlineText(c)) {
+        e = e.substring(a.raw.length), a.raw.slice(-1) !== "_" && (o = a.raw.slice(-1)), i = true;
+        let p = t.at(-1);
+        (p == null ? void 0 : p.type) === "text" ? (p.raw += a.raw, p.text += a.text) : t.push(a);
         continue;
       }
       if (e) {
@@ -6266,7 +6535,7 @@ var P = (_a = class {
 }, __publicField(_a, "passThroughHooks", /* @__PURE__ */ new Set(["preprocess", "postprocess", "processAllTokens", "emStrongMask"])), __publicField(_a, "passThroughHooksRespectAsync", /* @__PURE__ */ new Set(["preprocess", "postprocess", "processAllTokens"])), _a);
 var D = class {
   constructor(...e) {
-    __publicField(this, "defaults", z());
+    __publicField(this, "defaults", M());
     __publicField(this, "options", this.setOptions);
     __publicField(this, "parse", this.parseMarkdown(true));
     __publicField(this, "parseInline", this.parseMarkdown(false));
@@ -6328,9 +6597,9 @@ var D = class {
           if (!(i in r)) throw new Error(`renderer '${i}' does not exist`);
           if (["options", "parser"].includes(i)) continue;
           let o = i, u = n.renderer[o], a = r[o];
-          r[o] = (...p) => {
-            let c = u.apply(r, p);
-            return c === false && (c = a.apply(r, p)), c || "";
+          r[o] = (...c) => {
+            let p = u.apply(r, c);
+            return p === false && (p = a.apply(r, c)), p || "";
           };
         }
         s.renderer = r;
@@ -6341,9 +6610,9 @@ var D = class {
           if (!(i in r)) throw new Error(`tokenizer '${i}' does not exist`);
           if (["options", "rules", "lexer"].includes(i)) continue;
           let o = i, u = n.tokenizer[o], a = r[o];
-          r[o] = (...p) => {
-            let c = u.apply(r, p);
-            return c === false && (c = a.apply(r, p)), c;
+          r[o] = (...c) => {
+            let p = u.apply(r, c);
+            return p === false && (p = a.apply(r, c)), p;
           };
         }
         s.tokenizer = r;
@@ -6354,20 +6623,20 @@ var D = class {
           if (!(i in r)) throw new Error(`hook '${i}' does not exist`);
           if (["options", "block"].includes(i)) continue;
           let o = i, u = n.hooks[o], a = r[o];
-          P.passThroughHooks.has(i) ? r[o] = (p) => {
+          P.passThroughHooks.has(i) ? r[o] = (c) => {
             if (this.defaults.async && P.passThroughHooksRespectAsync.has(i)) return (async () => {
-              let h = await u.call(r, p);
-              return a.call(r, h);
+              let k = await u.call(r, c);
+              return a.call(r, k);
             })();
-            let c = u.call(r, p);
-            return a.call(r, c);
-          } : r[o] = (...p) => {
+            let p = u.call(r, c);
+            return a.call(r, p);
+          } : r[o] = (...c) => {
             if (this.defaults.async) return (async () => {
-              let h = await u.apply(r, p);
-              return h === false && (h = await a.apply(r, p)), h;
+              let k = await u.apply(r, c);
+              return k === false && (k = await a.apply(r, c)), k;
             })();
-            let c = u.apply(r, p);
-            return c === false && (c = a.apply(r, p)), c;
+            let p = u.apply(r, c);
+            return p === false && (p = a.apply(r, c)), p;
           };
         }
         s.hooks = r;
@@ -6398,17 +6667,17 @@ var D = class {
       if (typeof n > "u" || n === null) return o(new Error("marked(): input parameter is undefined or null"));
       if (typeof n != "string") return o(new Error("marked(): input parameter is of type " + Object.prototype.toString.call(n) + ", string expected"));
       if (i.hooks && (i.hooks.options = i, i.hooks.block = e), i.async) return (async () => {
-        let u = i.hooks ? await i.hooks.preprocess(n) : n, p = await (i.hooks ? await i.hooks.provideLexer(e) : e ? x.lex : x.lexInline)(u, i), c = i.hooks ? await i.hooks.processAllTokens(p) : p;
-        i.walkTokens && await Promise.all(this.walkTokens(c, i.walkTokens));
-        let k = await (i.hooks ? await i.hooks.provideParser(e) : e ? b.parse : b.parseInline)(c, i);
-        return i.hooks ? await i.hooks.postprocess(k) : k;
+        let u = i.hooks ? await i.hooks.preprocess(n) : n, c = await (i.hooks ? await i.hooks.provideLexer(e) : e ? x.lex : x.lexInline)(u, i), p = i.hooks ? await i.hooks.processAllTokens(c) : c;
+        i.walkTokens && await Promise.all(this.walkTokens(p, i.walkTokens));
+        let h = await (i.hooks ? await i.hooks.provideParser(e) : e ? b.parse : b.parseInline)(p, i);
+        return i.hooks ? await i.hooks.postprocess(h) : h;
       })().catch(o);
       try {
         i.hooks && (n = i.hooks.preprocess(n));
         let a = (i.hooks ? i.hooks.provideLexer(e) : e ? x.lex : x.lexInline)(n, i);
         i.hooks && (a = i.hooks.processAllTokens(a)), i.walkTokens && this.walkTokens(a, i.walkTokens);
-        let c = (i.hooks ? i.hooks.provideParser(e) : e ? b.parse : b.parseInline)(a, i);
-        return i.hooks && (c = i.hooks.postprocess(c)), c;
+        let p = (i.hooks ? i.hooks.provideParser(e) : e ? b.parse : b.parseInline)(a, i);
+        return i.hooks && (p = i.hooks.postprocess(p)), p;
       } catch (u) {
         return o(u);
       }
@@ -6426,22 +6695,22 @@ Please report this to https://github.com/markedjs/marked.`, e) {
     };
   }
 };
-var M = new D();
+var z = new D();
 function g(l3, e) {
-  return M.parse(l3, e);
+  return z.parse(l3, e);
 }
 g.options = g.setOptions = function(l3) {
-  return M.setOptions(l3), g.defaults = M.defaults, N(g.defaults), g;
+  return z.setOptions(l3), g.defaults = z.defaults, N(g.defaults), g;
 };
-g.getDefaults = z;
+g.getDefaults = M;
 g.defaults = T;
 g.use = function(...l3) {
-  return M.use(...l3), g.defaults = M.defaults, N(g.defaults), g;
+  return z.use(...l3), g.defaults = z.defaults, N(g.defaults), g;
 };
 g.walkTokens = function(l3, e) {
-  return M.walkTokens(l3, e);
+  return z.walkTokens(l3, e);
 };
-g.parseInline = M.parseInline;
+g.parseInline = z.parseInline;
 g.Parser = b;
 g.parser = b.parse;
 g.Renderer = y;
@@ -6489,6 +6758,198 @@ function renderMarkdownToHtml(markdown, baseUrl) {
   if (baseUrl) html2 = html2.replace(MEDIA_SRC_REGEX, `$1${baseUrl.replace(/\/+$/, "")}/$2$3`);
   return purify.sanitize(html2, { ADD_TAGS: ALLOWED_TAGS, ADD_ATTR: [...ALLOWED_ATTRS, "target", "rel"] });
 }
+const _hoisted_1$n = {
+  "aria-label": "Hermes clarification",
+  class: "ctv:rounded-xl ctv:border ctv:border-component-node-border ctv:bg-secondary-background ctv:text-base-foreground ctv:p-3 ctv:space-y-2"
+};
+const _hoisted_2$k = ["disabled"];
+const _hoisted_3$h = ["type", "name", "value", "checked", "onChange"];
+const _hoisted_4$d = {
+  key: 0,
+  class: "ctv:block"
+};
+const _hoisted_5$b = ["data-qid", "value", "onInput"];
+const _hoisted_6$a = { role: "status" };
+const _hoisted_7$6 = {
+  key: 0,
+  role: "alert"
+};
+const _hoisted_8$4 = { key: 1 };
+const _sfc_main$o = /* @__PURE__ */ defineComponent({
+  __name: "HermesQuestionCard",
+  props: {
+    interaction: {}
+  },
+  emits: ["respond"],
+  setup(__props, { emit: __emit }) {
+    const props = __props;
+    const emit = __emit;
+    const view = inject(interactionViewKey, void 0);
+    const disabled = computed(() => !(view == null ? void 0 : view.canRespond(props.interaction)));
+    const selected = reactive({});
+    const other = reactive({});
+    watch(() => props.interaction.id, () => {
+      for (const key2 of Object.keys(selected)) delete selected[key2];
+      for (const key2 of Object.keys(other)) delete other[key2];
+    }, { immediate: true });
+    function choose(id, value, multi, checked) {
+      if (disabled.value) return;
+      if (!multi) {
+        selected[id] = [value];
+        other[id] = "";
+      } else selected[id] = checked ? [...selected[id] ?? [], value] : (selected[id] ?? []).filter((v2) => v2 !== value);
+    }
+    function text2(id, value, multi) {
+      other[id] = value;
+      if (!multi && value.trim()) selected[id] = [];
+    }
+    const answers = computed(() => props.interaction.questions.map((q2) => {
+      var _a2;
+      return { id: q2.id, selected: selected[q2.id] ?? [], ...((_a2 = other[q2.id]) == null ? void 0 : _a2.trim()) ? { other_text: other[q2.id] } : {} };
+    }));
+    const valid = computed(() => validInteractionDecision(props.interaction, { answers: answers.value }));
+    function respond(skip = false) {
+      if (disabled.value || !skip && !valid.value) return;
+      emit("respond", { interaction: props.interaction, decision: skip ? { skip: true } : { answers: answers.value } });
+    }
+    return (_ctx, _cache) => {
+      var _a2, _b;
+      return openBlock(), createElementBlock("section", _hoisted_1$n, [
+        _cache[4] || (_cache[4] = createBaseVNode("strong", null, "Hermes · Clarification", -1)),
+        (openBlock(true), createElementBlock(Fragment, null, renderList(__props.interaction.questions, (q2) => {
+          return openBlock(), createElementBlock("fieldset", {
+            key: q2.id,
+            disabled: disabled.value
+          }, [
+            createBaseVNode("legend", null, toDisplayString(q2.question), 1),
+            (openBlock(true), createElementBlock(Fragment, null, renderList(q2.choices, (choice) => {
+              var _a3;
+              return openBlock(), createElementBlock("label", {
+                key: choice,
+                class: "ctv:block"
+              }, [
+                createBaseVNode("input", {
+                  class: "ctv:appearance-auto ctv:size-4 ctv:mr-2",
+                  type: q2.multi_select ? "checkbox" : "radio",
+                  name: `${__props.interaction.id}-${q2.id}`,
+                  value: choice,
+                  checked: (_a3 = selected[q2.id]) == null ? void 0 : _a3.includes(choice),
+                  onChange: ($event) => choose(q2.id, choice, q2.multi_select, $event.target.checked)
+                }, null, 40, _hoisted_3$h),
+                createTextVNode(toDisplayString(choice), 1)
+              ]);
+            }), 128)),
+            q2.allow_other || !q2.choices.length ? (openBlock(), createElementBlock("label", _hoisted_4$d, [
+              createTextVNode(toDisplayString(q2.choices.length ? "Other" : "Your answer") + " ", 1),
+              createBaseVNode("textarea", {
+                class: "ctv:block ctv:w-full ctv:min-h-16 ctv:border ctv:border-component-node-border ctv:bg-secondary-background ctv:text-base-foreground ctv:p-2",
+                "data-qid": q2.id,
+                value: other[q2.id] ?? "",
+                onInput: ($event) => text2(q2.id, $event.target.value, q2.multi_select)
+              }, null, 40, _hoisted_5$b)
+            ])) : createCommentVNode("", true)
+          ], 8, _hoisted_2$k);
+        }), 128)),
+        createBaseVNode("p", null, "Expires: " + toDisplayString(__props.interaction.expires_at ?? "No configured deadline"), 1),
+        createBaseVNode("p", _hoisted_6$a, toDisplayString(__props.interaction.state), 1),
+        ((_b = (_a2 = unref(view)) == null ? void 0 : _a2.protocolError) == null ? void 0 : _b.call(_a2, __props.interaction)) ? (openBlock(), createElementBlock("p", _hoisted_7$6, toDisplayString(unref(view).protocolError(__props.interaction)), 1)) : createCommentVNode("", true),
+        disabled.value ? (openBlock(), createElementBlock("p", _hoisted_8$4, "Read-only: local desktop channel and live connection required.")) : createCommentVNode("", true),
+        createVNode(_sfc_main$x, {
+          variant: "secondary",
+          size: "sm",
+          type: "button",
+          "data-action": "answer",
+          disabled: disabled.value || !valid.value,
+          onClick: _cache[0] || (_cache[0] = ($event) => respond())
+        }, {
+          default: withCtx(() => [..._cache[2] || (_cache[2] = [
+            createTextVNode("Submit answers", -1)
+          ])]),
+          _: 1
+        }, 8, ["disabled"]),
+        createVNode(_sfc_main$x, {
+          variant: "secondary",
+          size: "sm",
+          type: "button",
+          "data-action": "skip",
+          disabled: disabled.value,
+          onClick: _cache[1] || (_cache[1] = ($event) => respond(true))
+        }, {
+          default: withCtx(() => [..._cache[3] || (_cache[3] = [
+            createTextVNode("Skip questions", -1)
+          ])]),
+          _: 1
+        }, 8, ["disabled"])
+      ]);
+    };
+  }
+});
+const _hoisted_1$m = {
+  "aria-label": "Hermes tool approval",
+  class: "ctv:rounded-xl ctv:border ctv:border-component-node-border ctv:bg-secondary-background ctv:text-base-foreground ctv:p-3 ctv:space-y-2"
+};
+const _hoisted_2$j = { class: "ctv:whitespace-pre-wrap ctv:break-all" };
+const _hoisted_3$g = { key: 0 };
+const _hoisted_4$c = { role: "status" };
+const _hoisted_5$a = {
+  key: 1,
+  role: "alert"
+};
+const _hoisted_6$9 = { key: 2 };
+const _sfc_main$n = /* @__PURE__ */ defineComponent({
+  __name: "HermesApprovalCard",
+  props: {
+    interaction: {}
+  },
+  emits: ["respond"],
+  setup(__props, { emit: __emit }) {
+    const props = __props;
+    const emit = __emit;
+    const view = inject(interactionViewKey, void 0);
+    const disabled = computed(() => !(view == null ? void 0 : view.canRespond(props.interaction)));
+    function respond(choice) {
+      if (disabled.value || choice === "once" && (!props.interaction.action.approvable || props.interaction.action.truncated)) return;
+      emit("respond", { interaction: props.interaction, decision: { choice } });
+    }
+    return (_ctx, _cache) => {
+      var _a2, _b;
+      return openBlock(), createElementBlock("section", _hoisted_1$m, [
+        _cache[4] || (_cache[4] = createBaseVNode("strong", null, "Hermes · Tool approval", -1)),
+        createBaseVNode("pre", _hoisted_2$j, toDisplayString(__props.interaction.action.command), 1),
+        createBaseVNode("p", null, toDisplayString(__props.interaction.action.description), 1),
+        __props.interaction.action.redacted ? (openBlock(), createElementBlock("p", _hoisted_3$g, "Credentials redacted")) : createCommentVNode("", true),
+        createBaseVNode("p", null, "Expires: " + toDisplayString(__props.interaction.expires_at ?? "No configured deadline"), 1),
+        createBaseVNode("p", _hoisted_4$c, toDisplayString(__props.interaction.state), 1),
+        ((_b = (_a2 = unref(view)) == null ? void 0 : _a2.protocolError) == null ? void 0 : _b.call(_a2, __props.interaction)) ? (openBlock(), createElementBlock("p", _hoisted_5$a, toDisplayString(unref(view).protocolError(__props.interaction)), 1)) : createCommentVNode("", true),
+        disabled.value ? (openBlock(), createElementBlock("p", _hoisted_6$9, "Read-only: local desktop channel and live connection required.")) : createCommentVNode("", true),
+        createVNode(_sfc_main$x, {
+          variant: "secondary",
+          size: "sm",
+          type: "button",
+          disabled: disabled.value || !__props.interaction.action.approvable || __props.interaction.action.truncated,
+          onClick: _cache[0] || (_cache[0] = ($event) => respond("once"))
+        }, {
+          default: withCtx(() => [..._cache[2] || (_cache[2] = [
+            createTextVNode("Approve once", -1)
+          ])]),
+          _: 1
+        }, 8, ["disabled"]),
+        createVNode(_sfc_main$x, {
+          variant: "secondary",
+          size: "sm",
+          type: "button",
+          disabled: disabled.value,
+          onClick: _cache[1] || (_cache[1] = ($event) => respond("deny"))
+        }, {
+          default: withCtx(() => [..._cache[3] || (_cache[3] = [
+            createTextVNode("Deny", -1)
+          ])]),
+          _: 1
+        }, 8, ["disabled"])
+      ]);
+    };
+  }
+});
 function foldActivity(parts) {
   const rows = [];
   for (const part of parts) {
@@ -6709,7 +7170,7 @@ const _sfc_main$l = /* @__PURE__ */ defineComponent({
           ])
         ]),
         showAddCredits.value || showSubscribe.value || showUpgrade.value ? (openBlock(), createElementBlock("div", _hoisted_6$7, [
-          showUpgrade.value ? (openBlock(), createBlock(_sfc_main$v, {
+          showUpgrade.value ? (openBlock(), createBlock(_sfc_main$x, {
             key: 0,
             variant: "secondary",
             size: "sm",
@@ -6720,7 +7181,7 @@ const _sfc_main$l = /* @__PURE__ */ defineComponent({
             ]),
             _: 1
           })) : createCommentVNode("", true),
-          showSubscribe.value ? (openBlock(), createBlock(_sfc_main$v, {
+          showSubscribe.value ? (openBlock(), createBlock(_sfc_main$x, {
             key: 1,
             variant: "inverted",
             size: "sm",
@@ -6731,7 +7192,7 @@ const _sfc_main$l = /* @__PURE__ */ defineComponent({
             ]),
             _: 1
           })) : createCommentVNode("", true),
-          showAddCredits.value ? (openBlock(), createBlock(_sfc_main$v, {
+          showAddCredits.value ? (openBlock(), createBlock(_sfc_main$x, {
             key: 2,
             variant: "inverted",
             size: "sm",
@@ -6795,7 +7256,7 @@ const _sfc_main$j = /* @__PURE__ */ defineComponent({
           cancelled = true;
         });
         try {
-          const { codeToHtml } = await import("./shiki-Do5VLs4k.mjs");
+          const { codeToHtml } = await import("./shiki-yOI22FK8.mjs");
           const html2 = await codeToHtml(currentCode, {
             lang: currentLang,
             theme: "github-dark",
@@ -6815,7 +7276,7 @@ const _sfc_main$j = /* @__PURE__ */ defineComponent({
             _cache[1] || (_cache[1] = createBaseVNode("span", { class: "ctv:icon-[lucide--file-code] ctv:size-3.5" }, null, -1)),
             createBaseVNode("span", _hoisted_4$9, toDisplayString(__props.lang), 1)
           ]),
-          createVNode(_sfc_main$v, {
+          createVNode(_sfc_main$x, {
             type: "button",
             variant: "outline",
             size: "sm",
@@ -6978,9 +7439,9 @@ const _sfc_main$i = /* @__PURE__ */ defineComponent({
             ]),
             _: 1
           }, 8, ["class"]),
-          (openBlock(true), createElementBlock(Fragment, null, renderList(modelValue, (_2, key) => {
+          (openBlock(true), createElementBlock(Fragment, null, renderList(modelValue, (_2, key2) => {
             return openBlock(), createBlock(unref(SliderThumb_default), {
-              key,
+              key: key2,
               "data-slot": "slider-thumb",
               class: normalizeClass(
                 unref(cn)(
@@ -7283,7 +7744,7 @@ const _sfc_main$h = /* @__PURE__ */ defineComponent({
           src: __props.asset.url,
           preload: "metadata"
         }, null, 8, _hoisted_2$e),
-        createVNode(_sfc_main$v, {
+        createVNode(_sfc_main$x, {
           type: "button",
           variant: "secondary",
           size: "icon-lg",
@@ -7316,7 +7777,7 @@ const _sfc_main$h = /* @__PURE__ */ defineComponent({
               "onUpdate:modelValue": onScrub
             }, null, 8, ["model-value"]),
             createBaseVNode("div", _hoisted_7$5, [
-              createVNode(_sfc_main$v, {
+              createVNode(_sfc_main$x, {
                 type: "button",
                 variant: "muted-textonly",
                 size: "icon-sm",
@@ -7331,7 +7792,7 @@ const _sfc_main$h = /* @__PURE__ */ defineComponent({
                 ]),
                 _: 1
               }, 8, ["aria-label", "onClick"]),
-              createVNode(_sfc_main$v, {
+              createVNode(_sfc_main$x, {
                 type: "button",
                 variant: "muted-textonly",
                 size: "icon-sm",
@@ -7430,10 +7891,10 @@ const _sfc_main$g = /* @__PURE__ */ defineComponent({
       { immediate: true }
     );
     const Load3dViewerContent = defineAsyncComponent(
-      () => import("./Load3dViewerContent-Bsj9tsVF.mjs")
+      () => import("./Load3dViewerContent-DjgnLlgF.mjs")
     );
     const MediaLightbox = defineAsyncComponent(
-      () => import("./MediaLightbox-DJ5hr8dT.mjs")
+      () => import("./MediaLightbox-C5PY7Lqm.mjs")
     );
     function refreshModelThumbnail(asset, retry = true) {
       if (!isAssetPreviewSupported() || modelThumbnails.value[asset.url]) return;
@@ -7531,7 +7992,7 @@ const _sfc_main$g = /* @__PURE__ */ defineComponent({
             ], 10, _hoisted_2$d);
           }), 128))
         ], 2)) : createCommentVNode("", true),
-        collapsible.value ? (openBlock(), createBlock(_sfc_main$v, {
+        collapsible.value ? (openBlock(), createBlock(_sfc_main$x, {
           key: 1,
           type: "button",
           variant: "outline",
@@ -7557,7 +8018,7 @@ const _sfc_main$g = /* @__PURE__ */ defineComponent({
               title: assetNames.value[asset.url] || asset.filename
             }, null, 8, ["asset", "title"]);
           }), 128)),
-          audioCollapsible.value ? (openBlock(), createBlock(_sfc_main$v, {
+          audioCollapsible.value ? (openBlock(), createBlock(_sfc_main$x, {
             key: 0,
             type: "button",
             variant: "outline",
@@ -7641,7 +8102,7 @@ const _sfc_main$f = /* @__PURE__ */ defineComponent({
       return out;
     });
     const MediaLightbox = defineAsyncComponent(
-      () => import("./MediaLightbox-DJ5hr8dT.mjs")
+      () => import("./MediaLightbox-C5PY7Lqm.mjs")
     );
     const proseItems = ref([]);
     const proseIndex = ref(-1);
@@ -7732,7 +8193,7 @@ const _sfc_main$e = /* @__PURE__ */ defineComponent({
           createBaseVNode("p", _hoisted_3$a, toDisplayString(unref(t)("agent.runApproval.lead")), 1),
           createBaseVNode("ul", _hoisted_4$6, [
             createBaseVNode("li", null, [
-              __props.part.workflowId ? (openBlock(), createBlock(_sfc_main$v, {
+              __props.part.workflowId ? (openBlock(), createBlock(_sfc_main$x, {
                 key: 0,
                 type: "button",
                 variant: "link",
@@ -7750,7 +8211,7 @@ const _sfc_main$e = /* @__PURE__ */ defineComponent({
           createBaseVNode("p", _hoisted_6$4, toDisplayString(unref(t)("agent.runApproval.question")), 1)
         ]),
         createBaseVNode("div", _hoisted_7$4, [
-          createVNode(_sfc_main$v, {
+          createVNode(_sfc_main$x, {
             variant: "secondary",
             size: "sm",
             disabled: __props.answering,
@@ -7762,7 +8223,7 @@ const _sfc_main$e = /* @__PURE__ */ defineComponent({
             ]),
             _: 1
           }, 8, ["disabled", "aria-busy"]),
-          createVNode(_sfc_main$v, {
+          createVNode(_sfc_main$x, {
             variant: "primary",
             size: "sm",
             disabled: __props.answering,
@@ -8127,7 +8588,7 @@ const _sfc_main$d = /* @__PURE__ */ defineComponent({
       }
     }
     return (_ctx, _cache) => {
-      return unref(agentEnabled) && tab.value ? (openBlock(), createBlock(_sfc_main$v, {
+      return unref(agentEnabled) && tab.value ? (openBlock(), createBlock(_sfc_main$x, {
         key: 0,
         type: "button",
         variant: "outline",
@@ -8223,7 +8684,7 @@ const _sfc_main$b = /* @__PURE__ */ defineComponent({
     answeringAskIds: {},
     paywallPresentation: {}
   },
-  emits: ["answer", "openWorkflow", "paywallAction"],
+  emits: ["respondInteraction", "answer", "openWorkflow", "paywallAction"],
   setup(__props, { emit: __emit }) {
     const emit = __emit;
     return (_ctx, _cache) => {
@@ -8248,19 +8709,27 @@ const _sfc_main$b = /* @__PURE__ */ defineComponent({
             name: link.name
           }, null, 8, ["workflow-id", "locator-id", "name"]);
         }), 128))
-      ])) : __props.group.kind === "runApproval" ? (openBlock(), createBlock(_sfc_main$e, {
+      ])) : __props.group.kind === "hermes_interaction" && __props.group.part.interaction.kind === "hermes_approval" ? (openBlock(), createBlock(_sfc_main$n, {
         key: 3,
+        interaction: __props.group.part.interaction,
+        onRespond: _cache[0] || (_cache[0] = ($event) => emit("respondInteraction", $event))
+      }, null, 8, ["interaction"])) : __props.group.kind === "hermes_interaction" && __props.group.part.interaction.kind === "hermes_question" ? (openBlock(), createBlock(_sfc_main$o, {
+        key: 4,
+        interaction: __props.group.part.interaction,
+        onRespond: _cache[1] || (_cache[1] = ($event) => emit("respondInteraction", $event))
+      }, null, 8, ["interaction"])) : __props.group.kind === "runApproval" ? (openBlock(), createBlock(_sfc_main$e, {
+        key: 5,
         part: __props.group.part,
         answering: __props.answeringAskIds.has(__props.group.part.askId),
-        onAnswer: _cache[0] || (_cache[0] = (askId, selection) => emit("answer", askId, selection)),
-        onOpenWorkflow: _cache[1] || (_cache[1] = (workflowId, workflowName) => emit("openWorkflow", workflowId, workflowName))
+        onAnswer: _cache[2] || (_cache[2] = (askId, selection) => emit("answer", askId, selection)),
+        onOpenWorkflow: _cache[3] || (_cache[3] = (workflowId, workflowName) => emit("openWorkflow", workflowId, workflowName))
       }, null, 8, ["part", "answering"])) : __props.group.kind === "paywall" ? (openBlock(), createBlock(_sfc_main$l, {
-        key: 4,
+        key: 6,
         presentation: __props.paywallPresentation,
         message: __props.group.part.message,
-        onPaywallAction: _cache[2] || (_cache[2] = ($event) => emit("paywallAction", $event))
-      }, null, 8, ["presentation", "message"])) : (openBlock(), createElementBlock("div", {
-        key: 5,
+        onPaywallAction: _cache[4] || (_cache[4] = ($event) => emit("paywallAction", $event))
+      }, null, 8, ["presentation", "message"])) : __props.group.kind === "notice" ? (openBlock(), createElementBlock("div", {
+        key: 7,
         role: __props.group.part.level === "error" ? "alert" : "status",
         class: normalizeClass(
           unref(cn)(
@@ -8269,14 +8738,14 @@ const _sfc_main$b = /* @__PURE__ */ defineComponent({
           )
         )
       }, [
-        _cache[3] || (_cache[3] = createBaseVNode("span", { class: "ctv:mt-0.5 ctv:icon-[lucide--triangle-alert] ctv:size-4 ctv:shrink-0" }, null, -1)),
+        _cache[5] || (_cache[5] = createBaseVNode("span", { class: "ctv:mt-0.5 ctv:icon-[lucide--triangle-alert] ctv:size-4 ctv:shrink-0" }, null, -1)),
         createBaseVNode("span", _hoisted_3$8, [
           createBaseVNode("span", null, toDisplayString(__props.group.part.text), 1),
           __props.group.part.retryAfterSeconds !== void 0 ? (openBlock(), createElementBlock("span", _hoisted_4$5, toDisplayString(_ctx.$t("agent.retryAfterSeconds", {
             seconds: __props.group.part.retryAfterSeconds
           })), 1)) : createCommentVNode("", true)
         ])
-      ], 10, _hoisted_2$a));
+      ], 10, _hoisted_2$a)) : createCommentVNode("", true);
     };
   }
 });
@@ -8315,7 +8784,7 @@ const _sfc_main$a = /* @__PURE__ */ defineComponent({
     }
     return (_ctx, _cache) => {
       return openBlock(), createElementBlock("div", _hoisted_1$a, [
-        __props.assets.length ? (openBlock(), createBlock(_sfc_main$s, {
+        __props.assets.length ? (openBlock(), createBlock(_sfc_main$u, {
           key: 0,
           label: unref(t)("agent.downloadAssets"),
           "skip-delay-duration": 0,
@@ -8323,7 +8792,7 @@ const _sfc_main$a = /* @__PURE__ */ defineComponent({
           "collision-padding": 8
         }, {
           trigger: withCtx(() => [
-            createVNode(_sfc_main$v, {
+            createVNode(_sfc_main$x, {
               type: "button",
               variant: "muted-textonly",
               size: "icon-sm",
@@ -8341,14 +8810,14 @@ const _sfc_main$a = /* @__PURE__ */ defineComponent({
           _: 1
         }, 8, ["label"])) : createCommentVNode("", true),
         createBaseVNode("div", _hoisted_2$9, [
-          createVNode(_sfc_main$s, {
+          createVNode(_sfc_main$u, {
             label: unref(copied) ? unref(t)("agent.copied") : unref(t)("agent.copy"),
             "skip-delay-duration": 0,
             "disable-hoverable-content": "",
             "collision-padding": 8
           }, {
             trigger: withCtx(() => [
-              createVNode(_sfc_main$v, {
+              createVNode(_sfc_main$x, {
                 type: "button",
                 variant: "muted-textonly",
                 size: "unset",
@@ -8380,7 +8849,7 @@ const _sfc_main$a = /* @__PURE__ */ defineComponent({
             default: withCtx(() => [
               createVNode(unref(DropdownMenuTrigger_default), { "as-child": "" }, {
                 default: withCtx(() => [
-                  createVNode(_sfc_main$v, {
+                  createVNode(_sfc_main$x, {
                     variant: "muted-textonly",
                     size: "icon-sm",
                     "aria-label": unref(t)("agent.copyMarkdown"),
@@ -8438,7 +8907,7 @@ const _sfc_main$9 = /* @__PURE__ */ defineComponent({
     answeringAskIds: { default: () => /* @__PURE__ */ new Set() },
     paywallPresentation: { default: () => DEFAULT_AGENT_PAYWALL_PRESENTATION }
   },
-  emits: ["feedback", "answerAsk", "openWorkflow", "paywallAction"],
+  emits: ["respondInteraction", "feedback", "answerAsk", "openWorkflow", "paywallAction"],
   setup(__props, { emit: __emit }) {
     const { t } = useI18n();
     const emit = __emit;
@@ -8461,6 +8930,8 @@ const _sfc_main$9 = /* @__PURE__ */ defineComponent({
           const prev = out.at(-1);
           if ((prev == null ? void 0 : prev.kind) === "tabLinks") prev.parts.push(part);
           else out.push({ kind: "tabLinks", parts: [part] });
+        } else if (part.type === "hermes_interaction") {
+          out.push({ kind: "hermes_interaction", part });
         } else if (part.type === "runApproval") {
           out.push({ kind: "runApproval", part });
         } else if (part.type === "paywall") {
@@ -8482,7 +8953,7 @@ const _sfc_main$9 = /* @__PURE__ */ defineComponent({
     );
     const composing = computed(
       () => __props.message.streaming && __props.message.parts.length > 0 && __props.message.parts.every(
-        (part) => part.type !== "runApproval" && (!("state" in part) || part.state === "done")
+        (part) => part.type !== "hermes_interaction" && part.type !== "runApproval" && (!("state" in part) || part.state === "done")
       )
     );
     const status = computed(() => {
@@ -8505,13 +8976,14 @@ const _sfc_main$9 = /* @__PURE__ */ defineComponent({
           return openBlock(), createBlock(_sfc_main$b, {
             key: index,
             group,
+            onRespondInteraction: _cache[0] || (_cache[0] = ($event) => emit("respondInteraction", $event)),
             streaming: __props.message.streaming,
             "activity-parts": activityParts.value,
             "answering-ask-ids": __props.answeringAskIds,
             "paywall-presentation": __props.paywallPresentation,
-            onAnswer: _cache[0] || (_cache[0] = (askId, selection) => emit("answerAsk", askId, selection)),
-            onOpenWorkflow: _cache[1] || (_cache[1] = (workflowId, workflowName) => emit("openWorkflow", workflowId, workflowName)),
-            onPaywallAction: _cache[2] || (_cache[2] = ($event) => emit("paywallAction", $event))
+            onAnswer: _cache[1] || (_cache[1] = (askId, selection) => emit("answerAsk", askId, selection)),
+            onOpenWorkflow: _cache[2] || (_cache[2] = (workflowId, workflowName) => emit("openWorkflow", workflowId, workflowName)),
+            onPaywallAction: _cache[3] || (_cache[3] = ($event) => emit("paywallAction", $event))
           }, null, 8, ["group", "streaming", "activity-parts", "answering-ask-ids", "paywall-presentation"]);
         }), 128)),
         status.value ? (openBlock(), createElementBlock("div", _hoisted_2$8, [
@@ -8524,7 +8996,7 @@ const _sfc_main$9 = /* @__PURE__ */ defineComponent({
           key: 1,
           markdown: markdown.value,
           assets: replyAssets.value,
-          onFeedback: _cache[3] || (_cache[3] = ($event) => emit("feedback", $event))
+          onFeedback: _cache[4] || (_cache[4] = ($event) => emit("feedback", $event))
         }, null, 8, ["markdown", "assets"])) : createCommentVNode("", true)
       ]);
     };
@@ -8614,7 +9086,7 @@ const _sfc_main$8 = /* @__PURE__ */ defineComponent({
     );
     async function copyMessage() {
       if (__props.workflowReferences.length && richClipboard.isSupported.value && typeof ClipboardItem !== "undefined") {
-        const content = userMessageClipboard({
+        const content2 = userMessageClipboard({
           text: __props.text,
           workflowReferences: __props.workflowReferences,
           tags: __props.tags,
@@ -8623,13 +9095,13 @@ const _sfc_main$8 = /* @__PURE__ */ defineComponent({
         try {
           await richClipboard.copy([
             new ClipboardItem({
-              "text/plain": new Blob([content.text], { type: "text/plain" }),
-              "text/html": new Blob([content.html], { type: "text/html" })
+              "text/plain": new Blob([content2.text], { type: "text/plain" }),
+              "text/html": new Blob([content2.html], { type: "text/html" })
             })
           ]);
           return;
         } catch {
-          await plainClipboard.copy(content.text);
+          await plainClipboard.copy(content2.text);
           return;
         }
       }
@@ -8637,13 +9109,13 @@ const _sfc_main$8 = /* @__PURE__ */ defineComponent({
     }
     function copySelection(event) {
       if (!bubble.value || !event.clipboardData) return;
-      const content = selectedUserMessageClipboard(
+      const content2 = selectedUserMessageClipboard(
         bubble.value,
         document.getSelection()
       );
-      if (!content) return;
-      event.clipboardData.setData("text/plain", content.text);
-      event.clipboardData.setData("text/html", content.html);
+      if (!content2) return;
+      event.clipboardData.setData("text/plain", content2.text);
+      event.clipboardData.setData("text/html", content2.html);
       event.preventDefault();
       event.stopPropagation();
     }
@@ -8750,7 +9222,7 @@ const _sfc_main$8 = /* @__PURE__ */ defineComponent({
           }), 128))
         ], 512)) : createCommentVNode("", true),
         readableText.value ? (openBlock(), createElementBlock("div", _hoisted_8$3, [
-          __props.editable && (__props.text || __props.workflowReferences.length) ? (openBlock(), createBlock(_sfc_main$s, {
+          __props.editable && (__props.text || __props.workflowReferences.length) ? (openBlock(), createBlock(_sfc_main$u, {
             key: 0,
             label: unref(t)("g.edit"),
             "skip-delay-duration": 0,
@@ -8758,7 +9230,7 @@ const _sfc_main$8 = /* @__PURE__ */ defineComponent({
             "collision-padding": 8
           }, {
             trigger: withCtx(() => [
-              createVNode(_sfc_main$v, {
+              createVNode(_sfc_main$x, {
                 type: "button",
                 variant: "muted-textonly",
                 size: "icon-sm",
@@ -8774,14 +9246,14 @@ const _sfc_main$8 = /* @__PURE__ */ defineComponent({
             ]),
             _: 1
           }, 8, ["label"])) : createCommentVNode("", true),
-          createVNode(_sfc_main$s, {
+          createVNode(_sfc_main$u, {
             label: copied.value ? unref(t)("agent.copied") : unref(t)("agent.copy"),
             "skip-delay-duration": 0,
             "disable-hoverable-content": "",
             "collision-padding": 8
           }, {
             trigger: withCtx(() => [
-              createVNode(_sfc_main$v, {
+              createVNode(_sfc_main$x, {
                 type: "button",
                 variant: "muted-textonly",
                 size: "icon-sm",
@@ -8820,7 +9292,7 @@ const _sfc_main$7 = /* @__PURE__ */ defineComponent({
     editableTurnId: { default: null },
     answeringAskIds: { default: () => /* @__PURE__ */ new Set() }
   },
-  emits: ["feedback", "editPrompt", "answerAsk", "openWorkflow", "openReferenceWorkflow", "paywallAction"],
+  emits: ["feedback", "editPrompt", "respondInteraction", "answerAsk", "openWorkflow", "openReferenceWorkflow", "paywallAction"],
   setup(__props, { emit: __emit }) {
     const emit = __emit;
     const { t } = useI18n();
@@ -8894,9 +9366,10 @@ const _sfc_main$7 = /* @__PURE__ */ defineComponent({
                     "answering-ask-ids": __props.answeringAskIds,
                     "paywall-presentation": __props.paywallPresentation,
                     onFeedback: ($event) => emit("feedback", entry.id, $event),
-                    onAnswerAsk: _cache[2] || (_cache[2] = (askId, selection) => emit("answerAsk", askId, selection)),
-                    onOpenWorkflow: _cache[3] || (_cache[3] = (workflowId, workflowName) => emit("openWorkflow", workflowId, workflowName)),
-                    onPaywallAction: _cache[4] || (_cache[4] = ($event) => emit("paywallAction", $event))
+                    onRespondInteraction: _cache[2] || (_cache[2] = ($event) => emit("respondInteraction", $event)),
+                    onAnswerAsk: _cache[3] || (_cache[3] = (askId, selection) => emit("answerAsk", askId, selection)),
+                    onOpenWorkflow: _cache[4] || (_cache[4] = (workflowId, workflowName) => emit("openWorkflow", workflowId, workflowName)),
+                    onPaywallAction: _cache[5] || (_cache[5] = ($event) => emit("paywallAction", $event))
                   }, null, 8, ["message", "answering-ask-ids", "paywall-presentation", "onFeedback"]))
                 ], 64);
               }), 128)),
@@ -8907,7 +9380,7 @@ const _sfc_main$7 = /* @__PURE__ */ defineComponent({
             ])
           ])
         ], 2),
-        !atBottom.value ? withDirectives((openBlock(), createBlock(_sfc_main$v, {
+        !atBottom.value ? withDirectives((openBlock(), createBlock(_sfc_main$x, {
           key: 0,
           type: "button",
           variant: "secondary",
@@ -8916,7 +9389,7 @@ const _sfc_main$7 = /* @__PURE__ */ defineComponent({
           class: "ctv:absolute ctv:bottom-2 ctv:left-1/2 ctv:-translate-x-1/2 ctv:rounded-full ctv:shadow-md ctv:ring-1 ctv:ring-muted-foreground",
           onClick: scrollToLatest
         }, {
-          default: withCtx(() => [..._cache[5] || (_cache[5] = [
+          default: withCtx(() => [..._cache[6] || (_cache[6] = [
             createBaseVNode("span", { class: "ctv:icon-[lucide--chevron-down] ctv:size-4" }, null, -1)
           ])]),
           _: 1
@@ -8977,7 +9450,7 @@ const _sfc_main$6 = /* @__PURE__ */ defineComponent({
           ]),
           createBaseVNode("div", _hoisted_7$2, [
             (openBlock(true), createElementBlock(Fragment, null, renderList(prompts.value, (prompt, index) => {
-              return openBlock(), createBlock(_sfc_main$v, {
+              return openBlock(), createBlock(_sfc_main$x, {
                 key: index,
                 type: "button",
                 variant: "secondary",
@@ -9032,7 +9505,7 @@ const _sfc_main$5 = /* @__PURE__ */ defineComponent({
       return openBlock(), createElementBlock("header", _hoisted_1$5, [
         createBaseVNode("h1", _hoisted_2$4, toDisplayString(unref(t)("agent.title")), 1),
         createBaseVNode("div", _hoisted_3$3, [
-          withDirectives((openBlock(), createBlock(_sfc_main$v, {
+          withDirectives((openBlock(), createBlock(_sfc_main$x, {
             variant: "muted-textonly",
             size: "icon",
             "aria-label": unref(t)("agent.newChat"),
@@ -9050,7 +9523,7 @@ const _sfc_main$5 = /* @__PURE__ */ defineComponent({
               { bottom: true }
             ]
           ]),
-          withDirectives((openBlock(), createBlock(_sfc_main$v, {
+          withDirectives((openBlock(), createBlock(_sfc_main$x, {
             variant: "muted-textonly",
             size: "icon",
             "aria-label": sizeToggleLabel.value,
@@ -9070,7 +9543,7 @@ const _sfc_main$5 = /* @__PURE__ */ defineComponent({
               { bottom: true }
             ]
           ]),
-          withDirectives((openBlock(), createBlock(_sfc_main$v, {
+          withDirectives((openBlock(), createBlock(_sfc_main$x, {
             variant: "muted-textonly",
             size: "icon",
             "aria-label": unref(t)("agent.close"),
@@ -9102,6 +9575,11 @@ const _hoisted_6$1 = { class: "ctv:truncate" };
 const _hoisted_7$1 = { class: "ctv:min-h-0 ctv:flex-1" };
 const _hoisted_8$1 = { class: "ctv:shrink-0 ctv:py-3" };
 const _hoisted_9 = { class: "ctv:mx-auto ctv:flex ctv:w-full ctv:max-w-[640px] ctv:flex-col ctv:gap-4 ctv:px-4" };
+const _hoisted_10 = { class: "ctv:flex ctv:items-center ctv:justify-between ctv:gap-2 ctv:text-xs" };
+const _hoisted_11 = {
+  role: "status",
+  class: "ctv:min-w-0 ctv:truncate"
+};
 const _sfc_main$4 = /* @__PURE__ */ defineComponent({
   __name: "AgentPanel",
   props: {
@@ -9133,7 +9611,7 @@ const _sfc_main$4 = /* @__PURE__ */ defineComponent({
     editableTurnId: { default: null },
     answeringAskIds: { default: () => /* @__PURE__ */ new Set() }
   },
-  emits: ["send", "stop", "attach", "openAssets", "openEagle", "selectNodes", "removeTag", "mentionPick", "requestWorkflowReferences", "removeWorkflowReference", "feedback", "paywallAction", "newChat", "toggleSize", "close", "openHistory", "selectHistory", "deleteHistory", "copyHistory", "renameHistory", "renameChat", "answerAsk", "openWorkflow", "openReferenceWorkflow"],
+  emits: ["send", "stop", "attach", "openAssets", "openEagle", "selectNodes", "removeTag", "mentionPick", "requestWorkflowReferences", "removeWorkflowReference", "feedback", "paywallAction", "toggleWorkflowLink", "newChat", "toggleSize", "close", "openHistory", "selectHistory", "deleteHistory", "copyHistory", "renameHistory", "renameChat", "respondInteraction", "answerAsk", "openWorkflow", "openReferenceWorkflow"],
   setup(__props, { expose: __expose, emit: __emit }) {
     const emit = __emit;
     const showHistory = ref(false);
@@ -9150,8 +9628,6 @@ const _sfc_main$4 = /* @__PURE__ */ defineComponent({
       emit("selectHistory", id);
     }
     const composerRef = ref();
-    function onWorkflowTargetRequired() {
-    }
     const { t } = useI18n();
     const sessionTitle = computed(() => {
       if (__props.customTitle) return __props.customTitle;
@@ -9216,6 +9692,7 @@ const _sfc_main$4 = /* @__PURE__ */ defineComponent({
     }
     __expose({ addAttachment, updateAttachment, removeAttachment });
     return (_ctx, _cache) => {
+      var _a2;
       const _directive_tooltip = resolveDirective("tooltip");
       return openBlock(), createElementBlock("section", _hoisted_1$4, [
         createVNode(_sfc_main$5, {
@@ -9224,7 +9701,7 @@ const _sfc_main$4 = /* @__PURE__ */ defineComponent({
           onToggleSize: _cache[0] || (_cache[0] = ($event) => emit("toggleSize")),
           onClose: _cache[1] || (_cache[1] = ($event) => emit("close"))
         }, null, 8, ["is-maximized"]),
-        showHistory.value ? (openBlock(), createBlock(_sfc_main$r, {
+        showHistory.value ? (openBlock(), createBlock(_sfc_main$t, {
           key: 0,
           groups: __props.historyGroups,
           class: "ctv:min-h-0 ctv:flex-1",
@@ -9235,7 +9712,7 @@ const _sfc_main$4 = /* @__PURE__ */ defineComponent({
           onRename: _cache[5] || (_cache[5] = (id, title) => emit("renameHistory", id, title))
         }, null, 8, ["groups"])) : (openBlock(), createElementBlock(Fragment, { key: 1 }, [
           createBaseVNode("div", _hoisted_2$3, [
-            withDirectives((openBlock(), createBlock(_sfc_main$v, {
+            withDirectives((openBlock(), createBlock(_sfc_main$x, {
               id: "agent-chat-history",
               type: "button",
               variant: "muted-textonly",
@@ -9244,7 +9721,7 @@ const _sfc_main$4 = /* @__PURE__ */ defineComponent({
               class: "ctv:size-6 ctv:shrink-0",
               onClick: onOpenHistory
             }, {
-              default: withCtx(() => [..._cache[24] || (_cache[24] = [
+              default: withCtx(() => [..._cache[26] || (_cache[26] = [
                 createBaseVNode("span", { class: "ctv:icon-[lucide--history] ctv:size-4 ctv:shrink-0" }, null, -1)
               ])]),
               _: 1
@@ -9256,7 +9733,7 @@ const _sfc_main$4 = /* @__PURE__ */ defineComponent({
                 { bottom: true }
               ]
             ]),
-            renaming.value ? (openBlock(), createBlock(_sfc_main$u, {
+            renaming.value ? (openBlock(), createBlock(_sfc_main$w, {
               key: 0,
               ref_key: "renameInput",
               ref: renameInput,
@@ -9273,7 +9750,7 @@ const _sfc_main$4 = /* @__PURE__ */ defineComponent({
               "aria-label": unref(t)("agent.chatOptions"),
               class: "ctv:flex ctv:w-fit ctv:max-w-full ctv:min-w-0 ctv:items-center"
             }, [
-              createVNode(_sfc_main$v, {
+              createVNode(_sfc_main$x, {
                 ref_key: "titleButton",
                 ref: titleButton,
                 type: "button",
@@ -9292,13 +9769,13 @@ const _sfc_main$4 = /* @__PURE__ */ defineComponent({
                 default: withCtx(() => [
                   createVNode(unref(DropdownMenuTrigger_default), { "as-child": "" }, {
                     default: withCtx(() => [
-                      withDirectives((openBlock(), createBlock(_sfc_main$v, {
+                      withDirectives((openBlock(), createBlock(_sfc_main$x, {
                         variant: "muted-textonly",
                         size: "icon-sm",
                         "aria-label": unref(t)("agent.chatOptions"),
                         class: "ctv:size-6 ctv:shrink-0"
                       }, {
-                        default: withCtx(() => [..._cache[25] || (_cache[25] = [
+                        default: withCtx(() => [..._cache[27] || (_cache[27] = [
                           createBaseVNode("span", { class: "ctv:icon-[lucide--chevron-down] ctv:size-3" }, null, -1)
                         ])]),
                         _: 1
@@ -9327,7 +9804,7 @@ const _sfc_main$4 = /* @__PURE__ */ defineComponent({
                             onSelect: startRename
                           }, {
                             default: withCtx(() => [
-                              _cache[26] || (_cache[26] = createBaseVNode("span", { class: "ctv:icon-[lucide--pencil] ctv:size-4 ctv:shrink-0" }, null, -1)),
+                              _cache[28] || (_cache[28] = createBaseVNode("span", { class: "ctv:icon-[lucide--pencil] ctv:size-4 ctv:shrink-0" }, null, -1)),
                               createBaseVNode("span", _hoisted_5$1, toDisplayString(unref(t)("g.rename")), 1)
                             ]),
                             _: 1
@@ -9338,7 +9815,7 @@ const _sfc_main$4 = /* @__PURE__ */ defineComponent({
                             onSelect: onDeleteChat
                           }, {
                             default: withCtx(() => [
-                              _cache[27] || (_cache[27] = createBaseVNode("span", { class: "ctv:icon-[lucide--trash-2] ctv:size-4 ctv:shrink-0" }, null, -1)),
+                              _cache[29] || (_cache[29] = createBaseVNode("span", { class: "ctv:icon-[lucide--trash-2] ctv:size-4 ctv:shrink-0" }, null, -1)),
                               createBaseVNode("span", _hoisted_6$1, toDisplayString(unref(t)("g.delete")), 1)
                             ]),
                             _: 1
@@ -9359,8 +9836,8 @@ const _sfc_main$4 = /* @__PURE__ */ defineComponent({
               key: 0,
               "user-name": __props.userName,
               onInsert: _cache[7] || (_cache[7] = ($event) => {
-                var _a2;
-                return (_a2 = composerRef.value) == null ? void 0 : _a2.insert($event);
+                var _a3;
+                return (_a3 = composerRef.value) == null ? void 0 : _a3.insert($event);
               })
             }, null, 8, ["user-name"])) : (openBlock(), createBlock(_sfc_main$7, {
               key: 1,
@@ -9369,14 +9846,15 @@ const _sfc_main$4 = /* @__PURE__ */ defineComponent({
               "answering-ask-ids": __props.answeringAskIds,
               "paywall-presentation": __props.paywallPresentation,
               onEditPrompt: _cache[8] || (_cache[8] = ($event) => {
-                var _a2;
-                return (_a2 = composerRef.value) == null ? void 0 : _a2.replaceDraft($event);
+                var _a3;
+                return (_a3 = composerRef.value) == null ? void 0 : _a3.replaceDraft($event);
               }),
               onFeedback: _cache[9] || (_cache[9] = (id, vote) => emit("feedback", id, vote)),
-              onAnswerAsk: _cache[10] || (_cache[10] = (askId, selection) => emit("answerAsk", askId, selection)),
-              onOpenWorkflow: _cache[11] || (_cache[11] = (workflowId, workflowName) => emit("openWorkflow", workflowId, workflowName)),
-              onOpenReferenceWorkflow: _cache[12] || (_cache[12] = (workflowId, workflowName) => emit("openReferenceWorkflow", workflowId, workflowName)),
-              onPaywallAction: _cache[13] || (_cache[13] = ($event) => emit("paywallAction", $event))
+              onRespondInteraction: _cache[10] || (_cache[10] = ($event) => emit("respondInteraction", $event)),
+              onAnswerAsk: _cache[11] || (_cache[11] = (askId, selection) => emit("answerAsk", askId, selection)),
+              onOpenWorkflow: _cache[12] || (_cache[12] = (workflowId, workflowName) => emit("openWorkflow", workflowId, workflowName)),
+              onOpenReferenceWorkflow: _cache[13] || (_cache[13] = (workflowId, workflowName) => emit("openReferenceWorkflow", workflowId, workflowName)),
+              onPaywallAction: _cache[14] || (_cache[14] = ($event) => emit("paywallAction", $event))
             }, null, 8, ["entries", "editable-turn-id", "answering-ask-ids", "paywall-presentation"]))
           ])
         ], 64)),
@@ -9384,7 +9862,23 @@ const _sfc_main$4 = /* @__PURE__ */ defineComponent({
           renderSlot(_ctx.$slots, "instrument"),
           createBaseVNode("footer", _hoisted_8$1, [
             createBaseVNode("div", _hoisted_9, [
-              createVNode(_sfc_main$n, {
+              createBaseVNode("div", _hoisted_10, [
+                createBaseVNode("span", _hoisted_11, toDisplayString(__props.workflowDetached ? unref(t)("agent.noWorkflowLinked") : unref(t)("agent.workflowLinked", { name: ((_a2 = __props.activeTab) == null ? void 0 : _a2.name) ?? "" })), 1),
+                createVNode(_sfc_main$x, {
+                  type: "button",
+                  variant: "muted-textonly",
+                  size: "sm",
+                  disabled: __props.streaming || __props.submitting || __props.selectingTabPath !== null || __props.savingReference || __props.workflowDetached && __props.visibleTabPath === null,
+                  "aria-label": unref(t)(__props.workflowDetached ? "agent.linkCurrentWorkflow" : "agent.unlinkWorkflow"),
+                  onClick: _cache[15] || (_cache[15] = ($event) => emit("toggleWorkflowLink"))
+                }, {
+                  default: withCtx(() => [
+                    createTextVNode(toDisplayString(unref(t)(__props.workflowDetached ? "agent.linkCurrentWorkflow" : "agent.unlinkWorkflow")), 1)
+                  ]),
+                  _: 1
+                }, 8, ["disabled", "aria-label"])
+              ]),
+              createVNode(_sfc_main$p, {
                 ref_key: "composerRef",
                 ref: composerRef,
                 streaming: __props.streaming,
@@ -9397,22 +9891,20 @@ const _sfc_main$4 = /* @__PURE__ */ defineComponent({
                 "select-workflow-reference": __props.selectWorkflowReference,
                 "available-workflows": __props.availableWorkflows,
                 "editable-workflow-id": __props.editableWorkflowId,
-                "has-workflow-target": !__props.workflowDetached,
                 "workflow-selecting": __props.selectingTabPath !== null || __props.savingReference,
                 "get-mention-nodes": __props.getMentionNodes,
                 onSend: onComposerSend,
-                onStop: _cache[14] || (_cache[14] = ($event) => emit("stop")),
-                onAttach: _cache[15] || (_cache[15] = ($event) => emit("attach")),
-                onOpenAssets: _cache[16] || (_cache[16] = ($event) => emit("openAssets")),
-                onOpenEagle: _cache[17] || (_cache[17] = ($event) => emit("openEagle")),
-                onSelectNodes: _cache[18] || (_cache[18] = ($event) => emit("selectNodes")),
-                onRemoveTag: _cache[19] || (_cache[19] = ($event) => emit("removeTag", $event)),
-                onMentionPick: _cache[20] || (_cache[20] = ($event) => emit("mentionPick", $event)),
-                onRequestWorkflowReferences: _cache[21] || (_cache[21] = ($event) => emit("requestWorkflowReferences")),
-                onRemoveWorkflowReference: _cache[22] || (_cache[22] = ($event) => emit("removeWorkflowReference", $event)),
-                onOpenReferenceWorkflow: _cache[23] || (_cache[23] = (workflowId, workflowName) => emit("openReferenceWorkflow", workflowId, workflowName)),
-                onWorkflowTargetRequired
-              }, null, 8, ["streaming", "submitting", "can-attach", "can-open-assets", "can-open-eagle", "selection-tags", "node-reference-disabled-reason", "select-workflow-reference", "available-workflows", "editable-workflow-id", "has-workflow-target", "workflow-selecting", "get-mention-nodes"]),
+                onStop: _cache[16] || (_cache[16] = ($event) => emit("stop")),
+                onAttach: _cache[17] || (_cache[17] = ($event) => emit("attach")),
+                onOpenAssets: _cache[18] || (_cache[18] = ($event) => emit("openAssets")),
+                onOpenEagle: _cache[19] || (_cache[19] = ($event) => emit("openEagle")),
+                onSelectNodes: _cache[20] || (_cache[20] = ($event) => emit("selectNodes")),
+                onRemoveTag: _cache[21] || (_cache[21] = ($event) => emit("removeTag", $event)),
+                onMentionPick: _cache[22] || (_cache[22] = ($event) => emit("mentionPick", $event)),
+                onRequestWorkflowReferences: _cache[23] || (_cache[23] = ($event) => emit("requestWorkflowReferences")),
+                onRemoveWorkflowReference: _cache[24] || (_cache[24] = ($event) => emit("removeWorkflowReference", $event)),
+                onOpenReferenceWorkflow: _cache[25] || (_cache[25] = (workflowId, workflowName) => emit("openReferenceWorkflow", workflowId, workflowName))
+              }, null, 8, ["streaming", "submitting", "can-attach", "can-open-assets", "can-open-eagle", "selection-tags", "node-reference-disabled-reason", "select-workflow-reference", "available-workflows", "editable-workflow-id", "workflow-selecting", "get-mention-nodes"]),
               createVNode(AgentFeedbackCaption)
             ])
           ])
@@ -9649,7 +10141,7 @@ const _sfc_main$2 = /* @__PURE__ */ defineComponent({
             ]),
             actions: withCtx(() => [
               createBaseVNode("div", _hoisted_2$1, [
-                liveNodes.value.length > 0 ? (openBlock(), createBlock(_sfc_main$v, {
+                liveNodes.value.length > 0 ? (openBlock(), createBlock(_sfc_main$x, {
                   key: 0,
                   variant: "secondary",
                   size: "sm",
@@ -9661,7 +10153,7 @@ const _sfc_main$2 = /* @__PURE__ */ defineComponent({
                   ]),
                   _: 1
                 })) : createCommentVNode("", true),
-                isComplete.value ? (openBlock(), createBlock(_sfc_main$v, {
+                isComplete.value ? (openBlock(), createBlock(_sfc_main$x, {
                   key: 1,
                   variant: "muted-textonly",
                   size: "icon",
@@ -9889,7 +10381,7 @@ const _sfc_main$1 = /* @__PURE__ */ defineComponent({
                     }, toDisplayString(unref(step).body), 9, _hoisted_7)
                   ]),
                   createBaseVNode("div", _hoisted_8, [
-                    createVNode(_sfc_main$v, {
+                    createVNode(_sfc_main$x, {
                       variant: "secondary",
                       size: "md",
                       onClick: unref(finish)
@@ -9899,7 +10391,7 @@ const _sfc_main$1 = /* @__PURE__ */ defineComponent({
                       ]),
                       _: 1
                     }, 8, ["onClick"]),
-                    createVNode(_sfc_main$v, {
+                    createVNode(_sfc_main$x, {
                       variant: "inverted",
                       size: "md",
                       onClick: unref(next)
@@ -9931,10 +10423,14 @@ function useAttachment(options) {
     return id;
   }
   function isTooLarge(file) {
-    var _a2, _b;
-    const maxBytes = ((_a2 = options.maxBytes) == null ? void 0 : _a2.call(options, file)) ?? MAX_ATTACHMENT_BYTES;
+    var _a2, _b, _c;
+    if (options.allowed && !options.allowed(file)) {
+      (_a2 = options.onError) == null ? void 0 : _a2.call(options, "Unsupported attachment for this provider. Only capability-approved media references are supported when enabled; documents and archives are unsupported.");
+      return true;
+    }
+    const maxBytes = ((_b = options.maxBytes) == null ? void 0 : _b.call(options, file)) ?? MAX_ATTACHMENT_BYTES;
     if (file.size <= maxBytes) return false;
-    (_b = options.onError) == null ? void 0 : _b.call(
+    (_c = options.onError) == null ? void 0 : _c.call(
       options,
       i18n.global.t("agent.attachmentTooLarge", {
         name: file.name,
@@ -9970,6 +10466,11 @@ function useAttachment(options) {
     }
   }
   async function addDeferredFile(name, resolve) {
+    var _a2, _b;
+    if (((_a2 = options.allowDeferred) == null ? void 0 : _a2.call(options)) === false) {
+      (_b = options.onError) == null ? void 0 : _b.call(options, "Deferred/Eagle attachments unavailable for this provider. Import images through the library first, then attach an existing image asset when enabled.");
+      return void 0;
+    }
     const id = stage(name);
     const file = await resolve();
     if (!file) {
@@ -10045,6 +10546,27 @@ function createAgentEventTransport(message, emit) {
     var _a2, _b;
     if (settled) return;
     switch (event.type) {
+      case "agent_interaction": {
+        const interaction = { ...event.data.interaction, can_respond: false };
+        const prior = message.parts.find((p) => p.type === "hermes_interaction" && p.interaction.id === interaction.id);
+        if ((prior == null ? void 0 : prior.type) === "hermes_interaction") {
+          if (prior.interaction.state !== "pending" && interaction.state === "pending") return;
+          prior.interaction = interaction;
+        } else message.parts.push({ type: "hermes_interaction", interaction });
+        break;
+      }
+      case "agent_notice":
+        closeOpenText();
+        closeOpenThinking();
+        message.thinking = false;
+        message.thinkingText = void 0;
+        message.parts.push({
+          type: "notice",
+          text: event.data.text,
+          level: event.data.level === "warn" ? "warning" : event.data.level,
+          detail: event.data.detail
+        });
+        break;
       case "agent_thinking":
         closeOpenText();
         message.thinking = true;
@@ -10145,7 +10667,7 @@ function serializeWorkflowReferences(text2, references) {
     return `[${name}](${workflowReferenceUrl(part.reference.id)})`;
   }).join("");
 }
-function parseWorkflowReferences(content, references) {
+function parseWorkflowReferences(content2, references) {
   const remaining = new Map(
     references.map((reference) => [
       workflowReferenceUrl(reference.id),
@@ -10155,12 +10677,12 @@ function parseWorkflowReferences(content, references) {
   const positioned = [];
   let text2 = "";
   let offset2 = 0;
-  for (const match of content.matchAll(
+  for (const match of content2.matchAll(
     /\[((?:\\.|[^\]\\])*)\]\((workflow:\/\/[^\s)]+)\)/g
   )) {
     const reference = remaining.get(match[2]);
     if (!reference) continue;
-    text2 += content.slice(offset2, match.index);
+    text2 += content2.slice(offset2, match.index);
     positioned.push({
       ...reference,
       name: match[1].replace(/\\([\\[\]])/g, "$1"),
@@ -10170,7 +10692,7 @@ function parseWorkflowReferences(content, references) {
     offset2 = match.index + match[0].length;
   }
   return {
-    text: text2 + content.slice(offset2),
+    text: text2 + content2.slice(offset2),
     references: [...remaining.values(), ...positioned]
   };
 }
@@ -10183,12 +10705,12 @@ function attachmentRefNames(value) {
     return typeof name === "string" ? [name] : [];
   });
 }
-function parseUserAttachments(content) {
-  const names = Array.isArray(content == null ? void 0 : content.attachments) ? content.attachments.filter(
+function parseUserAttachments(content2) {
+  const names = Array.isArray(content2 == null ? void 0 : content2.attachments) ? content2.attachments.filter(
     (name) => typeof name === "string"
-  ) : attachmentRefNames(content == null ? void 0 : content.attachment_refs);
-  const previews = content == null ? void 0 : content.attachment_previews;
-  const labels = content == null ? void 0 : content.attachment_labels;
+  ) : attachmentRefNames(content2 == null ? void 0 : content2.attachment_refs);
+  const previews = content2 == null ? void 0 : content2.attachment_previews;
+  const labels = content2 == null ? void 0 : content2.attachment_labels;
   return names.length > 0 ? names.map((name) => ({
     name: (labels == null ? void 0 : labels[name]) ?? name,
     ref: name,
@@ -10212,7 +10734,7 @@ function parseUserWorkflowReferences(text2, rawReferences) {
   return references.length > 0 ? parseWorkflowReferences(text2, references) : void 0;
 }
 function normalizeAgentTranscript(history2) {
-  var _a2, _b, _c, _d, _e2;
+  var _a2, _b, _c, _d, _e2, _f;
   const userTexts = /* @__PURE__ */ new Map();
   const userAttachments = /* @__PURE__ */ new Map();
   const userWorkflowReferences = /* @__PURE__ */ new Map();
@@ -10247,18 +10769,36 @@ function normalizeAgentTranscript(history2) {
     if (row.role === "assistant") {
       const message = assistants.get(turnId) ?? createAssistantMessage(turnId);
       message.streaming = false;
-      if (text2)
-        message.parts = [
-          ...message.parts,
-          { type: "text", text: text2, state: "done" }
-        ];
-      if (row.status === "streaming" && ((_c = row.pending_ask) == null ? void 0 : _c.kind) === "run_approval") {
-        message.parts.push({
-          type: "runApproval",
-          askId: row.pending_ask.ask_id,
-          workflowId: ((_d = row.pending_ask.context) == null ? void 0 : _d.workflow_id) || void 0,
-          workflowName: ((_e2 = row.pending_ask.context) == null ? void 0 : _e2.workflow_name) || void 0
-        });
+      const blocks = (_c = row.content) == null ? void 0 : _c.blocks;
+      if (Array.isArray(blocks)) {
+        for (const block of blocks) {
+          if (!block || typeof block !== "object") continue;
+          if (block.type === "hermes_interaction") {
+            const parsed = zTVInteraction.safeParse(block.interaction);
+            if (parsed.success && parsed.data.message_id === row.id) message.parts.push({ type: "hermes_interaction", interaction: { ...parsed.data, can_respond: false } });
+          } else if (block.type === "text" && typeof block.text === "string") {
+            message.parts.push({ type: "text", text: block.text, state: "done" });
+          } else if (block.type === "notice" && typeof block.text === "string") {
+            message.parts.push({
+              type: "notice",
+              text: block.text,
+              level: block.level === "error" ? "error" : block.level === "warn" || block.level === "warning" ? "warning" : "info",
+              ...typeof block.detail === "string" ? { detail: block.detail } : {}
+            });
+          }
+        }
+      } else if (text2) {
+        message.parts.push({ type: "text", text: text2, state: "done" });
+      }
+      if (row.status === "streaming") {
+        if (((_d = row.pending_ask) == null ? void 0 : _d.kind) === "run_approval") {
+          message.parts.push({
+            type: "runApproval",
+            askId: row.pending_ask.ask_id,
+            workflowId: ((_e2 = row.pending_ask.context) == null ? void 0 : _e2.workflow_id) || void 0,
+            workflowName: ((_f = row.pending_ask.context) == null ? void 0 : _f.workflow_name) || void 0
+          });
+        }
         message.streaming = true;
         pending2 = {
           messageId: row.id,
@@ -10299,6 +10839,7 @@ const useAgentConversationStore = defineStore(
     let liveMessage = null;
     const backgroundTurns = /* @__PURE__ */ new Map();
     let hydratedMessageIds = /* @__PURE__ */ new Set();
+    let hydratedMessageTurnIds = /* @__PURE__ */ new Map();
     let hydratedAssistantTurnIds = /* @__PURE__ */ new Set();
     const activeIndex = ref(-1);
     function replaceActive(message) {
@@ -10342,9 +10883,26 @@ const useAgentConversationStore = defineStore(
       activeIndex.value = messages.value.push(message) - 1;
       transport = createAgentEventTransport(message, replaceActive);
     }
+    function reconcileInteraction(interaction) {
+      const targetId = hydratedMessageTurnIds.get(interaction.message_id) ?? interaction.message_id;
+      const candidates = interaction.thread_id === threadId.value ? [...messages.value.filter((m2) => m2.id === targetId || m2.id === interaction.message_id), ...liveMessage && activeTurnId.value === interaction.message_id ? [liveMessage] : []] : [];
+      const background = backgroundTurns.get(interaction.thread_id);
+      if ((background == null ? void 0 : background.messageId) === interaction.message_id) candidates.push(background.message);
+      if (!candidates.length && interaction.thread_id === threadId.value) {
+        const message = createAssistantMessage(targetId);
+        message.streaming = false;
+        messages.value.push(message);
+        candidates.push(message);
+      }
+      for (const message of candidates) {
+        const part = message.parts.find((p) => p.type === "hermes_interaction" && p.interaction.id === interaction.id);
+        if ((part == null ? void 0 : part.type) === "hermes_interaction") part.interaction = interaction;
+        else message.parts.push({ type: "hermes_interaction", interaction });
+      }
+    }
     function ingest(event) {
       var _a2;
-      if (transport && event.data.message_id === activeTurnId.value) {
+      if (transport && event.data.message_id === activeTurnId.value && (event.data.thread_id === void 0 || event.data.thread_id === threadId.value)) {
         if (event.type === "agent_message_done") {
           transport.settle();
           clearActive();
@@ -10395,10 +10953,12 @@ const useAgentConversationStore = defineStore(
       const entry = backgroundTurns.get(threadId.value);
       if (!entry) return;
       backgroundTurns.delete(threadId.value);
-      const kept = messages.value.filter((m2) => m2.id !== entry.message.id);
-      const poppedHydratedCopy = removeHydratedCopy(entry, kept);
-      if (entry.settled && !poppedHydratedCopy && hydratedMessageIds.has(entry.messageId))
-        return;
+      if (entry.settled && hydratedMessageIds.has(entry.messageId)) return;
+      const hydratedTurnId = hydratedMessageTurnIds.get(entry.messageId);
+      const kept = messages.value.filter(
+        (m2) => m2.id !== entry.message.id && m2.id !== hydratedTurnId
+      );
+      removeHydratedCopy(entry, kept);
       if (entry.userText !== void 0 && !userTexts.value.has(entry.message.id))
         userTexts.value.set(entry.message.id, entry.userText);
       const index = kept.push(entry.message) - 1;
@@ -10420,10 +10980,10 @@ const useAgentConversationStore = defineStore(
       return true;
     }
     function settleBackgroundTurn(turnId) {
-      for (const [key, entry] of backgroundTurns) {
+      for (const [key2, entry] of backgroundTurns) {
         if (entry.messageId !== turnId) continue;
         entry.transport.settle();
-        backgroundTurns.delete(key);
+        backgroundTurns.delete(key2);
         return;
       }
     }
@@ -10454,6 +11014,7 @@ const useAgentConversationStore = defineStore(
       dropAttachmentPreviews();
       threadId.value = null;
       hydratedMessageIds = /* @__PURE__ */ new Set();
+      hydratedMessageTurnIds = /* @__PURE__ */ new Map();
       hydratedAssistantTurnIds = /* @__PURE__ */ new Set();
       clearActive();
     }
@@ -10466,6 +11027,9 @@ const useAgentConversationStore = defineStore(
       userWorkflowReferences.value = transcript.userWorkflowReferences;
       latestWorkflowId.value = transcript.latestWorkflowId;
       hydratedMessageIds = transcript.rowIds;
+      hydratedMessageTurnIds = new Map(
+        history2.filter((row) => row.role === "assistant").map((row) => [row.id, row.turn_id])
+      );
       hydratedAssistantTurnIds = transcript.assistantTurnIds;
       dropAttachmentPreviews();
       userAttachments.value = transcript.userAttachments;
@@ -10520,6 +11084,7 @@ const useAgentConversationStore = defineStore(
       recordFailedSend,
       recordPaywall,
       startTurn,
+      reconcileInteraction,
       ingest,
       abortActiveTurn,
       stashActiveTurn,
@@ -10891,6 +11456,25 @@ function createUuidv4() {
   }
   throw new UuidGenerationError("Web Crypto is required to generate a UUID");
 }
+function copyWorkflowJson(value) {
+  const ancestors = /* @__PURE__ */ new Set();
+  function copy(value2, depth) {
+    if (depth > 64) throw new Error("Mixed context JSON exceeds the depth limit.");
+    if (value2 === null || typeof value2 === "string" || typeof value2 === "boolean") return value2;
+    if (typeof value2 === "number" && Number.isFinite(value2)) return value2;
+    if (typeof value2 !== "object" || value2 === null || !Array.isArray(value2) && Object.prototype.toString.call(value2) !== "[object Object]" || typeof value2.toJSON === "function")
+      throw new Error("Mixed context requires finite JSON values; no graph fields were dropped.");
+    if (ancestors.has(value2)) throw new Error("Mixed context JSON must not contain cycles.");
+    ancestors.add(value2);
+    try {
+      if (Array.isArray(value2)) return Array.from(value2, (item) => copy(item, depth + 1));
+      return Object.fromEntries(Object.entries(value2).map(([key2, item]) => [key2, copy(item, depth + 1)]));
+    } finally {
+      ancestors.delete(value2);
+    }
+  }
+  return copy(value, 0);
+}
 const THREAD_STORAGE_KEY = "ComfyTV.Agent.ThreadId";
 const PREPARE_TIMEOUT_MS = 3e3;
 let sessionGeneration = 0;
@@ -10910,6 +11494,8 @@ function useAgentSession(deps) {
   const { rest, events, workflow } = deps;
   const conversationStore = useAgentConversationStore();
   const bindingStore = useAgentWorkflowTabBindingStore();
+  const interactions = rest.interactionChannel ? createAgentInteractions(rest, conversationStore.reconcileInteraction) : void 0;
+  let interactionRefresh;
   const boundWorkflowId = ref(rememberedWorkflowId);
   const notices = ref([]);
   const promptEditState = ref({ phase: "idle" });
@@ -10932,12 +11518,19 @@ function useAgentSession(deps) {
     notices.value.push({ level: "error", text: text2 });
   }
   function start() {
+    var _a2;
     ownedGeneration = ++sessionGeneration;
     everLive = false;
     if (conversationStore.threadId === null && localStorage.getItem(THREAD_STORAGE_KEY) === null) {
       rememberedWorkflowId = null;
       boundWorkflowId.value = null;
     }
+    void ((_a2 = rest.interactionChannel) == null ? void 0 : _a2.open().then(() => {
+      if (conversationStore.threadId) void (interactions == null ? void 0 : interactions.refresh(conversationStore.threadId));
+    }));
+    interactionRefresh = setInterval(() => {
+      if (conversationStore.threadId) void (interactions == null ? void 0 : interactions.refresh(conversationStore.threadId));
+    }, 3e4);
     unsubscribe = events.subscribe(onRaw);
     if (events.onStatus) unsubscribeStatus = events.onStatus(onStatus);
     const surviving = conversationStore.threadId;
@@ -10969,6 +11562,7 @@ function useAgentSession(deps) {
       const history2 = await rest.getMessages(threadId);
       if (conversationStore.threadId !== threadId || !isCurrent()) return false;
       conversationStore.hydrate(history2);
+      await (interactions == null ? void 0 : interactions.refresh(threadId));
       await ((_a2 = workflow == null ? void 0 : workflow.restored) == null ? void 0 : _a2.call(workflow, conversationStore.latestWorkflowId, isCurrent));
       if (conversationStore.threadId !== threadId || !isCurrent()) return false;
       return true;
@@ -10985,6 +11579,9 @@ function useAgentSession(deps) {
     }
   }
   function stop() {
+    var _a2;
+    clearInterval(interactionRefresh);
+    (_a2 = rest.interactionChannel) == null ? void 0 : _a2.close();
     unsubscribe == null ? void 0 : unsubscribe();
     unsubscribeStatus == null ? void 0 : unsubscribeStatus();
     unsubscribe = null;
@@ -11023,9 +11620,10 @@ function useAgentSession(deps) {
     if ((wfContext == null ? void 0 : wfContext.id) === void 0) return rest.postMessage(threadId, input);
     return rest.postMessage(threadId, { ...input, workflowId: wfContext.id });
   }
-  function buildPostInput(threadId, text2, origin, wfContext, attachments, tags, workflowReferences) {
+  function buildPostInput(threadId, text2, origin, wfContext, attachments, tags, workflowReferences, mixed = false) {
     var _a2, _b;
-    const draft = (_a2 = workflow == null ? void 0 : workflow.draft) == null ? void 0 : _a2.call(workflow, origin);
+    const liveDraft = (_a2 = workflow == null ? void 0 : workflow.draft) == null ? void 0 : _a2.call(workflow, origin);
+    const draft = mixed && liveDraft ? { ...liveDraft, content: copyWorkflowJson(liveDraft.content) } : liveDraft;
     return {
       content: serializeWorkflowReferences(text2, workflowReferences ?? []),
       tabs: (_b = workflow == null ? void 0 : workflow.tabs) == null ? void 0 : _b.call(workflow, origin),
@@ -11033,9 +11631,9 @@ function useAgentSession(deps) {
         workflowReferences,
         wfContext == null ? void 0 : wfContext.id
       ),
-      selection: selectedNodes(tags),
+      selection: selectedNodes(tags, mixed),
       attachments: attachments == null ? void 0 : attachments.map((attachment) => attachment.ref),
-      ...canSendDraft(threadId, wfContext, draft) ? { draft } : {}
+      ...mixed && draft !== void 0 || canSendDraft(threadId, wfContext, draft) ? { draft } : {}
     };
   }
   function serializeReferencedWorkflows(references, currentWorkflowId) {
@@ -11044,9 +11642,12 @@ function useAgentSession(deps) {
       name: reference.name
     }));
   }
-  function selectedNodes(tags) {
+  function selectedNodes(tags, mixed = false) {
     if (tags === void 0 || tags.length === 0) return void 0;
-    return { node_ids: tags.map((tag) => tag.id) };
+    return {
+      node_ids: tags.map((tag) => tag.id),
+      ...mixed ? { node_locators: tags.map((tag) => tag.locatorId ?? String(tag.id)) } : {}
+    };
   }
   function canSendDraft(threadId, wfContext, draft) {
     if (draft === void 0) return false;
@@ -11114,21 +11715,60 @@ function useAgentSession(deps) {
     if (rememberedWorkflowId === sent.id) rememberedWorkflowId = null;
   }
   async function performSend(text2, attachments, tags, workflowReferences) {
+    var _a2, _b;
     const generation = loadGeneration;
     const threadAtSend = conversationStore.threadId ?? "new";
     const originContext = workflow == null ? void 0 : workflow.current();
     const origin = originContext === void 0 ? null : { tabPath: originContext.tabPath };
     let sentContext;
     try {
+      const capability = (_a2 = deps.attachmentCapability) == null ? void 0 : _a2.call(deps);
+      const policy = attachmentPolicy(capability ?? {});
+      const mixed = Boolean(attachments == null ? void 0 : attachments.length) && policy.mixedContext;
+      if (mixed || policy.references) {
+        attachments = attachments == null ? void 0 : attachments.map((attachment) => ({ ...attachment }));
+      }
+      if (policy.references && (attachments == null ? void 0 : attachments.some(
+        (attachment) => !policy.enabled || !/^asset:\d+$/.test(attachment.ref)
+      ))) throw new Error("Unsupported media reference. Attach capability-approved image/video/audio assets; documents and archives are unsupported.");
+      if (mixed) {
+        tags = tags == null ? void 0 : tags.map((tag) => ({ ...tag }));
+        workflowReferences = workflowReferences == null ? void 0 : workflowReferences.map((reference) => ({
+          ...reference
+        }));
+      }
+      const originAtClick = mixed && originContext ? { ...originContext } : originContext;
+      const identityAtClick = mixed ? (_b = workflow == null ? void 0 : workflow.identity) == null ? void 0 : _b.call(workflow, origin) : void 0;
+      const captured = mixed ? JSON.parse(JSON.stringify(
+        buildPostInput(
+          threadAtSend,
+          text2,
+          origin,
+          originAtClick,
+          attachments,
+          tags,
+          workflowReferences,
+          true
+        ),
+        (_key, value) => {
+          if (typeof value === "number" && !Number.isFinite(value))
+            throw new Error("Mixed context requires finite JSON values.");
+          return value;
+        }
+      )) : void 0;
       await prepareWorkflow();
       if (generation !== loadGeneration) return false;
       const wfContext = workflow == null ? void 0 : workflow.current(origin);
-      if (workflowTargetChanged(originContext, wfContext)) {
+      const originUnavailable = mixed && origin !== null && ((wfContext == null ? void 0 : wfContext.tabPath) !== origin.tabPath || (workflow == null ? void 0 : workflow.identity) && workflow.identity(origin) !== identityAtClick);
+      if (workflowTargetChanged(originAtClick, wfContext) || originUnavailable) {
         recordUnavailableTarget(text2);
         return false;
       }
       sentContext = wfContext;
-      const ack = await postTurn(
+      const ack = captured ? await rest.postMessage(threadAtSend, {
+        ...captured,
+        ...(wfContext == null ? void 0 : wfContext.id) === void 0 ? {} : { workflowId: wfContext.id }
+      }) : await postTurn(
         threadAtSend,
         text2,
         origin,
@@ -11203,16 +11843,8 @@ function useAgentSession(deps) {
     } catch (error) {
       setAskAnswering(askId, false);
       if (error instanceof AgentApiError && error.status === 409) {
-        conversationStore.ingest({
-          type: "agent_ask_resolved",
-          data: {
-            thread_id: currentThreadId,
-            message_id: messageId,
-            ask_id: askId,
-            status: "answered",
-            selected: null
-          }
-        });
+        if (conversationStore.threadId === currentThreadId)
+          await hydrateFromServer(currentThreadId, () => conversationStore.threadId === currentThreadId);
         return;
       }
       reportError(error, { errorType: "agent_ask_answer_failed" });
@@ -11264,6 +11896,11 @@ function useAgentSession(deps) {
       return;
     }
     const event = parsed.data;
+    if (event.type === "agent_interaction") {
+      interactions == null ? void 0 : interactions.hint(event.data.interaction);
+      void (interactions == null ? void 0 : interactions.refresh(event.data.thread_id));
+      return;
+    }
     if (event.type === "agent_ask_resolved")
       setAskAnswering(event.data.ask_id, false);
     switch (event.type) {
@@ -11282,6 +11919,8 @@ function useAgentSession(deps) {
     }
   }
   function onStatus(live) {
+    if (rest.interactionChannel) rest.interactionChannel.connected.value = live;
+    if (live && conversationStore.threadId) void (interactions == null ? void 0 : interactions.refresh(conversationStore.threadId));
     if (live) {
       everLive = true;
       return;
@@ -11307,6 +11946,8 @@ function useAgentSession(deps) {
     stop,
     sendMessage,
     stopTurn,
+    interactionView: interactions == null ? void 0 : interactions.view,
+    respondInteraction: interactions == null ? void 0 : interactions.respond,
     answerAsk,
     answeringAskIds: computed(() => answeringAskIds.value),
     newChat,
@@ -11344,15 +11985,23 @@ function useAgentDraftSubmission(options) {
     flush: "sync"
   });
   async function submit(text2, attachments, references = []) {
-    var _a2, _b;
+    var _a2, _b, _c;
     const target = options.target();
-    if (!options.canSubmit() || ((_a2 = composer.submission) == null ? void 0 : _a2.phase) === "pending" || target === null || !text2.trim() && attachments.length === 0 || attachments.some((attachment) => attachment.uploading))
+    if (!options.canSubmit() || ((_a2 = composer.submission) == null ? void 0 : _a2.phase) === "pending" || !text2.trim() && attachments.length === 0 || attachments.some((attachment) => attachment.uploading))
       return;
-    const prompt = composer.prompt;
-    const sentAttachments = [...attachments];
-    const sentReferences = [...references];
+    const capture = attachments.length > 0 && ((_b = options.captureMixedContext) == null ? void 0 : _b.call(options)) === true;
+    const prompt = capture ? {
+      text: composer.prompt.text,
+      references: composer.prompt.references.map((reference) => {
+        if (reference.kind === "node") return { ...reference, node: { ...reference.node } };
+        if (reference.kind === "asset") return { ...reference, attachment: { ...reference.attachment } };
+        return { ...reference };
+      })
+    } : composer.prompt;
+    const sentAttachments = capture ? attachments.map((item) => ({ ...item })) : [...attachments];
+    const sentReferences = capture ? references.map((item) => ({ ...item })) : [...references];
     selection.exit();
-    const nodes = selection.workflow() === target ? [...selection.staged.value] : [];
+    const nodes = selection.workflow() === target ? selection.staged.value.map((node) => capture ? { ...node } : node) : [];
     selection.consume();
     const submissionId = composer.startSubmission({
       prompt,
@@ -11366,7 +12015,7 @@ function useAgentDraftSubmission(options) {
       nodes,
       sentReferences
     );
-    const stopRequested = ((_b = composer.submission) == null ? void 0 : _b.id) === submissionId && composer.submission.stopRequested;
+    const stopRequested = ((_c = composer.submission) == null ? void 0 : _c.id) === submissionId && composer.submission.stopRequested;
     composer.settleSubmission(submissionId, sent);
     if (sent && stopRequested) await options.stop();
   }
@@ -11616,8 +12265,8 @@ const _sfc_main = /* @__PURE__ */ defineComponent({
     );
     watch(
       onboardingKey,
-      (key) => {
-        if (key) adoptSharedOnboardingFlag(key);
+      (key2) => {
+        if (key2) adoptSharedOnboardingFlag(key2);
       },
       { immediate: true }
     );
@@ -11728,9 +12377,9 @@ const _sfc_main = /* @__PURE__ */ defineComponent({
       if (!target) return void 0;
       if (target.path === ((_a3 = workflowStore.activeWorkflow) == null ? void 0 : _a3.path))
         (_b = target.changeTracker) == null ? void 0 : _b.prepareForSave();
-      const content = target.activeState;
-      if (!content) return void 0;
-      return { content };
+      const content2 = target.activeState;
+      if (!content2) return void 0;
+      return { content: content2 };
     }
     const selectedTargetTab = computed(() => {
       const target = selectedTarget.value;
@@ -11786,12 +12435,16 @@ const _sfc_main = /* @__PURE__ */ defineComponent({
       boundWorkflowId,
       bindWorkflow,
       answerAsk,
+      interactionView,
+      respondInteraction,
       answeringAskIds
     } = useAgentSession({
       rest,
       events,
+      attachmentCapability: () => attachmentCapability.value,
       workflow: {
         current: targetWorkflowTurnContext,
+        identity: originWorkflow,
         adopted: onWorkflowAdopted,
         restored: onWorkflowRestored,
         prepare: async () => {
@@ -11803,6 +12456,7 @@ const _sfc_main = /* @__PURE__ */ defineComponent({
         draft: targetWorkflowDraft
       }
     });
+    if (interactionView) provide(interactionViewKey, interactionView);
     const isSending = computed(
       () => {
         var _a3;
@@ -12001,9 +12655,9 @@ const _sfc_main = /* @__PURE__ */ defineComponent({
     watch(threadId, (id) => history2.setActive(id), { immediate: true });
     void refreshHistory();
     async function onSelectHistory(id) {
+      invalidateEaglePicker();
       composerStore.invalidateSubmission();
       cancelWorkflowSelection();
-      agentPanelStore.resetWorkflowTarget();
       exitNodeSelectionMode();
       await loadThread(id);
       void refreshHistory();
@@ -12048,6 +12702,7 @@ const _sfc_main = /* @__PURE__ */ defineComponent({
     ]);
     const { submit: onSend } = useAgentDraftSubmission({
       canSubmit: () => !workflowSelecting.value && !isSending.value,
+      captureMixedContext: () => imagePolicy.value.mixedContext,
       target: () => selectedTarget.value,
       editableWorkflowId: () => editableWorkflowId.value,
       selection: {
@@ -12075,13 +12730,23 @@ const _sfc_main = /* @__PURE__ */ defineComponent({
       history2.remove(id);
       if (id === threadId.value) onNewChat();
     }
+    function onToggleWorkflowLink() {
+      if (isSending.value || isStreaming.value || workflowSelecting.value) return;
+      if (selectionTags.value.length > 0) {
+        toast.add({ severity: "warn", detail: t("agent.unlinkWorkflowNodes"), life: 5e3 });
+        return;
+      }
+      cancelWorkflowSelection();
+      if (workflowDetached.value) agentPanelStore.resetWorkflowTarget();
+      else agentPanelStore.setWorkflowTarget(null);
+    }
     function onNewChat() {
+      invalidateEaglePicker();
       composerStore.invalidateSubmission();
       cancelWorkflowSelection();
       exitNodeSelectionMode();
       composerStore.setWorkflowReferences([]);
       composerStore.resetPromptHistory();
-      agentPanelStore.setWorkflowTarget(workflowStore.activeWorkflow);
       newChat();
     }
     const panelRef = ref();
@@ -12154,9 +12819,9 @@ const _sfc_main = /* @__PURE__ */ defineComponent({
         [...canvas.selectedItems].filter(isLGraphNode).map((node) => [workflowStore.nodeToNodeLocatorId(node), node])
       );
       for (const tag of selectionTags.value) {
-        const key = selectedNodeKey(tag);
-        const node = getNodeByLocatorId(app.rootGraph, key);
-        if (node) merged.set(key, node);
+        const key2 = selectedNodeKey(tag);
+        const node = getNodeByLocatorId(app.rootGraph, key2);
+        if (node) merged.set(key2, node);
       }
       if (merged.size) {
         canvas.selectItems([...merged.values()]);
@@ -12174,7 +12839,40 @@ const _sfc_main = /* @__PURE__ */ defineComponent({
         if (selectingNodes) canvas.canvas.focus();
       });
     }
+    const attachmentCapability = ref({ attachments: false });
+    const imagePolicy = computed(() => attachmentPolicy(attachmentCapability.value));
+    let eaglePickerGeneration = 0;
+    function invalidateEaglePicker() {
+      eaglePickerGeneration++;
+      closeEaglePicker();
+      closeAssetPicker();
+    }
+    watch([threadId, newChatRequests, imagePolicy], invalidateEaglePicker, { flush: "sync" });
+    watch([threadId, newChatRequests], async ([id], _2, onCleanup) => {
+      let current = true;
+      onCleanup(() => {
+        current = false;
+      });
+      attachmentCapability.value = { attachments: false };
+      try {
+        const response = await api.fetchApi(`/comfytv/agent/threads/${encodeURIComponent(id ?? "new")}/attachment-capability`);
+        const capability = response.ok ? await response.json() : { attachments: false };
+        if (current) attachmentCapability.value = capability;
+      } catch {
+      }
+    }, { immediate: true, flush: "sync" });
+    function addPolicyAttachment(item) {
+      var _a3;
+      const asset = useAssetStore().byId(assetIdOf(item.ref) ?? -1);
+      if (!imagePolicy.value.allows((asset == null ? void 0 : asset.media_type) ?? "other")) {
+        toast.add({ severity: "warn", detail: imagePolicy.value.label, life: 5e3 });
+        return;
+      }
+      (_a3 = panelRef.value) == null ? void 0 : _a3.addAttachment(item);
+    }
     const attachment = useAttachment({
+      allowDeferred: () => imagePolicy.value.allowsDeferred,
+      allowed: (file) => imagePolicy.value.allows(getMediaTypeFromFilename(file.name)),
       upload: (file) => uploadToLibrary(file),
       maxBytes: (file) => {
         const serverLimit = api.getServerFeature(
@@ -12193,33 +12891,48 @@ const _sfc_main = /* @__PURE__ */ defineComponent({
     function onAttach() {
       var _a3;
       exitNodeSelectionMode();
-      (_a3 = fileInput.value) == null ? void 0 : _a3.click();
+      if (imagePolicy.value.enabled) (_a3 = fileInput.value) == null ? void 0 : _a3.click();
     }
     const attachedAssetIds = () => composerStore.attachments.flatMap((item) => {
       const id = assetIdOf(item.ref);
       return id === null ? [] : [id];
     });
+    function allowEagleImport() {
+      if (imagePolicy.value.allowsDeferred) return true;
+      toast.add({ severity: "warn", detail: "Eagle attachment import unavailable for this provider. Import images through the library first, then attach an existing image asset when enabled.", life: 5e3 });
+      return false;
+    }
     function onOpenEagle() {
+      if (!allowEagleImport()) return;
       exitNodeSelectionMode();
+      const generation = ++eaglePickerGeneration;
+      const id = threadId.value;
+      const canPick = () => generation === eaglePickerGeneration && id === threadId.value && imagePolicy.value.allowsDeferred;
       openEaglePicker({
+        canPick,
         addedIds: attachedAssetIds,
         select: (asset) => {
-          var _a3;
-          return (_a3 = panelRef.value) == null ? void 0 : _a3.addAttachment(toAttachment(asset));
+          if (canPick()) addPolicyAttachment(toAttachment(asset));
         },
-        deselect: (asset) => composerStore.removeAttachment(toAttachment(asset).id)
+        deselect: (asset) => {
+          if (canPick()) composerStore.removeAttachment(toAttachment(asset).id);
+        }
       });
     }
     function onOpenAssets() {
       exitNodeSelectionMode();
       closeEaglePicker();
+      const generation = ++eaglePickerGeneration;
+      const id = threadId.value;
+      const canPick = () => generation === eaglePickerGeneration && id === threadId.value && imagePolicy.value.enabled;
       openAssetPicker({
         addedIds: attachedAssetIds,
         select: (asset) => {
-          var _a3;
-          return (_a3 = panelRef.value) == null ? void 0 : _a3.addAttachment(toAttachment(asset));
+          if (canPick()) addPolicyAttachment(toAttachment(asset));
         },
-        deselect: (asset) => composerStore.removeAttachment(toAttachment(asset).id)
+        deselect: (asset) => {
+          if (canPick()) composerStore.removeAttachment(toAttachment(asset).id);
+        }
       });
     }
     function onMentionPick(node) {
@@ -12265,15 +12978,15 @@ const _sfc_main = /* @__PURE__ */ defineComponent({
       if (assetDragDepth === 0) assetDragActive.value = false;
     }
     async function attachDroppedAsset(event) {
-      var _a3, _b, _c;
       if (event.dataTransfer && isEagleDrag(event.dataTransfer)) {
+        if (!allowEagleImport()) return;
         for (const item of await droppedEagleAssets(event.dataTransfer))
-          (_a3 = panelRef.value) == null ? void 0 : _a3.addAttachment(item);
+          addPolicyAttachment(item);
         return;
       }
       if (event.dataTransfer && isComfyTVAssetDrag(event.dataTransfer)) {
         for (const item of droppedComfyTVAssets(event.dataTransfer))
-          (_b = panelRef.value) == null ? void 0 : _b.addAttachment(item);
+          addPolicyAttachment(item);
         return;
       }
       const asset = event.dataTransfer && getDroppedAsset(event.dataTransfer);
@@ -12286,7 +12999,7 @@ const _sfc_main = /* @__PURE__ */ defineComponent({
         return;
       }
       if (asset.ref && asset.kind !== "other") {
-        (_c = panelRef.value) == null ? void 0 : _c.addAttachment({
+        addPolicyAttachment({
           id: `asset:${asset.ref}`,
           name: asset.name,
           ref: asset.ref,
@@ -12341,7 +13054,7 @@ const _sfc_main = /* @__PURE__ */ defineComponent({
             ref_key: "fileInput",
             ref: fileInput,
             type: "file",
-            accept: unref(AGENT_ATTACH_ACCEPT),
+            accept: imagePolicy.value.accept,
             multiple: "",
             class: "ctv:hidden",
             "data-testid": "agent-file-input",
@@ -12375,6 +13088,7 @@ const _sfc_main = /* @__PURE__ */ defineComponent({
             "selecting-tab-path": ((_b = unref(selectingTarget)) == null ? void 0 : _b.path) ?? null,
             "select-tab": unref(onSelectWorkflowTarget),
             "workflow-detached": workflowDetached.value,
+            onToggleWorkflowLink,
             "get-mention-nodes": mentionableNodes,
             "paywall-presentation": paywallPresentation.value,
             onSend: unref(onSend),
@@ -12388,6 +13102,7 @@ const _sfc_main = /* @__PURE__ */ defineComponent({
             onRequestWorkflowReferences: unref(onRequestWorkflowReferences),
             onRemoveWorkflowReference: unref(composerStore).removeWorkflowReference,
             onFeedback,
+            onRespondInteraction: unref(respondInteraction),
             onAnswerAsk: unref(answerAsk),
             onOpenWorkflow: onOpenApprovalWorkflow,
             onOpenReferenceWorkflow: onNavigateToReferenceWorkflow,
@@ -12401,7 +13116,7 @@ const _sfc_main = /* @__PURE__ */ defineComponent({
             onRenameHistory,
             onRenameChat,
             onCopyHistory: onCopyMarkdown
-          }, null, 8, ["entries", "editable-turn-id", "answering-ask-ids", "user-name", "streaming", "submitting", "can-open-assets", "can-open-eagle", "is-maximized", "history-groups", "session-id", "custom-title", "selection-tags", "node-reference-disabled-reason", "select-workflow-reference", "saving-reference", "editable-workflow-id", "active-tab", "workflow-tabs", "visible-tab-path", "selecting-tab-path", "select-tab", "workflow-detached", "paywall-presentation", "onSend", "onRequestWorkflowReferences", "onRemoveWorkflowReference", "onAnswerAsk"]),
+          }, null, 8, ["entries", "editable-turn-id", "answering-ask-ids", "user-name", "streaming", "submitting", "can-open-assets", "can-open-eagle", "is-maximized", "history-groups", "session-id", "custom-title", "selection-tags", "node-reference-disabled-reason", "select-workflow-reference", "saving-reference", "editable-workflow-id", "active-tab", "workflow-tabs", "visible-tab-path", "selecting-tab-path", "select-tab", "workflow-detached", "paywall-presentation", "onSend", "onRequestWorkflowReferences", "onRemoveWorkflowReference", "onRespondInteraction", "onAnswerAsk"]),
           unref(consentAccepted) && onboardingKey.value && !unref(canvasStore).linearMode && unref(activeTour) === null ? (openBlock(), createBlock(_sfc_main$1, {
             key: 0,
             steps: coachSteps.value,
@@ -12415,4 +13130,4 @@ const _sfc_main = /* @__PURE__ */ defineComponent({
 export {
   _sfc_main as default
 };
-//# sourceMappingURL=AgentPanelRoot-CA2CMPMZ.mjs.map
+//# sourceMappingURL=AgentPanelRoot-BJjtjdi_.mjs.map
